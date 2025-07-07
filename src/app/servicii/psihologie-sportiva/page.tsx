@@ -550,7 +550,7 @@ export default function PsihologieSportivaPage() {
                                             <span className="text-sm text-gray-500">• {testimonial.age}</span>
                                         </div>
                                         <Typography variant="body" className="text-gray-700 italic leading-relaxed">
-                                            "{testimonial.quote}"
+                                            &#34;{testimonial.quote}&#34;
                                         </Typography>
                                         <div className="border-t pt-3">
                                             <Typography variant="small" className="font-medium text-gray-900">
