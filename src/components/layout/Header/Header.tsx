@@ -24,35 +24,31 @@ const navigationItems = [
         href: '/servicii',
         submenu: [
             {
-                name: 'Terapie Autism',
-                href: '/servicii/terapie-autism',
-                description: 'Specialist în terapie pentru copii și adulți cu autism'
-            },
-            {
-                name: 'Psihoterapie Individuală',
-                href: '/servicii/psihoterapie-individuala',
-                description: 'Consiliere pentru anxietate, depresie și dezvoltare personală'
-            },
-            {
-                name: 'Terapie de Cuplu',
-                href: '/servicii/terapie-cuplu',
-                description: 'Îmbunătățirea relațiilor și comunicării în cuplu'
-            },
-            {
-                name: 'Consiliere Familială',
-                href: '/servicii/consiliere-familiala',
-                description: 'Suport pentru dinamica și armonizarea familiei'
-            },
-            {
-                name: 'Evaluare Psihologică',
+                name: 'Ședințe de Evaluare',
                 href: '/servicii/evaluare-psihologica',
-                description: 'Diagnostic complet și planuri de intervenție'
+                description: 'Evaluare prin observație și chestionare specializate - 50 min'
+            },
+            {
+                name: 'Intervenție pentru Recuperare',
+                href: '/servicii/interventie-recuperare',
+                description: 'Terapie prin joc pentru copii cu autism, ADHD - 100 min'
+            },
+            {
+                name: 'Psihologie Sportivă',
+                href: '/servicii/psihologie-sportiva',
+                description: 'Îmbunătățirea performanței sportive - cabinet/online - 50 min'
+            },
+            {
+                name: 'Psihoterapie',
+                href: '/servicii/psihoterapie',
+                description: 'Pentru adulți, adolescenți și copii - cabinet/online - 50 min'
+            },
+            {
+                name: 'Logopedie',
+                href: '/servicii/logopedie',
+                description: 'Recuperarea vorbirii la copii - 45 min'
             }
         ]
-    },
-    {
-        name: 'Blog',
-        href: '/blog',
     },
     {
         name: 'Contact',

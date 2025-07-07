@@ -15,6 +15,10 @@ import {
   Target,
   Clock,
   MapPin,
+  ClipboardList,
+  Gamepad2,
+  Trophy,
+  MessageSquare,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -52,53 +56,90 @@ const stats = [
 
 const services = [
   {
-    icon: Brain,
-    title: 'Terapie Autism',
-    description: 'Specializat în terapie pentru copii și adulți cu tulburări din spectrul autist. Intervenție timpurie și dezvoltare abilități sociale folosind metode validate științific.',
+    icon: ClipboardList,
+    title: 'Ședințe de Evaluare',
+    description: 'Evaluare prin metoda observației și aplicarea de chestionare potrivite situației în care vă aflați. Diagnostic complet pentru autism, ADHD, anxietate și alte tulburări.',
     features: [
-      'Intervenție timpurie pentru copii 2-6 ani',
-      'Terapie comportamentală aplicată (ABA)',
-      'Dezvoltare abilități sociale și comunicare',
-      'Suport și training pentru părinți și familie',
-      'Evaluare și diagnostic autism',
-      'Planuri de intervenție personalizate'
+      'Observație clinică structurată',
+      'Chestionare și teste specializate',
+      'Evaluare autism, ADHD, anxietate',
+      'Raport psihologic detaliat',
+      'Recomandări de tratament',
+      'Consultație de urmărire gratuită'
     ],
-    href: '/servicii/terapie-autism',
+    href: '/servicii/evaluare-psihologica',
     color: 'therapeutic',
     featured: true,
-    price: 'de la 200 RON/ședință'
+    price: 'de la 200 RON/ședință',
+    duration: '50 minute'
+  },
+  {
+    icon: Gamepad2,
+    title: 'Intervenție pentru Recuperare',
+    description: 'Terapie de recuperare prin joc pentru copii cu întârzieri în dezvoltare, ADHD, autism, întârzieri în vorbire. Părinții pot asista la ședințe.',
+    features: [
+      'Terapie prin joc pentru copii',
+      'Recuperare autism și ADHD',
+      'Probleme de integrare senzorială',
+      'Întârzieri în dezvoltare',
+      'Participarea părinților la ședințe',
+      'Plan de exerciții pentru acasă'
+    ],
+    href: '/servicii/interventie-recuperare',
+    color: 'calming',
+    price: 'de la 250 RON/ședință',
+    duration: '100 minute'
+  },
+  {
+    icon: Trophy,
+    title: 'Psihologie Sportivă',
+    description: 'Dedicată celor care fac sport și își doresc îmbunătățirea atitudinii, rezultatelor și per total performanței în sportul pe care îl practică.',
+    features: [
+      'Îmbunătățirea performanței sportive',
+      'Gestionarea anxietății de competiție',
+      'Dezvoltarea concentrării și focusului',
+      'Motivație și stabilirea obiectivelor',
+      'Ședințe la cabinet sau online',
+      'Pentru adulți, adolescenți și copii'
+    ],
+    href: '/servicii/psihologie-sportiva',
+    color: 'warm',
+    price: 'de la 180 RON/ședință',
+    duration: '50 minute'
   },
   {
     icon: Heart,
-    title: 'Psihoterapie Individuală',
-    description: 'Consiliere profesională pentru anxietate, depresie, traumă și dezvoltare personală. Abordare personalizată pentru fiecare pacient în mediu sigur și empatic.',
+    title: 'Psihoterapie',
+    description: 'Ședințe de psihoterapie pentru adulți, adolescenți și copii. Tratament pentru anxietate, depresie, traumă și dezvoltare personală în mediu sigur și empatic.',
     features: [
       'Terapie cognitiv-comportamentală (TCC)',
-      'Tratament anxietate și tulburări de panică',
-      'Terapie pentru depresie și tulburări de dispoziție',
+      'Tratament anxietate și depresie',
       'Procesarea traumelor și PTSD',
       'Dezvoltare personală și creștere',
-      'Gestionarea stresului și burnout'
+      'Ședințe la cabinet sau online',
+      'Adaptat pentru toate vârstele'
     ],
-    href: '/servicii/psihoterapie-individuala',
-    color: 'calming',
-    price: 'de la 180 RON/ședință'
+    href: '/servicii/psihoterapie',
+    color: 'empathy',
+    price: 'de la 180 RON/ședință',
+    duration: '50 minute'
   },
   {
-    icon: Users,
-    title: 'Terapie de Cuplu și Familie',
-    description: 'Îmbunătățirea comunicării și rezolvarea conflictelor în relații. Consiliere pentru cupluri și familii pentru construirea unor relații sănătoase și armonioase.',
+    icon: MessageSquare,
+    title: 'Logopedie',
+    description: 'Ședințe pentru copii în vederea recuperărilor în urma întârzierilor în dezvoltarea vorbirii și corectarea sau însușirea anumitor sunete.',
     features: [
-      'Îmbunătățirea comunicării în cuplu',
-      'Rezolvarea conflictelor și tensiunilor',
-      'Construirea încrederii și intimității',
-      'Pregătirea pentru căsătorie',
-      'Terapie familială sistemică',
-      'Medierea separării și divorțului'
+      'Recuperarea întârzierilor în vorbire',
+      'Corectarea defectelor de pronunție',
+      'Învățarea sunetelor corecte',
+      'Dezvoltarea vocabularului',
+      'Îmbunătățirea fluenței vorbirii',
+      'Exerciții pentru acasă cu părinții'
     ],
-    href: '/servicii/terapie-cuplu',
-    color: 'warm',
-    price: 'de la 220 RON/ședință'
+    href: '/servicii/logopedie',
+    color: 'trust',
+    price: 'de la 150 RON/ședință',
+    duration: '45 minute'
   }
 ]
 
