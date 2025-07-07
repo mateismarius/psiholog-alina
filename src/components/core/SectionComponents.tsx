@@ -26,11 +26,19 @@ export function HeroSection({
     return (
         <section
             className={cn(
-                "min-h-screen flex items-center bg-therapeutic-gradient text-white relative overflow-hidden",
+                "min-h-screen flex items-center relative overflow-hidden",
+                // Folosim noua schemă de culori mov-teracotă-bronz
+                "bg-gradient-to-br from-therapeutic-600 via-therapeutic-500 to-calming-500 text-white",
                 className
             )}
         >
-            {content}
+            {/* Background decorations */}
+            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
+            <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-warm-500/20 rounded-full blur-3xl animate-blob" />
+
+            <div className="relative z-10 w-full">
+                {content}
+            </div>
         </section>
     )
 }
@@ -82,13 +90,15 @@ export function TestimonialSection({
     return (
         <section
             className={cn(
-                "py-20 bg-therapeutic-gradient text-white relative overflow-hidden",
+                "py-20 relative overflow-hidden text-white",
+                // Folosim noua schemă - gradient mov-teracotă
+                "bg-gradient-to-br from-therapeutic-700 via-therapeutic-600 to-calming-600",
                 className
             )}
         >
             {/* Background decorations */}
             <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-2xl" />
-            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-warm-500/20 rounded-full blur-3xl" />
 
             <div className="relative z-10">
                 {content}
@@ -129,10 +139,17 @@ export function CtaSection({
                            }: SectionProps) {
     return (
         <section className={cn(
-            "py-20 bg-calming-gradient text-white relative overflow-hidden",
+            "py-20 text-white relative overflow-hidden",
+            // Folosim noua schemă pentru CTA - gradient calming-warm
+            "bg-gradient-to-r from-calming-600 via-calming-500 to-warm-600",
             className
         )}>
             <div className="absolute inset-0 bg-black/10" />
+
+            {/* Background decorations */}
+            <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-therapeutic-500/20 rounded-full blur-3xl" />
+
             <Container size={containerSize} padding={containerPadding} className="relative z-10">
                 {children}
             </Container>
@@ -154,4 +171,3 @@ export function StatsSection({
         </section>
     )
 }
-

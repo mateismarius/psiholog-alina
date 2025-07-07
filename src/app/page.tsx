@@ -161,14 +161,9 @@ const expertise = [
 export default function HomePage() {
   return (
       <>
-        {/* Hero Section */}
-        <HeroSection className="relative overflow-hidden" withContainer={false}>
-          {/* Background decorations */}
-          <div className="absolute inset-0 bg-hero-gradient opacity-90" />
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-blob" />
-
-          <Container size="xl" className="relative z-10 py-20">
+        {/* Hero Section - fără background-uri duplicate */}
+        <HeroSection>
+          <Container size="xl" className="py-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
 
               {/* Content */}
@@ -213,7 +208,7 @@ export default function HomePage() {
                     </Link>
                   </Button>
 
-                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                  <Button asChild size="lg" variant="outline" className="border-white text-therapeutic-600 hover:bg-white hover:text-therapeutic-700">
                     <Link href="/servicii/terapie-autism">
                       Despre Terapie Autism
                     </Link>
@@ -222,7 +217,7 @@ export default function HomePage() {
 
                 <div className="flex items-center space-x-6 pt-4">
                   <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
+                    <div className="w-3 h-3 bg-warm-300 rounded-full animate-pulse" />
                     <span className="text-white/80 text-sm">Disponibil pentru consultații</span>
                   </div>
                   <a
@@ -413,7 +408,7 @@ export default function HomePage() {
                         ))}
                       </div>
                       <Typography variant="body" className="text-white/90 mb-6 italic">
-                        "{testimonial.content}"
+                        &#34;{testimonial.content}&#34;
                       </Typography>
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">

@@ -1,484 +1,341 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@tailwind utilities;
 
-@layer base {
-  :root {
-    /* ShadCN base colors */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 199 89% 48%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 199 89% 48%;
-    --radius: 0.5rem;
+@custom-variant dark (&:is(.dark *));
 
-    /* Psychology custom colors */
-    --therapeutic-50: 240 100% 98%;
-    --therapeutic-100: 224 100% 96%;
-    --therapeutic-200: 186 100% 87%;
-    --therapeutic-300: 186 96% 79%;
-    --therapeutic-400: 186 84% 69%;
-    --therapeutic-500: 199 89% 48%;
-    --therapeutic-600: 200 98% 39%;
-    --therapeutic-700: 201 96% 32%;
-    --therapeutic-800: 201 90% 27%;
-    --therapeutic-900: 202 80% 24%;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 
-    --calming-50: 78 100% 97%;
-    --calming-100: 79 100% 90%;
-    --calming-200: 80 93% 80%;
-    --calming-300: 81 85% 67%;
-    --calming-400: 82 78% 55%;
-    --calming-500: 84 81% 44%;
-    --calming-600: 85 84% 35%;
-    --calming-700: 86 78% 27%;
-    --calming-800: 87 70% 22%;
-    --calming-900: 88 61% 20%;
+  /* CULORILE TALE CUSTOM pentru site psiholog - ACESTEA LIPSEAU! */
+  --color-therapeutic-50: var(--therapeutic-50);
+  --color-therapeutic-100: var(--therapeutic-100);
+  --color-therapeutic-200: var(--therapeutic-200);
+  --color-therapeutic-300: var(--therapeutic-300);
+  --color-therapeutic-400: var(--therapeutic-400);
+  --color-therapeutic-500: var(--therapeutic-500);
+  --color-therapeutic-600: var(--therapeutic-600);
+  --color-therapeutic-700: var(--therapeutic-700);
+  --color-therapeutic-800: var(--therapeutic-800);
+  --color-therapeutic-900: var(--therapeutic-900);
+  --color-therapeutic: var(--therapeutic-500);
 
-    --warm-50: 55 100% 97%;
-    --warm-100: 55 100% 88%;
-    --warm-200: 53 100% 77%;
-    --warm-300: 50 100% 64%;
-    --warm-400: 48 96% 53%;
-    --warm-500: 45 93% 47%;
-    --warm-600: 41 96% 40%;
-    --warm-700: 35 91% 33%;
-    --warm-800: 32 81% 29%;
-    --warm-900: 28 73% 26%;
+  --color-calming-50: var(--calming-50);
+  --color-calming-100: var(--calming-100);
+  --color-calming-200: var(--calming-200);
+  --color-calming-300: var(--calming-300);
+  --color-calming-400: var(--calming-400);
+  --color-calming-500: var(--calming-500);
+  --color-calming-600: var(--calming-600);
+  --color-calming-700: var(--calming-700);
+  --color-calming-800: var(--calming-800);
+  --color-calming-900: var(--calming-900);
+  --color-calming: var(--calming-500);
 
-    --empathy-50: 270 100% 98%;
-    --empathy-100: 269 100% 95%;
-    --empathy-200: 269 100% 92%;
-    --empathy-300: 269 97% 85%;
-    --empathy-400: 270 95% 75%;
-    --empathy-500: 271 91% 65%;
-    --empathy-600: 271 81% 56%;
-    --empathy-700: 272 72% 47%;
-    --empathy-800: 272 67% 39%;
-    --empathy-900: 273 66% 32%;
+  --color-warm-50: var(--warm-50);
+  --color-warm-100: var(--warm-100);
+  --color-warm-200: var(--warm-200);
+  --color-warm-300: var(--warm-300);
+  --color-warm-400: var(--warm-400);
+  --color-warm-500: var(--warm-500);
+  --color-warm-600: var(--warm-600);
+  --color-warm-700: var(--warm-700);
+  --color-warm-800: var(--warm-800);
+  --color-warm-900: var(--warm-900);
+  --color-warm: var(--warm-500);
 
-    --trust-50: 214 100% 97%;
-    --trust-100: 214 95% 93%;
-    --trust-200: 213 97% 87%;
-    --trust-300: 212 96% 78%;
-    --trust-400: 213 94% 68%;
-    --trust-500: 217 91% 60%;
-    --trust-600: 221 83% 53%;
-    --trust-700: 224 76% 48%;
-    --trust-800: 226 71% 40%;
-    --trust-900: 224 64% 33%;
+  --color-empathy-50: var(--empathy-50);
+  --color-empathy-100: var(--empathy-100);
+  --color-empathy-200: var(--empathy-200);
+  --color-empathy-300: var(--empathy-300);
+  --color-empathy-400: var(--empathy-400);
+  --color-empathy-500: var(--empathy-500);
+  --color-empathy-600: var(--empathy-600);
+  --color-empathy-700: var(--empathy-700);
+  --color-empathy-800: var(--empathy-800);
+  --color-empathy-900: var(--empathy-900);
+  --color-empathy: var(--empathy-500);
 
-    --peace-50: 183 100% 96%;
-    --peace-100: 185 96% 90%;
-    --peace-200: 186 94% 81%;
-    --peace-300: 187 92% 69%;
-    --peace-400: 188 86% 53%;
-    --peace-500: 189 94% 43%;
-    --peace-600: 192 91% 36%;
-    --peace-700: 194 82% 31%;
-    --peace-800: 196 69% 27%;
-    --peace-900: 197 64% 24%;
-  }
+  --color-trust-50: var(--trust-50);
+  --color-trust-100: var(--trust-100);
+  --color-trust-200: var(--trust-200);
+  --color-trust-300: var(--trust-300);
+  --color-trust-400: var(--trust-400);
+  --color-trust-500: var(--trust-500);
+  --color-trust-600: var(--trust-600);
+  --color-trust-700: var(--trust-700);
+  --color-trust-800: var(--trust-800);
+  --color-trust-900: var(--trust-900);
+  --color-trust: var(--trust-500);
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 199 89% 48%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 199 89% 48%;
-  }
+  --color-peace-50: var(--peace-50);
+  --color-peace-100: var(--peace-100);
+  --color-peace-200: var(--peace-200);
+  --color-peace-300: var(--peace-300);
+  --color-peace-400: var(--peace-400);
+  --color-peace-500: var(--peace-500);
+  --color-peace-600: var(--peace-600);
+  --color-peace-700: var(--peace-700);
+  --color-peace-800: var(--peace-800);
+  --color-peace-900: var(--peace-900);
+  --color-peace: var(--peace-500);
+
+  /* Custom Agency Colors - le păstrezi pentru compatibilitate */
+  --color-agency-blue: var(--agency-blue);
+  --color-agency-blue-light: var(--agency-blue-light);
+  --color-agency-blue-dark: var(--agency-blue-dark);
+  --color-agency-accent: var(--agency-accent);
+  --color-agency-accent-light: var(--agency-accent-light);
+  --color-agency-accent-dark: var(--agency-accent-dark);
+  --color-agency-gray: var(--agency-gray);
+  --color-agency-gray-light: var(--agency-gray-light);
+  --color-agency-gray-dark: var(--agency-gray-dark);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-error: var(--error);
+  --color-error-light: var(--error-light);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Font families - definite în layout.tsx cu Inter și Merriweather */
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-serif: Merriweather, Georgia, serif;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.558 0.166 264.052);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.768 0.114 85.87);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* SCHEMA PROFESIONALĂ ELEGANTĂ - Mov profund + Teracotă + Auriu roz */
+  --therapeutic-50: oklch(0.97 0.02 280);   /* Mov foarte deschis */
+  --therapeutic-100: oklch(0.92 0.04 280);  /* Lavandă pal */
+  --therapeutic-200: oklch(0.85 0.08 280);  /* Mov deschis */
+  --therapeutic-300: oklch(0.72 0.12 280);  /* Mov mediu */
+  --therapeutic-400: oklch(0.58 0.15 280);  /* Mov intens */
+  --therapeutic-500: oklch(0.42 0.18 280);  /* Mov profund profesional */
+  --therapeutic-600: oklch(0.35 0.18 280);  /* Mov închis */
+  --therapeutic-700: oklch(0.28 0.16 280);  /* Mov foarte închis */
+  --therapeutic-800: oklch(0.22 0.12 280);  /* Mov aproape negru */
+  --therapeutic-900: oklch(0.16 0.08 280);  /* Mov foarte închis */
+
+  --calming-50: oklch(0.97 0.02 35);    /* Teracotă foarte deschis */
+  --calming-100: oklch(0.92 0.04 35);   /* Piersică caldă */
+  --calming-200: oklch(0.85 0.08 35);   /* Somon elegant */
+  --calming-300: oklch(0.72 0.12 35);   /* Teracotă deschis */
+  --calming-400: oklch(0.58 0.15 35);   /* Teracotă mediu */
+  --calming-500: oklch(0.45 0.18 35);   /* Teracotă intens */
+  --calming-600: oklch(0.38 0.18 35);   /* Teracotă închis */
+  --calming-700: oklch(0.32 0.16 35);   /* Maro-roșiatic */
+  --calming-800: oklch(0.25 0.12 35);   /* Maro cald */
+  --calming-900: oklch(0.18 0.08 35);   /* Maro foarte închis */
+
+  --warm-50: oklch(0.97 0.02 55);     /* Auriu-roz foarte deschis */
+  --warm-100: oklch(0.92 0.04 55);    /* Șampanie pal */
+  --warm-200: oklch(0.85 0.08 55);    /* Auriu-roz deschis */
+  --warm-300: oklch(0.72 0.12 55);    /* Auriu cald */
+  --warm-400: oklch(0.58 0.15 55);    /* Bronz deschis */
+  --warm-500: oklch(0.45 0.18 55);    /* Bronz intens */
+  --warm-600: oklch(0.38 0.18 55);    /* Bronz închis */
+  --warm-700: oklch(0.32 0.16 55);    /* Aramiu */
+  --warm-800: oklch(0.25 0.12 55);    /* Maro-auriu */
+  --warm-900: oklch(0.18 0.08 55);    /* Maro foarte închis */
+
+  --empathy-50: oklch(0.97 0.02 340);   /* Roz-mov foarte deschis */
+  --empathy-100: oklch(0.92 0.04 340);  /* Roz pal */
+  --empathy-200: oklch(0.85 0.08 340);  /* Roz-mov deschis */
+  --empathy-300: oklch(0.72 0.12 340);  /* Roz mediu */
+  --empathy-400: oklch(0.58 0.15 340);  /* Roz intens */
+  --empathy-500: oklch(0.45 0.18 340);  /* Roz profund */
+  --empathy-600: oklch(0.38 0.18 340);  /* Roz închis */
+  --empathy-700: oklch(0.32 0.16 340);  /* Magenta închis */
+  --empathy-800: oklch(0.25 0.12 340);  /* Burgundy */
+  --empathy-900: oklch(0.18 0.08 340);  /* Vișiniu închis */
+
+  --trust-50: oklch(0.97 0.02 220);    /* Gri-mov foarte deschis */
+  --trust-100: oklch(0.92 0.04 220);   /* Gri lavandă */
+  --trust-200: oklch(0.85 0.08 220);   /* Gri-mov deschis */
+  --trust-300: oklch(0.72 0.12 220);   /* Gri-mov mediu */
+  --trust-400: oklch(0.58 0.15 220);   /* Gri-mov intens */
+  --trust-500: oklch(0.45 0.18 220);   /* Gri-mov profund */
+  --trust-600: oklch(0.38 0.18 220);   /* Gri-mov închis */
+  --trust-700: oklch(0.32 0.16 220);   /* Antracit-mov */
+  --trust-800: oklch(0.25 0.12 220);   /* Gri foarte închis */
+  --trust-900: oklch(0.18 0.08 220);   /* Aproape negru */
+
+  --peace-50: oklch(0.97 0.02 200);    /* Gri-lavandă foarte deschis */
+  --peace-100: oklch(0.92 0.04 200);   /* Argintiu cald */
+  --peace-200: oklch(0.85 0.08 200);   /* Gri cald deschis */
+  --peace-300: oklch(0.72 0.12 200);   /* Gri cald mediu */
+  --peace-400: oklch(0.58 0.15 200);   /* Gri cald intens */
+  --peace-500: oklch(0.45 0.18 200);   /* Gri cald profund */
+  --peace-600: oklch(0.38 0.18 200);   /* Gri cald închis */
+  --peace-700: oklch(0.32 0.16 200);   /* Gri-șist */
+  --peace-800: oklch(0.25 0.12 200);   /* Gri foarte închis */
+  --peace-900: oklch(0.18 0.08 200);   /* Gri aproape negru */
+
+  /* Custom Agency Colors - Light Mode */
+  --agency-blue: oklch(0.558 0.166 264.052);
+  --agency-blue-light: oklch(0.97 0.03 264.052);
+  --agency-blue-dark: oklch(0.35 0.166 264.052);
+
+  --agency-accent: oklch(0.768 0.114 85.87);
+  --agency-accent-light: oklch(0.95 0.05 85.87);
+  --agency-accent-dark: oklch(0.65 0.114 85.87);
+
+  --agency-gray: oklch(0.5 0.02 264);
+  --agency-gray-light: oklch(0.98 0.005 264);
+  --agency-gray-dark: oklch(0.2 0.02 264);
+
+  --success: oklch(0.55 0.15 142);
+  --success-light: oklch(0.95 0.03 142);
+
+  --warning: oklch(0.7 0.15 65);
+  --warning-light: oklch(0.95 0.03 65);
+
+  --error: oklch(0.577 0.245 27.325);
+  --error-light: oklch(0.95 0.05 27.325);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+
+  /* Custom Agency Colors - Dark Mode */
+  --agency-blue: oklch(0.65 0.166 264.052);
+  --agency-blue-light: oklch(0.25 0.08 264.052);
+  --agency-blue-dark: oklch(0.8 0.166 264.052);
+
+  --agency-accent: oklch(0.8 0.114 85.87);
+  --agency-accent-light: oklch(0.3 0.05 85.87);
+  --agency-accent-dark: oklch(0.9 0.114 85.87);
+
+  --agency-gray: oklch(0.7 0.02 264);
+  --agency-gray-light: oklch(0.25 0.02 264);
+  --agency-gray-dark: oklch(0.9 0.02 264);
+
+  --success: oklch(0.65 0.15 142);
+  --success-light: oklch(0.25 0.08 142);
+
+  --warning: oklch(0.75 0.15 65);
+  --warning-light: oklch(0.3 0.08 65);
+
+  --error: oklch(0.704 0.191 22.216);
+  --error-light: oklch(0.3 0.1 22.216);
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-  }
-}
-
-/* Typography Classes */
-@layer components {
-  .typography-h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 
-  .typography-h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight;
+  /* Typography classes for your psychology site */
+  h1, h2, h3 {
+    font-family: var(--font-serif);
   }
 
-  .typography-h3 {
-    @apply text-2xl md:text-3xl font-semibold tracking-tight leading-snug;
+  .font-serif {
+    font-family: var(--font-serif);
   }
 
-  .typography-body {
-    @apply text-base leading-relaxed;
+  .font-sans {
+    font-family: var(--font-sans);
   }
-
-  .typography-lead {
-    @apply text-xl text-muted-foreground leading-relaxed font-light;
-  }
-
-  .typography-quote {
-    @apply text-lg md:text-xl italic leading-relaxed font-light;
-  }
-
-  /* Color utilities */
-  .text-therapeutic {
-    color: hsl(var(--therapeutic-600));
-  }
-
-  .text-calming {
-    color: hsl(var(--calming-600));
-  }
-
-  .text-warm {
-    color: hsl(var(--warm-600));
-  }
-
-  .text-empathy {
-    color: hsl(var(--empathy-600));
-  }
-
-  .text-trust {
-    color: hsl(var(--trust-600));
-  }
-
-  .text-peace {
-    color: hsl(var(--peace-600));
-  }
-
-  .bg-therapeutic {
-    background-color: hsl(var(--therapeutic-500));
-  }
-
-  .bg-therapeutic-light {
-    background-color: hsl(var(--therapeutic-100));
-  }
-
-  .bg-calming {
-    background-color: hsl(var(--calming-500));
-  }
-
-  .bg-calming-light {
-    background-color: hsl(var(--calming-100));
-  }
-
-  .bg-warm {
-    background-color: hsl(var(--warm-500));
-  }
-
-  .bg-warm-light {
-    background-color: hsl(var(--warm-100));
-  }
-
-  /* Gradient backgrounds */
-  .bg-therapeutic-gradient {
-    background: linear-gradient(135deg, hsl(var(--therapeutic-500)), hsl(var(--therapeutic-600)));
-  }
-
-  .bg-calming-gradient {
-    background: linear-gradient(135deg, hsl(var(--calming-500)), hsl(var(--calming-600)));
-  }
-
-  .bg-warm-gradient {
-    background: linear-gradient(135deg, hsl(var(--warm-500)), hsl(var(--warm-600)));
-  }
-
-  .bg-hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--therapeutic-500)), hsl(var(--calming-500)), hsl(var(--warm-500)));
-  }
-
-  /* Shadow utilities */
-  .shadow-therapeutic {
-    box-shadow: 0 10px 25px hsla(var(--therapeutic-500), 0.15);
-  }
-
-  .shadow-calming {
-    box-shadow: 0 10px 25px hsla(var(--calming-500), 0.15);
-  }
-
-  .shadow-warm {
-    box-shadow: 0 10px 25px hsla(var(--warm-500), 0.15);
-  }
-
-  /* Button variants */
-  .btn-therapeutic {
-    @apply bg-therapeutic text-white hover:bg-therapeutic/90 shadow-therapeutic transition-all duration-200;
-  }
-
-  .btn-calming {
-    @apply bg-calming text-white hover:bg-calming/90 shadow-calming transition-all duration-200;
-  }
-
-  .btn-warm {
-    @apply bg-warm text-warm-900 hover:bg-warm/90 shadow-warm transition-all duration-200;
-  }
-
-  /* Card variants */
-  .card-therapeutic {
-    @apply bg-card border border-border shadow-therapeutic;
-  }
-
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-  }
-
-  /* Animation classes */
-  .animate-breathe {
-    animation: breathe 3s ease-in-out infinite;
-  }
-
-  .animate-float {
-    animation: float 4s ease-in-out infinite;
-  }
-
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite;
-  }
-
-  .hover-lift {
-    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-lg;
-  }
-
-  .hover-scale {
-    @apply transition-transform duration-200 hover:scale-105;
-  }
-}
-
-/* Keyframes */
-@keyframes breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 5px hsl(var(--therapeutic-500) / 0.5);
-  }
-  50% {
-    box-shadow: 0 0 20px hsl(var(--therapeutic-500) / 0.8), 0 0 30px hsl(var(--therapeutic-500) / 0.6);
-  }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slide-in {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
-}
-
-/* Utility animations */
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out;
-}
-
-.animate-slide-in {
-  animation: slide-in 0.5s ease-out;
-}
-
-/* Responsive typography */
-@media (max-width: 768px) {
-  .typography-h1 { @apply text-3xl; }
-  .typography-h2 { @apply text-2xl; }
-  .typography-h3 { @apply text-xl; }
-}
-
-/* Focus styles for accessibility */
-.focus-ring:focus {
-  @apply outline-none ring-2 ring-therapeutic ring-offset-2;
-}
-
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .animate-breathe,
-  .animate-float,
-  .animate-glow,
-  .hover-lift,
-  .hover-scale,
-  .animate-fade-in,
-  .animate-slide-in {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-/* Additional animations for psychology website - add to globals.css */
-
-/* Enhanced Animation Classes */
-@layer components {
-  .animate-fade-in {
-    animation: fadeInUp 0.7s ease-out forwards;
-  }
-
-  .animate-slide-up {
-    animation: slideUpLarge 0.8s ease-out forwards;
-  }
-
-  .animate-stagger > * {
-    opacity: 0;
-    animation: fadeInStagger 0.6s ease-out forwards;
-  }
-
-  .animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
-  .animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
-  .animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
-  .animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
-  .animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
-  .animate-stagger > *:nth-child(6) { animation-delay: 0.6s; }
-
-  /* Hover animations for cards */
-  .hover-lift-gentle {
-    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
-  }
-
-  .hover-scale-gentle {
-    @apply transition-transform duration-300 hover:scale-105;
-  }
-}
-
-/* Enhanced Keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUpLarge {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInStagger {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Psychology-specific animations */
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-@keyframes gentleFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes softPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-/* Apply heartbeat to therapeutic elements */
-.animate-heartbeat {
-  animation: heartbeat 2s ease-in-out infinite;
-}
-
-.animate-gentle-float {
-  animation: gentleFloat 3s ease-in-out infinite;
-}
-
-.animate-soft-pulse {
-  animation: softPulse 2s ease-in-out infinite;
-}
-
-/* Loading states */
-.loading-shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-/* Responsive animation controls */
-@media (prefers-reduced-motion: reduce) {
-  .animate-fade-in,
-  .animate-slide-up,
-  .animate-stagger > *,
-  .animate-heartbeat,
-  .animate-gentle-float,
-  .animate-soft-pulse,
-  .hover-lift-gentle,
-  .hover-scale-gentle {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-  }
-
-  .animate-stagger > * {
-    opacity: 1;
-  }
-}
-
-/* Enhanced focus states for accessibility */
-.focus-therapeutic:focus {
-  @apply outline-none ring-2 ring-therapeutic-500 ring-offset-2;
-}
-
-.focus-calming:focus {
-  @apply outline-none ring-2 ring-calming-500 ring-offset-2;
-}
-
-.focus-warm:focus {
-  @apply outline-none ring-2 ring-warm-500 ring-offset-2;
 }

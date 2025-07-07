@@ -24,8 +24,8 @@ export const viewport: Viewport = {
     initialScale: 1,
     maximumScale: 5,
     themeColor: [
-        { media: '(prefers-color-scheme: light)', color: '#0ea5e9' },
-        { media: '(prefers-color-scheme: dark)', color: '#0284c7' },
+        { media: '(prefers-color-scheme: light)', color: '#6B46C1' }, // Mov profund profesional
+        { media: '(prefers-color-scheme: dark)', color: '#8B5CF6' },   // Mov mai deschis pentru dark
     ],
 }
 
@@ -202,6 +202,7 @@ export default function RootLayout({
             />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <title>Psiholog Alina</title>
         </head>
         <body className={cn(
             "min-h-screen bg-background font-sans antialiased",
