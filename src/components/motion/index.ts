@@ -1,0 +1,10 @@
+// src/components/motion/index.ts - Barrel exports
+export { FadeIn } from './FadeIn/FadeIn'
+export { SlideUp } from './SlideUp/SlideUp'
+export { SlideIn } from './SlideIn/SlideIn'
+export { Scale } from './Scale/Scale'
+export { Stagger } from './Stagger/Stagger'
+export { StaggerItem } from './StaggerItem/StaggerItem'
+export { HoverScale } from './HoverScale/HoverScale'
+export { Floating } from './Floating/Floating'
+export { PageTransition } from './PageTransition/PageTransition'

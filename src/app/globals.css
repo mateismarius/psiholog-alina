@@ -1,26 +1,484 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* ShadCN base colors */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 199 89% 48%;
+    --radius: 0.5rem;
+
+    /* Psychology custom colors */
+    --therapeutic-50: 240 100% 98%;
+    --therapeutic-100: 224 100% 96%;
+    --therapeutic-200: 186 100% 87%;
+    --therapeutic-300: 186 96% 79%;
+    --therapeutic-400: 186 84% 69%;
+    --therapeutic-500: 199 89% 48%;
+    --therapeutic-600: 200 98% 39%;
+    --therapeutic-700: 201 96% 32%;
+    --therapeutic-800: 201 90% 27%;
+    --therapeutic-900: 202 80% 24%;
+
+    --calming-50: 78 100% 97%;
+    --calming-100: 79 100% 90%;
+    --calming-200: 80 93% 80%;
+    --calming-300: 81 85% 67%;
+    --calming-400: 82 78% 55%;
+    --calming-500: 84 81% 44%;
+    --calming-600: 85 84% 35%;
+    --calming-700: 86 78% 27%;
+    --calming-800: 87 70% 22%;
+    --calming-900: 88 61% 20%;
+
+    --warm-50: 55 100% 97%;
+    --warm-100: 55 100% 88%;
+    --warm-200: 53 100% 77%;
+    --warm-300: 50 100% 64%;
+    --warm-400: 48 96% 53%;
+    --warm-500: 45 93% 47%;
+    --warm-600: 41 96% 40%;
+    --warm-700: 35 91% 33%;
+    --warm-800: 32 81% 29%;
+    --warm-900: 28 73% 26%;
+
+    --empathy-50: 270 100% 98%;
+    --empathy-100: 269 100% 95%;
+    --empathy-200: 269 100% 92%;
+    --empathy-300: 269 97% 85%;
+    --empathy-400: 270 95% 75%;
+    --empathy-500: 271 91% 65%;
+    --empathy-600: 271 81% 56%;
+    --empathy-700: 272 72% 47%;
+    --empathy-800: 272 67% 39%;
+    --empathy-900: 273 66% 32%;
+
+    --trust-50: 214 100% 97%;
+    --trust-100: 214 95% 93%;
+    --trust-200: 213 97% 87%;
+    --trust-300: 212 96% 78%;
+    --trust-400: 213 94% 68%;
+    --trust-500: 217 91% 60%;
+    --trust-600: 221 83% 53%;
+    --trust-700: 224 76% 48%;
+    --trust-800: 226 71% 40%;
+    --trust-900: 224 64% 33%;
+
+    --peace-50: 183 100% 96%;
+    --peace-100: 185 96% 90%;
+    --peace-200: 186 94% 81%;
+    --peace-300: 187 92% 69%;
+    --peace-400: 188 86% 53%;
+    --peace-500: 189 94% 43%;
+    --peace-600: 192 91% 36%;
+    --peace-700: 194 82% 31%;
+    --peace-800: 196 69% 27%;
+    --peace-900: 197 64% 24%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 199 89% 48%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Typography Classes */
+@layer components {
+  .typography-h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight;
+  }
+
+  .typography-h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight;
+  }
+
+  .typography-h3 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight leading-snug;
+  }
+
+  .typography-body {
+    @apply text-base leading-relaxed;
+  }
+
+  .typography-lead {
+    @apply text-xl text-muted-foreground leading-relaxed font-light;
+  }
+
+  .typography-quote {
+    @apply text-lg md:text-xl italic leading-relaxed font-light;
+  }
+
+  /* Color utilities */
+  .text-therapeutic {
+    color: hsl(var(--therapeutic-600));
+  }
+
+  .text-calming {
+    color: hsl(var(--calming-600));
+  }
+
+  .text-warm {
+    color: hsl(var(--warm-600));
+  }
+
+  .text-empathy {
+    color: hsl(var(--empathy-600));
+  }
+
+  .text-trust {
+    color: hsl(var(--trust-600));
+  }
+
+  .text-peace {
+    color: hsl(var(--peace-600));
+  }
+
+  .bg-therapeutic {
+    background-color: hsl(var(--therapeutic-500));
+  }
+
+  .bg-therapeutic-light {
+    background-color: hsl(var(--therapeutic-100));
+  }
+
+  .bg-calming {
+    background-color: hsl(var(--calming-500));
+  }
+
+  .bg-calming-light {
+    background-color: hsl(var(--calming-100));
+  }
+
+  .bg-warm {
+    background-color: hsl(var(--warm-500));
+  }
+
+  .bg-warm-light {
+    background-color: hsl(var(--warm-100));
+  }
+
+  /* Gradient backgrounds */
+  .bg-therapeutic-gradient {
+    background: linear-gradient(135deg, hsl(var(--therapeutic-500)), hsl(var(--therapeutic-600)));
+  }
+
+  .bg-calming-gradient {
+    background: linear-gradient(135deg, hsl(var(--calming-500)), hsl(var(--calming-600)));
+  }
+
+  .bg-warm-gradient {
+    background: linear-gradient(135deg, hsl(var(--warm-500)), hsl(var(--warm-600)));
+  }
+
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--therapeutic-500)), hsl(var(--calming-500)), hsl(var(--warm-500)));
+  }
+
+  /* Shadow utilities */
+  .shadow-therapeutic {
+    box-shadow: 0 10px 25px hsla(var(--therapeutic-500), 0.15);
+  }
+
+  .shadow-calming {
+    box-shadow: 0 10px 25px hsla(var(--calming-500), 0.15);
+  }
+
+  .shadow-warm {
+    box-shadow: 0 10px 25px hsla(var(--warm-500), 0.15);
+  }
+
+  /* Button variants */
+  .btn-therapeutic {
+    @apply bg-therapeutic text-white hover:bg-therapeutic/90 shadow-therapeutic transition-all duration-200;
+  }
+
+  .btn-calming {
+    @apply bg-calming text-white hover:bg-calming/90 shadow-calming transition-all duration-200;
+  }
+
+  .btn-warm {
+    @apply bg-warm text-warm-900 hover:bg-warm/90 shadow-warm transition-all duration-200;
+  }
+
+  /* Card variants */
+  .card-therapeutic {
+    @apply bg-card border border-border shadow-therapeutic;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Animation classes */
+  .animate-breathe {
+    animation: breathe 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
+
+/* Keyframes */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px hsl(var(--therapeutic-500) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(var(--therapeutic-500) / 0.8), 0 0 30px hsl(var(--therapeutic-500) / 0.6);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* Utility animations */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .typography-h1 { @apply text-3xl; }
+  .typography-h2 { @apply text-2xl; }
+  .typography-h3 { @apply text-xl; }
+}
+
+/* Focus styles for accessibility */
+.focus-ring:focus {
+  @apply outline-none ring-2 ring-therapeutic ring-offset-2;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-breathe,
+  .animate-float,
+  .animate-glow,
+  .hover-lift,
+  .hover-scale,
+  .animate-fade-in,
+  .animate-slide-in {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Additional animations for psychology website - add to globals.css */
+
+/* Enhanced Animation Classes */
+@layer components {
+  .animate-fade-in {
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUpLarge 0.8s ease-out forwards;
+  }
+
+  .animate-stagger > * {
+    opacity: 0;
+    animation: fadeInStagger 0.6s ease-out forwards;
+  }
+
+  .animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+  .animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+  .animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+  .animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+  .animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+  .animate-stagger > *:nth-child(6) { animation-delay: 0.6s; }
+
+  /* Hover animations for cards */
+  .hover-lift-gentle {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .hover-scale-gentle {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
+
+/* Enhanced Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpLarge {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInStagger {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Psychology-specific animations */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Apply heartbeat to therapeutic elements */
+.animate-heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.animate-soft-pulse {
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Responsive animation controls */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-stagger > *,
+  .animate-heartbeat,
+  .animate-gentle-float,
+  .animate-soft-pulse,
+  .hover-lift-gentle,
+  .hover-scale-gentle {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .animate-stagger > * {
+    opacity: 1;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.focus-therapeutic:focus {
+  @apply outline-none ring-2 ring-therapeutic-500 ring-offset-2;
+}
+
+.focus-calming:focus {
+  @apply outline-none ring-2 ring-calming-500 ring-offset-2;
+}
+
+.focus-warm:focus {
+  @apply outline-none ring-2 ring-warm-500 ring-offset-2;
 }
