@@ -8,15 +8,12 @@ import {
     Users,
     Brain,
     Star,
-    CheckCircle,
     Calendar,
     Phone,
     Target,
-    BookOpen,
     Shield,
     Lightbulb,
     Clock,
-    MapPin,
     Quote,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
