@@ -519,7 +519,7 @@ export default function HomePage() {
 
                 <span className="text-white/70">sau</span>
 
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-calming-600">
+                <Button asChild size="lg" variant="outline" className="border-white text-calming-600 hover:bg-white hover:text-calming-800">
                   <a href="tel:+40722123456">
                     <Phone className="w-5 h-5 mr-2" />
                     Sună acum: +40 722 123 456
