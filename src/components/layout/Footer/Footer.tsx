@@ -29,10 +29,8 @@ const footerSections = {
     ],
     informatii: [
         { name: 'Despre Mine', href: '/despre-mine' },
-        { name: 'Blog Psihologie', href: '/blog' },
         { name: 'Întrebări Frecvente', href: '/faq' },
-        { name: 'Testimoniale', href: '/testimoniale' },
-        { name: 'Resurse Utile', href: '/resurse' },
+        // { name: 'Testimoniale', href: '/testimoniale' },
     ],
     legal: [
         { name: 'Politica de Confidențialitate', href: '/confidentialitate' },
