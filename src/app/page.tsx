@@ -4,7 +4,6 @@ import {
   ArrowRight,
   Star,
   Users,
-  Calendar,
   Shield,
   Heart,
   Brain,
