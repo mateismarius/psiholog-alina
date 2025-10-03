@@ -270,8 +270,8 @@ export default function AboutPage() {
                             <div className="relative">
                                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src="/images/psiholog-alina-about.jpg"
-                                        alt="Psiholog Alina Popescu - Specialist terapie autism București"
+                                        src="/images/psiholog-alina-hero.jpg"
+                                        alt="Psiholog Alina Patru - Specialist terapie autism București"
                                         width={500}
                                         height={600}
                                         className="w-full h-auto"

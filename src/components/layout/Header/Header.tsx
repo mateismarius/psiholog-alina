@@ -32,7 +32,7 @@ const navigationItems = [
 export function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
-    const [setHoveredItem] = useState<string | null>(null)
+    // const [setHoveredItem] = useState<string | null>(null)
     const pathname = usePathname()
 
     useEffect(() => {
@@ -124,8 +124,8 @@ export function Header() {
                                 <div
                                     key={item.name}
                                     className="relative group"
-                                    onMouseEnter={() => setHoveredItem(item.name)}
-                                    onMouseLeave={() => setHoveredItem(null)}
+                                    // onMouseEnter={() => setHoveredItem(item.name)}
+                                    // onMouseLeave={() => setHoveredItem(null)}
                                 >
                                     <Link
                                         href={item.href}
@@ -152,7 +152,7 @@ export function Header() {
                                 </Link>
                             </Button>
                             <Button asChild className="bg-therapeutic text-white hover:bg-therapeutic/90">
-                                <Link href="/programare">
+                                <Link href="/contact">
                                     <Calendar className="h-4 w-4 mr-2" />
                                     Programare
                                 </Link>
@@ -217,7 +217,7 @@ export function Header() {
                                                 <Link href="/contact">Contact</Link>
                                             </Button>
                                             <Button asChild className="bg-therapeutic text-white hover:bg-therapeutic/90 w-full sm:w-auto">
-                                                <Link href="/programare">Programare</Link>
+                                                <Link href="/contact">Programare</Link>
                                             </Button>
                                         </div>
                                     </div>
