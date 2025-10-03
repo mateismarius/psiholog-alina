@@ -106,7 +106,7 @@ export function Header() {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <Heart className="h-6 w-6 lg:h-7 lg:w-7 text-muted-foreground" />
+                                <Heart className="h-6 w-6 lg:h-7 lg:w-7 text-therapeutic-700" />
                             </motion.div>
                             <div className="sm:block text-left sm:text-left ">
                                 <div className="font-bold text-xl lg:text-2xl text-therapeutic-700">
