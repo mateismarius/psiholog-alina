@@ -108,7 +108,7 @@ export function Header() {
                             >
                                 <Heart className="h-6 w-6 lg:h-7 lg:w-7" />
                             </motion.div>
-                            <div className="hidden sm:block">
+                            <div className=" sm:block">
                                 <div className="font-bold text-xl lg:text-2xl text-therapeutic-700">
                                     Psiholog Alina
                                 </div>
