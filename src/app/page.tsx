@@ -30,7 +30,7 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 const stats = [
   {
     icon: Users,
-    value: '500+',
+    value: '100+',
     label: 'Pacienți Ajutați',
     description: 'Copii și adulți cu autism și alte tulburări'
   },
@@ -38,7 +38,7 @@ const stats = [
     icon: Star,
     value: '4.9/5',
     label: 'Rating Pacienți',
-    description: 'Peste 150 de recenzii pozitive'
+    description: 'Peste 100 de recenzii pozitive'
   },
   {
     icon: Award,
@@ -70,7 +70,7 @@ const services = [
     href: '/servicii/evaluare-psihologica',
     color: 'therapeutic',
     featured: true,
-    price: 'de la 200 RON/ședință',
+    price: '350 RON/ședință',
     duration: '50 minute'
   },
   {
@@ -87,7 +87,7 @@ const services = [
     ],
     href: '/servicii/interventie-recuperare',
     color: 'calming',
-    price: 'de la 250 RON/ședință',
+    price: '240 RON/ședință',
     duration: '100 minute'
   },
   {
@@ -104,7 +104,7 @@ const services = [
     ],
     href: '/servicii/psihologie-sportiva',
     color: 'warm',
-    price: 'de la 180 RON/ședință',
+    price: '230 RON/ședință',
     duration: '50 minute'
   },
   {
@@ -121,7 +121,7 @@ const services = [
     ],
     href: '/servicii/psihoterapie',
     color: 'empathy',
-    price: 'de la 180 RON/ședință',
+    price: '230 RON/ședință',
     duration: '50 minute'
   },
   {
@@ -138,7 +138,7 @@ const services = [
     ],
     href: '/servicii/logopedie',
     color: 'trust',
-    price: 'de la 150 RON/ședință',
+    price: '180 RON/ședință',
     duration: '45 minute'
   }
 ]
@@ -240,21 +240,21 @@ export default function HomePage() {
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
-                    <Link href="/programare">
-                      <Calendar className="w-5 h-5 mr-2" />
-                      Programare Gratuită
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Link>
-                  </Button>
+                {/*<div className="flex flex-col sm:flex-row gap-4">*/}
+                {/*  /!*<Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">*!/*/}
+                {/*  /!*  <Link href="/programare">*!/*/}
+                {/*  /!*    <Calendar className="w-5 h-5 mr-2" />*!/*/}
+                {/*  /!*    Programare Gratuită*!/*/}
+                {/*  /!*    <ArrowRight className="w-5 h-5 ml-2" />*!/*/}
+                {/*  /!*  </Link>*!/*/}
+                {/*  /!*</Button>*!/*/}
 
-                  <Button asChild size="lg" variant="outline" className="border-white text-therapeutic-600 hover:bg-white hover:text-therapeutic-700">
-                    <Link href="/servicii/terapie-autism">
-                      Despre Terapie Autism
-                    </Link>
-                  </Button>
-                </div>
+                {/*  <Button asChild size="lg" variant="outline" className="border-white text-therapeutic-600 hover:bg-white hover:text-therapeutic-700">*/}
+                {/*    <Link href="/servicii/terapie-autism">*/}
+                {/*      Despre Terapie Autism*/}
+                {/*    </Link>*/}
+                {/*  </Button>*/}
+                {/*</div>*/}
 
                 <div className="flex items-center space-x-6 pt-4">
                   <div className="flex items-center space-x-2">
@@ -262,11 +262,11 @@ export default function HomePage() {
                     <span className="text-white/80 text-sm">Disponibil pentru consultații</span>
                   </div>
                   <a
-                      href="tel:+40722123456"
+                      href="tel:+40724172996"
                       className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors"
                   >
                     <Phone className="w-4 h-4" />
-                    <span className="font-medium">+40 722 123 456</span>
+                    <span className="font-medium">+40 724 172 996</span>
                   </a>
                 </div>
               </AnimatedSection>
@@ -295,7 +295,7 @@ export default function HomePage() {
                         <Heart className="w-6 h-6 text-therapeutic-600" />
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-therapeutic-600">500+</div>
+                        <div className="text-2xl font-bold text-therapeutic-600">100+</div>
                         <div className="text-sm text-gray-600">Familii ajutate</div>
                       </div>
                     </div>
@@ -345,7 +345,7 @@ export default function HomePage() {
               {services.map((service, index) => {
                 const Icon = service.icon
                 return (
-                    <div key={index} className="group">
+                    <div key={index}  className="group">
                       <Card className={`h-full ${service.featured ? 'ring-2 ring-therapeutic-200 shadow-therapeutic' : ''} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
                         <CardHeader className="relative">
                           {service.featured && (
@@ -490,8 +490,8 @@ export default function HomePage() {
                     <div>
                       <Typography variant="h6" className="mb-2">Locație</Typography>
                       <Typography variant="body" className="text-gray-600">
-                        Strada Exemplu nr. 123<br />
-                        Sector 1, București<br />
+                          Str. Lunei, Nr.7<br />
+                        Sector 2, București<br />
                         <span className="text-sm text-therapeutic-600">Lângă metrou Aviatorilor</span>
                       </Typography>
                     </div>
@@ -522,11 +522,11 @@ export default function HomePage() {
                     <div>
                       <Typography variant="h6" className="mb-2">Contact</Typography>
                       <Typography variant="body" className="text-gray-600">
-                        <a href="tel:+40722123456" className="block hover:text-warm-600 transition-colors">
-                          +40 722 123 456
+                        <a href="tel:+40724172996" className="block hover:text-warm-600 transition-colors">
+                          +40 724 172 996
                         </a>
-                        <a href="mailto:contact@psiholog-alina.ro" className="block hover:text-warm-600 transition-colors">
-                          contact@psiholog-alina.ro
+                        <a href="mailto:psiholog.alina.patru@gmail.com" className="block hover:text-warm-600 transition-colors">
+                          psiholog.alina.patru@gmail.com
                         </a>
                         <span className="text-sm text-warm-600">Răspuns în 24h</span>
                       </Typography>
@@ -551,19 +551,19 @@ export default function HomePage() {
               </Typography>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
-                  <Link href="/programare">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Programare Gratuită
-                  </Link>
-                </Button>
+                {/*<Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">*/}
+                {/*  <Link href="/programare">*/}
+                {/*    <Calendar className="w-5 h-5 mr-2" />*/}
+                {/*    Programare Gratuită*/}
+                {/*  </Link>*/}
+                {/*</Button>*/}
 
-                <span className="text-white/70">sau</span>
+                {/*<span className="text-white/70">sau</span>*/}
 
-                <Button asChild size="lg" variant="outline" className="border-white text-calming-600 hover:bg-white hover:text-calming-800">
-                  <a href="tel:+40722123456">
+                <Button asChild size="lg" variant="outline" className="border-white text-calming-600 hover:bg-red-100 hover:text-calming-900">
+                  <a href="tel:+40724172996">
                     <Phone className="w-5 h-5 mr-2" />
-                    Sună acum: +40 722 123 456
+                    Sună acum: +40 724 172 996
                   </a>
                 </Button>
               </div>

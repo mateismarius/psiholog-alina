@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Mail, MapPin, Calendar, Heart, ChevronDown } from 'lucide-react'
+import { Menu, X, Phone, Mail, MapPin, Calendar, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/core'
 import { cn } from '@/lib/utils'
@@ -22,33 +22,6 @@ const navigationItems = [
     {
         name: 'Servicii',
         href: '/servicii',
-        submenu: [
-            {
-                name: 'Ședințe de Evaluare',
-                href: '/servicii/evaluare-psihologica',
-                description: 'Evaluare prin observație și chestionare specializate - 50 min'
-            },
-            {
-                name: 'Intervenție pentru Recuperare',
-                href: '/servicii/interventie-recuperare',
-                description: 'Terapie prin joc pentru copii cu autism, ADHD - 100 min'
-            },
-            {
-                name: 'Psihologie Sportivă',
-                href: '/servicii/psihologie-sportiva',
-                description: 'Îmbunătățirea performanței sportive - cabinet/online - 50 min'
-            },
-            {
-                name: 'Psihoterapie',
-                href: '/servicii/psihoterapie',
-                description: 'Pentru adulți, adolescenți și copii - cabinet/online - 50 min'
-            },
-            {
-                name: 'Logopedie',
-                href: '/servicii/logopedie',
-                description: 'Recuperarea vorbirii la copii - 45 min'
-            }
-        ]
     },
     {
         name: 'Contact',
@@ -59,7 +32,7 @@ const navigationItems = [
 export function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
-    const [hoveredItem, setHoveredItem] = useState<string | null>(null)
+    const [setHoveredItem] = useState<string | null>(null)
     const pathname = usePathname()
 
     useEffect(() => {
@@ -85,34 +58,29 @@ export function Header() {
                             <div className="flex items-center space-x-2">
                                 <Phone className="h-4 w-4" />
                                 <a
-                                    href="tel:+40722123456"
+                                    href="tel:+40724172996"
                                     className="hover:text-therapeutic-200 transition-colors"
                                 >
-                                    +40 722 123 456
+                                    +40 724 172 996
                                 </a>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Mail className="h-4 w-4" />
                                 <a
-                                    href="mailto:contact@psiholog-alina.ro"
+                                    href="mailto:psiholog.alina.patru@gmail.com"
                                     className="hover:text-therapeutic-200 transition-colors"
                                 >
-                                    contact@psiholog-alina.ro
+                                    psiholog.alina.patru@gmail.com
                                 </a>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <MapPin className="h-4 w-4" />
-                                <span>București, Sector 1</span>
+                                <span>Str. Lunei ,nr.7,sector 2, București sau Online</span>
                             </div>
                         </div>
                         <div className="flex items-center space-x-4">
                             <span className="text-therapeutic-200">Program: Lun-Vin 9:00-18:00</span>
-                            <Link
-                                href="/programare"
-                                className="hover:text-therapeutic-200 transition-colors font-medium"
-                            >
-                                Programare Online
-                            </Link>
+
                         </div>
                     </div>
                 </Container>
@@ -169,40 +137,8 @@ export function Header() {
                                         )}
                                     >
                                         {item.name}
-                                        {item.submenu && <ChevronDown className="inline h-4 w-4 ml-1" />}
                                     </Link>
 
-                                    {/* Submenu */}
-                                    {item.submenu && (
-                                        <AnimatePresence>
-                                            {hoveredItem === item.name && (
-                                                <motion.div
-                                                    initial={{ opacity: 0, y: 10 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    exit={{ opacity: 0, y: 10 }}
-                                                    transition={{ duration: 0.2 }}
-                                                    className="absolute left-0 top-full mt-2 w-80 bg-white border border-border shadow-xl rounded-lg p-4 z-50"
-                                                >
-                                                    <div className="space-y-3">
-                                                        {item.submenu.map((subItem) => (
-                                                            <Link
-                                                                key={subItem.name}
-                                                                href={subItem.href}
-                                                                className="block p-3 rounded-md hover:bg-therapeutic-50 transition-colors group/sub"
-                                                            >
-                                                                <div className="font-medium text-therapeutic-800 group-hover/sub:text-therapeutic-600 transition-colors">
-                                                                    {subItem.name}
-                                                                </div>
-                                                                <div className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                                                                    {subItem.description}
-                                                                </div>
-                                                            </Link>
-                                                        ))}
-                                                    </div>
-                                                </motion.div>
-                                            )}
-                                        </AnimatePresence>
-                                    )}
                                 </div>
                             ))}
                         </nav>
@@ -262,20 +198,7 @@ export function Header() {
                                                 {item.name}
                                             </Link>
 
-                                            {/* Mobile submenu */}
-                                            {item.submenu && (
-                                                <div className="pl-4 space-y-2 border-l-2 border-therapeutic-200">
-                                                    {item.submenu.map((subItem) => (
-                                                        <Link
-                                                            key={subItem.name}
-                                                            href={subItem.href}
-                                                            className="block py-2 text-sm text-muted-foreground hover:text-therapeutic-600 transition-colors"
-                                                        >
-                                                            {subItem.name}
-                                                        </Link>
-                                                    ))}
-                                                </div>
-                                            )}
+
                                         </div>
                                     ))}
 
@@ -283,7 +206,7 @@ export function Header() {
                                     <div className="pt-4 border-t space-y-3">
                                         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                                             <Phone className="h-4 w-4" />
-                                            <a href="tel:+40722123456">+40 722 123 456</a>
+                                            <a href="tel:+40724172996">+40 724 172 996</a>
                                         </div>
                                         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                                             <Mail className="h-4 w-4" />

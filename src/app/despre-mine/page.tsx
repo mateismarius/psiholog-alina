@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 }
 
 const personalInfo = {
-    name: 'Psiholog Alina Popescu',
+    name: 'Alina Patru',
     title: 'Psiholog Clinician & Specialist Terapie Autism',
     experience: '10+ ani experiență',
     clients: '500+ pacienți ajutați',

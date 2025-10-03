@@ -6,26 +6,22 @@ import {
     Mail,
     MapPin,
     Clock,
-    Facebook,
-    Linkedin,
-    Instagram,
     Heart,
     Award,
     Shield,
     Users,
 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { motion } from 'framer-motion'
 
 const footerSections = {
     servicii: [
-        { name: 'Terapie Autism', href: '/servicii/terapie-autism' },
-        { name: 'Psihoterapie Individuală', href: '/servicii/psihoterapie-individuala' },
-        { name: 'Terapie de Cuplu', href: '/servicii/terapie-cuplu' },
-        { name: 'Consiliere Familială', href: '/servicii/consiliere-familiala' },
-        { name: 'Evaluare Psihologică', href: '/servicii/evaluare-psihologica' },
+        { name: 'Terapie Autism', href: '/servicii' },
+        { name: 'Psihoterapie Individuală', href: '/servicii'},
+        { name: 'Terapie de Cuplu', href: '/servicii'},
+        { name: 'Consiliere Familială', href: '/servicii' },
+        { name: 'Evaluare Psihologică', href: '/servicii' },
     ],
     informatii: [
         { name: 'Despre Mine', href: '/despre-mine' },
@@ -41,26 +37,26 @@ const footerSections = {
     ]
 }
 
-const socialLinks = [
-    {
-        name: 'Facebook',
-        href: 'https://facebook.com/psiholog-alina-bucuresti',
-        icon: Facebook,
-        color: 'hover:text-blue-600'
-    },
-    {
-        name: 'LinkedIn',
-        href: 'https://linkedin.com/in/psiholog-alina',
-        icon: Linkedin,
-        color: 'hover:text-blue-700'
-    },
-    {
-        name: 'Instagram',
-        href: 'https://instagram.com/psiholog.alina',
-        icon: Instagram,
-        color: 'hover:text-pink-600'
-    },
-]
+// const socialLinks = [
+//     {
+//         name: 'Facebook',
+//         href: 'https://facebook.com/psiholog-alina-bucuresti',
+//         icon: Facebook,
+//         color: 'hover:text-blue-600'
+//     },
+//     {
+//         name: 'LinkedIn',
+//         href: 'https://linkedin.com/in/psiholog-alina',
+//         icon: Linkedin,
+//         color: 'hover:text-blue-700'
+//     },
+//     {
+//         name: 'Instagram',
+//         href: 'https://instagram.com/psiholog.alina',
+//         icon: Instagram,
+//         color: 'hover:text-pink-600'
+//     },
+// ]
 
 const achievements = [
     {
@@ -114,47 +110,47 @@ export function Footer() {
                                 </Typography>
 
                                 {/* Contact info */}
-                                <div className="space-y-4">
-                                    <div className="flex items-center space-x-3">
-                                        <Phone className="h-5 w-5 text-therapeutic-400 flex-shrink-0" />
-                                        <a
-                                            href="tel:+40722123456"
-                                            className="text-gray-300 hover:text-white transition-colors"
-                                        >
-                                            +40 722 123 456
-                                        </a>
-                                    </div>
+                                {/*<div className="space-y-4">*/}
+                                {/*    <div className="flex items-center space-x-3">*/}
+                                {/*        <Phone className="h-5 w-5 text-therapeutic-400 flex-shrink-0" />*/}
+                                {/*        <a*/}
+                                {/*            href="tel:+40724172996"*/}
+                                {/*            className="text-gray-300 hover:text-white transition-colors"*/}
+                                {/*        >*/}
+                                {/*            +40 722 123 456*/}
+                                {/*        </a>*/}
+                                {/*    </div>*/}
 
-                                    <div className="flex items-center space-x-3">
-                                        <Mail className="h-5 w-5 text-therapeutic-400 flex-shrink-0" />
-                                        <a
-                                            href="mailto:contact@psiholog-alina.ro"
-                                            className="text-gray-300 hover:text-white transition-colors"
-                                        >
-                                            contact@psiholog-alina.ro
-                                        </a>
-                                    </div>
+                                {/*    <div className="flex items-center space-x-3">*/}
+                                {/*        <Mail className="h-5 w-5 text-therapeutic-400 flex-shrink-0" />*/}
+                                {/*        <a*/}
+                                {/*            href="mailto:contact@psiholog-alina.ro"*/}
+                                {/*            className="text-gray-300 hover:text-white transition-colors"*/}
+                                {/*        >*/}
+                                {/*            contact@psiholog-alina.ro*/}
+                                {/*        </a>*/}
+                                {/*    </div>*/}
 
-                                    <div className="flex items-start space-x-3">
-                                        <MapPin className="h-5 w-5 text-therapeutic-400 flex-shrink-0 mt-0.5" />
-                                        <div className="text-gray-300">
-                                            <div>Strada Exemplu nr. 123</div>
-                                            <div>Sector 1, București</div>
-                                        </div>
-                                    </div>
+                                {/*    <div className="flex items-start space-x-3">*/}
+                                {/*        <MapPin className="h-5 w-5 text-therapeutic-400 flex-shrink-0 mt-0.5" />*/}
+                                {/*        <div className="text-gray-300">*/}
+                                {/*            <div>Strada Exemplu nr. 123</div>*/}
+                                {/*            <div>Sector 1, București</div>*/}
+                                {/*        </div>*/}
+                                {/*    </div>*/}
 
-                                    <div className="flex items-start space-x-3">
-                                        <Clock className="h-5 w-5 text-therapeutic-400 flex-shrink-0 mt-0.5" />
-                                        <div className="text-gray-300">
-                                            <div className="font-medium text-white mb-2">Program Cabinet:</div>
-                                            <div className="text-sm space-y-1">
-                                                <div>Luni - Vineri: 09:00 - 18:00</div>
-                                                <div>Sâmbătă: 09:00 - 14:00</div>
-                                                <div>Duminică: Închis</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {/*    <div className="flex items-start space-x-3">*/}
+                                {/*        <Clock className="h-5 w-5 text-therapeutic-400 flex-shrink-0 mt-0.5" />*/}
+                                {/*        <div className="text-gray-300">*/}
+                                {/*            <div className="font-medium text-white mb-2">Program Cabinet:</div>*/}
+                                {/*            <div className="text-sm space-y-1">*/}
+                                {/*                <div>Luni - Vineri: 09:00 - 18:00</div>*/}
+                                {/*                <div>Sâmbătă: 09:00 - 14:00</div>*/}
+                                {/*                <div>Duminică: Închis</div>*/}
+                                {/*            </div>*/}
+                                {/*        </div>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
                             </div>
 
                             {/* Services */}
@@ -195,54 +191,99 @@ export function Footer() {
                                 </ul>
                             </div>
 
-                            {/* Newsletter & Social */}
                             <div>
                                 <Typography variant="h6" className="text-white mb-6">
-                                    Rămâi la Curent
+                                    Contact
                                 </Typography>
+                                <div className="flex items-center space-x-3 mb-1">
+                                    <Phone className="h-5 w-5 text-therapeutic-400 flex-shrink-0" />
+                                    <a
+                                        href="tel:+40724172996"
+                                        className="text-gray-300 hover:text-white transition-colors"
+                                    >
+                                        +40 724 172 996
+                                    </a>
+                                </div>
 
-                                <div className="mb-6">
-                                    <Typography variant="small" className="text-gray-300 mb-4">
-                                        Abonează-te pentru articole noi despre psihologie și autism.
-                                    </Typography>
-                                    <div className="flex flex-col sm:flex-row gap-2">
-                                        <input
-                                            type="email"
-                                            placeholder="Email-ul tău"
-                                            className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-therapeutic-500 focus:border-therapeutic-500"
-                                        />
-                                        <Button size="sm" className="bg-therapeutic text-white hover:bg-therapeutic/90">
-                                            Abonează-te
-                                        </Button>
+                                <div className="flex items-center space-x-3 mb-1">
+                                    <Mail className="h-5 w-5 text-therapeutic-400 flex-shrink-0" />
+                                    <a
+                                        href="mailto:psiholog.alina.patru@gmail.com"
+                                        className="text-gray-300 hover:text-white transition-colors"
+                                    >
+                                        psiholog.alina.patru@gmail.com
+                                    </a>
+                                </div>
+
+                                <div className="flex items-start space-x-3 mb-1">
+                                    <MapPin className="h-5 w-5 text-therapeutic-400 flex-shrink-0 mt-0.5" />
+                                    <div className="text-gray-300">
+                                        <div>Strada Lunei nr. 7</div>
+                                        <div>Sector 2, București</div>
                                     </div>
                                 </div>
 
-                                {/* Social Media */}
-                                <div>
-                                    <Typography variant="small" className="text-gray-300 mb-4">
-                                        Urmărește-ne pe Social Media
-                                    </Typography>
-                                    <div className="flex space-x-4">
-                                        {socialLinks.map((social) => {
-                                            const Icon = social.icon
-                                            return (
-                                                <motion.a
-                                                    key={social.name}
-                                                    href={social.href}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className={`text-gray-400 ${social.color} transition-colors p-2 rounded-full bg-gray-800 hover:bg-gray-700`}
-                                                    whileHover={{ scale: 1.1 }}
-                                                    whileTap={{ scale: 0.9 }}
-                                                    aria-label={`Urmărește-ne pe ${social.name}`}
-                                                >
-                                                    <Icon className="h-5 w-5" />
-                                                </motion.a>
-                                            )
-                                        })}
+                                <div className="flex items-start space-x-3 space-y-5 mt-5 ">
+                                    <Clock className="h-5 w-5 text-therapeutic-400 flex-shrink-0 mt-0.5" />
+                                    <div className="text-gray-300">
+                                        <div className="font-medium text-white mb-2">Program Cabinet:</div>
+                                        <div className="text-sm space-y-1">
+                                            <div>Luni - Vineri: 09:00 - 18:00</div>
+                                            <div>Sâmbătă: 09:00 - 14:00</div>
+                                            <div>Duminică: Închis</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            {/*/!* Newsletter & Social *!/*/}
+                            {/*<div>*/}
+                            {/*    <Typography variant="h6" className="text-white mb-6">*/}
+                            {/*        Rămâi la Curent*/}
+                            {/*    </Typography>*/}
+
+                            {/*    <div className="mb-6">*/}
+                            {/*        <Typography variant="small" className="text-gray-300 mb-4">*/}
+                            {/*            Abonează-te pentru articole noi despre psihologie și autism.*/}
+                            {/*        </Typography>*/}
+                            {/*        <div className="flex flex-col sm:flex-row gap-2">*/}
+                            {/*            <input*/}
+                            {/*                type="email"*/}
+                            {/*                placeholder="Email-ul tău"*/}
+                            {/*                className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-therapeutic-500 focus:border-therapeutic-500"*/}
+                            {/*            />*/}
+                            {/*            <Button size="sm" className="bg-therapeutic text-white hover:bg-therapeutic/90">*/}
+                            {/*                Abonează-te*/}
+                            {/*            </Button>*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+
+                            {/*    /!* Social Media *!/*/}
+                            {/*    <div>*/}
+                            {/*        <Typography variant="small" className="text-gray-300 mb-4">*/}
+                            {/*            Urmărește-ne pe Social Media*/}
+                            {/*        </Typography>*/}
+                            {/*        <div className="flex space-x-4">*/}
+                            {/*            {socialLinks.map((social) => {*/}
+                            {/*                const Icon = social.icon*/}
+                            {/*                return (*/}
+                            {/*                    <motion.a*/}
+                            {/*                        key={social.name}*/}
+                            {/*                        href={social.href}*/}
+                            {/*                        target="_blank"*/}
+                            {/*                        rel="noopener noreferrer"*/}
+                            {/*                        className={`text-gray-400 ${social.color} transition-colors p-2 rounded-full bg-gray-800 hover:bg-gray-700`}*/}
+                            {/*                        whileHover={{ scale: 1.1 }}*/}
+                            {/*                        whileTap={{ scale: 0.9 }}*/}
+                            {/*                        aria-label={`Urmărește-ne pe ${social.name}`}*/}
+                            {/*                    >*/}
+                            {/*                        <Icon className="h-5 w-5" />*/}
+                            {/*                    </motion.a>*/}
+                            {/*                )*/}
+                            {/*            })}*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                         </div>
 
                         {/* Achievements section */}
