@@ -99,16 +99,16 @@ export function Header() {
                         {/* Logo */}
                         <Link
                             href="/"
-                            className="flex items-center space-x-3 group"
+                            className="flex items-center space-x-3 group "
                         >
                             <motion.div
                                 className="h-12 w-12 lg:h-14 lg:w-14 rounded-full bg-therapeutic-gradient flex items-center justify-center text-white font-bold text-xl shadow-therapeutic"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <Heart className="h-6 w-6 lg:h-7 lg:w-7" />
+                                <Heart className="h-6 w-6 lg:h-7 lg:w-7 text-muted-foreground" />
                             </motion.div>
-                            <div className=" sm:block">
+                            <div className="sm:block text-left sm:text-left ">
                                 <div className="font-bold text-xl lg:text-2xl text-therapeutic-700">
                                     Psiholog Alina
                                 </div>
