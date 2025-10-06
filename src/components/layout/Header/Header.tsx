@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Mail, MapPin, Calendar, Heart } from 'lucide-react'
+import { Menu, X, Phone, Mail, MapPin, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/core'
 import { cn } from '@/lib/utils'
@@ -152,8 +152,8 @@ export function Header() {
                                 </Link>
                             </Button>
                             <Button asChild className="bg-therapeutic text-white hover:bg-therapeutic/90">
-                                <Link href="/contact">
-                                    <Calendar className="h-4 w-4 mr-2" />
+                                <Link href="mailto:psiholog.alina.patru@gmail.com">
+                                    <Mail className="h-4 w-4 mr-2" />
                                     Programare
                                 </Link>
                             </Button>

@@ -257,7 +257,7 @@ export default function AboutPage() {
                                         Programează o întâlnire
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="border-white text-therapeutic-600 hover:bg-therapeutic-100  hover:text-therapeutic-700">
                                     <Link href="/servicii">
                                         Serviciile mele
                                     </Link>

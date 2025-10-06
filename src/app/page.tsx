@@ -67,7 +67,10 @@ const services = [
       'Consultație de urmărire gratuită'
     ],
     href: '/servicii/evaluare-psihologica',
-    color: 'therapeutic',
+      color: 'bg-therapeutic',
+      colorTxtIcon: 'text-therapeutic-600',
+      colorTxtFeature: 'text-therapeutic-500',
+      colorBgIcon: 'bg-therapeutic-100',
     featured: true,
     price: '350 RON/ședință',
     duration: '50 minute'
@@ -85,7 +88,10 @@ const services = [
       'Plan de exerciții pentru acasă'
     ],
     href: '/servicii/interventie-recuperare',
-    color: 'calming',
+      color: 'bg-warm',
+      colorTxtIcon: 'text-warm-600',
+      colorTxtFeature: 'text-warm-500',
+      colorBgIcon: 'bg-warm-100',
     price: '240 RON/ședință',
     duration: '100 minute'
   },
@@ -102,7 +108,10 @@ const services = [
       'Pentru adulți, adolescenți și copii'
     ],
     href: '/servicii/psihologie-sportiva',
-    color: 'warm',
+      color: 'bg-trust',
+      colorTxtIcon: 'text-trust-600',
+      colorTxtFeature: 'text-trust-500',
+      colorBgIcon: 'bg-trust-100',
     price: '230 RON/ședință',
     duration: '50 minute'
   },
@@ -119,7 +128,10 @@ const services = [
       'Adaptat pentru toate vârstele'
     ],
     href: '/servicii/psihoterapie',
-    color: 'empathy',
+      color: 'bg-empathy',
+      colorTxtIcon: 'text-empathy-600',
+      colorTxtFeature: 'text-empathy-500',
+      colorBgIcon: 'bg-empathy-100',
     price: '230 RON/ședință',
     duration: '50 minute'
   },
@@ -136,7 +148,10 @@ const services = [
       'Exerciții pentru acasă cu părinții'
     ],
     href: '/servicii/logopedie',
-    color: 'trust',
+    color: 'bg-peace',
+    colorTxtIcon: 'text-peace-600',
+    colorTxtFeature: 'text-peace-500',
+    colorBgIcon: 'bg-peace-100',
     price: '180 RON/ședință',
     duration: '45 minute'
   }
@@ -220,11 +235,11 @@ export default function HomePage() {
                       family="serif"
                   >
                     Specialist în
-                    <span className="block text-warm-200">Terapie Autism</span>
+                    <span className="block text-warm-200 ">Terapie Autism</span>
                     <span className="block text-calming-200">și Psihoterapie</span>
                   </Typography>
 
-                  <Typography variant="lead" className="text-white/90 max-w-2xl">
+                  <Typography variant="lead" className="text-white/90 max-w-2xl ">
                     Cabinet de psihologie specializat în <strong>terapie autism</strong> pentru copii și adulți în București.
                     Oferim intervenție timpurie, evaluare profesională și suport pentru familii într-un mediu sigur și empatic.
                   </Typography>
@@ -329,11 +344,11 @@ export default function HomePage() {
         {/* Services Section */}
         <ServicesSection>
           <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-            <Typography variant="h2" className="mb-6" family="serif">
+            <Typography variant="h2" className="mb-6 text-center" family="serif">
               Servicii Specializate de
-              <span className="text-therapeutic"> Psihologie Clinică</span>
+              <span className="text-therapeutic text-center"> Psihologie Clinică</span>
             </Typography>
-            <Typography variant="lead">
+            <Typography variant="lead" className="text-center">
               Oferim terapie profesională adaptată nevoilor fiecărui pacient,
               cu focus pe rezultate măsurabile și îmbunătățirea calității vieții.
             </Typography>
@@ -352,13 +367,13 @@ export default function HomePage() {
                                 Cel mai solicitat
                               </div>
                           )}
-                          <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-${service.color}-100`}>
-                            <Icon className={`w-7 h-7 text-${service.color}-600`} />
+                          <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 ${service.colorBgIcon}`}>
+                            <Icon className={`w-7 h-7 ${service.colorTxtIcon}`} />
                           </div>
-                          <CardTitle className="text-xl group-hover:text-therapeutic-600 transition-colors">
+                          <CardTitle className="text-xl group-hover:text-therapeutic-600 transition-colors ">
                             {service.title}
                           </CardTitle>
-                          <div className="text-sm font-medium text-therapeutic-600">
+                          <div className={`text-sm font-bold ${service.colorTxtFeature}`}>
                             {service.price}
                           </div>
                         </CardHeader>
@@ -370,13 +385,13 @@ export default function HomePage() {
                           <ul className="space-y-2">
                             {service.features.map((feature, idx) => (
                                 <li key={idx} className="flex items-start space-x-2 text-sm">
-                                  <CheckCircle className={`w-4 h-4 text-${service.color}-500 mt-0.5 flex-shrink-0`} />
+                                  <CheckCircle className={`w-4 h-4 ${service.colorTxtFeature} mt-0.5 flex-shrink-0`} />
                                   <span>{feature}</span>
                                 </li>
                             ))}
                           </ul>
 
-                          <Button asChild className={`w-full bg-${service.color} text-white hover:bg-${service.color}/90`}>
+                          <Button asChild className={`w-full ${service.color} text-white hover:bg-${service.color}/90`}>
                             <Link href={service.href}>
                               Află mai mult
                               <ArrowRight className="w-4 h-4 ml-2" />
