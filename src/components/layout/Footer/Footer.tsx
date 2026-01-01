@@ -66,7 +66,7 @@ const achievements = [
     },
     {
         icon: Users,
-        text: '500+ Pacienți',
+        text: '100+ Pacienți',
         description: 'Ajutați cu succes'
     },
     {
@@ -82,7 +82,7 @@ export function Footer() {
     return (
         <footer className="bg-gray-900 text-white relative overflow-hidden">
             {/* Background decoration */}
-            <div className="absolute inset-0 bg-gradient-to-br from-therapeutic-900/20 to-calming-900/20" />
+            <div className="absolute inset-0 bg-linear-to-br from-therapeutic-900/20 to-calming-900/20" />
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-therapeutic-500/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-calming-500/10 rounded-full blur-3xl" />
 
@@ -105,8 +105,8 @@ export function Footer() {
                                 </Link>
 
                                 <Typography variant="body" className="text-gray-300 mb-6 leading-relaxed">
-                                    Cabinet de psihologie specializat în terapie autism pentru copii și adulți.
-                                    Oferim consiliere profesională într-un mediu sigur și empatic.
+                                    Cabinet de psihologie specializat în psihologie clinica si psihoterapie pentru copii și adulți în București si online.
+                                    Oferim intervenție timpurie, evaluare profesională și suport psihologic într-un mediu sigur și empatic.
                                 </Typography>
 
                                 {/* Contact info */}
@@ -196,7 +196,7 @@ export function Footer() {
                                     Contact
                                 </Typography>
                                 <div className="flex items-center space-x-3 mb-1">
-                                    <Phone className="h-5 w-5 text-therapeutic-400 flex-shrink-0" />
+                                    <Phone className="h-5 w-5 text-therapeutic-400 shrink-0" />
                                     <a
                                         href="tel:+40724172996"
                                         className="text-gray-300 hover:text-white transition-colors"
@@ -206,7 +206,7 @@ export function Footer() {
                                 </div>
 
                                 <div className="flex items-center space-x-3 mb-1">
-                                    <Mail className="h-5 w-5 text-therapeutic-400 flex-shrink-0" />
+                                    <Mail className="h-5 w-5 text-therapeutic-400 shrink-0" />
                                     <a
                                         href="mailto:psiholog.alina.patru@gmail.com"
                                         className="text-gray-300 hover:text-white transition-colors"
@@ -216,7 +216,7 @@ export function Footer() {
                                 </div>
 
                                 <div className="flex items-start space-x-3 mb-1">
-                                    <MapPin className="h-5 w-5 text-therapeutic-400 flex-shrink-0 mt-0.5" />
+                                    <MapPin className="h-5 w-5 text-therapeutic-400 shrink-0 mt-0.5" />
                                     <div className="text-gray-300">
                                         <div>Strada Lunei nr. 7</div>
                                         <div>Sector 2, București</div>
@@ -224,13 +224,12 @@ export function Footer() {
                                 </div>
 
                                 <div className="flex items-start space-x-3 space-y-5 mt-5 ">
-                                    <Clock className="h-5 w-5 text-therapeutic-400 flex-shrink-0 mt-0.5" />
+                                    <Clock className="h-5 w-5 text-therapeutic-400 shrink-0 mt-0.5" />
                                     <div className="text-gray-300">
                                         <div className="font-medium text-white mb-2">Program Cabinet:</div>
                                         <div className="text-sm space-y-1">
-                                            <div>Luni - Vineri: 09:00 - 18:00</div>
-                                            <div>Sâmbătă: 09:00 - 14:00</div>
-                                            <div>Duminică: Închis</div>
+                                            <div>Luni - Vineri</div>
+                                            <div>Online</div>
                                         </div>
                                     </div>
                                 </div>

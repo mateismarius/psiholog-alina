@@ -49,7 +49,7 @@ const stats = [
     icon: Shield,
     value: '100%',
     label: 'Confidențialitate',
-    description: 'Cabinet acreditat CPR - Colegiul Psihologilor'
+    description: 'Cabinet acreditat CPR si la nivel UE'
   }
 ]
 
@@ -64,7 +64,6 @@ const services = [
       'Evaluare autism, ADHD, anxietate',
       'Raport psihologic detaliat',
       'Recomandări de tratament',
-      'Consultație de urmărire gratuită'
     ],
     href: '/servicii/evaluare-psihologica',
       color: 'bg-therapeutic',
@@ -92,8 +91,28 @@ const services = [
       colorTxtIcon: 'text-warm-600',
       colorTxtFeature: 'text-warm-500',
       colorBgIcon: 'bg-warm-100',
-    price: '240 RON/ședință',
+    price: '250 RON/ședință',
     duration: '100 minute'
+  },
+  {
+    icon: Gamepad2,
+    title: 'Intervenție pentru Recuperare',
+    description: 'Terapie de recuperare prin joc pentru copii cu întârzieri în dezvoltare, ADHD, autism, întârzieri în vorbire. Părinții pot asista la ședințe.',
+    features: [
+      'Terapie prin joc pentru copii',
+      'Recuperare autism și ADHD',
+      'Probleme de integrare senzorială si reflexe primare',
+      'Întârzieri în dezvoltare',
+      'Participarea părinților la ședințe',
+      'Plan de exerciții pentru acasă'
+    ],
+    href: '/servicii/interventie-recuperare',
+    color: 'bg-warm',
+    colorTxtIcon: 'text-warm-600',
+    colorTxtFeature: 'text-warm-500',
+    colorBgIcon: 'bg-warm-100',
+    price: '180 RON/ședință',
+    duration: '50 minute'
   },
   {
     icon: Trophy,
@@ -112,7 +131,7 @@ const services = [
       colorTxtIcon: 'text-trust-600',
       colorTxtFeature: 'text-trust-500',
       colorBgIcon: 'bg-trust-100',
-    price: '230 RON/ședință',
+    price: '250 RON/ședință',
     duration: '50 minute'
   },
   {
@@ -120,7 +139,7 @@ const services = [
     title: 'Psihoterapie',
     description: 'Ședințe de psihoterapie pentru adulți, adolescenți și copii. Tratament pentru anxietate, depresie, traumă și dezvoltare personală în mediu sigur și empatic.',
     features: [
-      'Terapie cognitiv-comportamentală (TCC)',
+      'Terapie integrativa',
       'Tratament anxietate și depresie',
       'Procesarea traumelor și PTSD',
       'Dezvoltare personală și creștere',
@@ -132,7 +151,7 @@ const services = [
       colorTxtIcon: 'text-empathy-600',
       colorTxtFeature: 'text-empathy-500',
       colorBgIcon: 'bg-empathy-100',
-    price: '230 RON/ședință',
+    price: '250 RON/ședință',
     duration: '50 minute'
   },
   {
@@ -193,23 +212,23 @@ const benefits = [
 const expertise = [
   {
     icon: Brain,
-    title: 'Autism și Tulburări de Dezvoltare',
+    title: 'Autism și Tulburări de Neurodezvoltare',
     description: 'Specializare în diagnostic și terapie pentru spectrul autist'
   },
   {
     icon: Heart,
     title: 'Anxietate și Depresie',
-    description: 'Tratament cognitiv-comportamental pentru adulți'
+    description: 'Tratament psihoterapeutic'
   },
   {
     icon: Users,
-    title: 'Terapie de Familie',
-    description: 'Medierea conflictelor și îmbunătățirea comunicării'
+    title: 'Psihologia sportiva',
+    description: 'Interventie pentru imbunatatire preformantelor sportive'
   },
   {
     icon: Shield,
     title: 'Psihologie Clinică',
-    description: 'Evaluări psihologice complete și planuri de tratament'
+    description: 'Evaluări psihologice complete și planuri de interventie'
   }
 ]
 
@@ -240,15 +259,15 @@ export default function HomePage() {
                   </Typography>
 
                   <Typography variant="lead" className="text-white/90 max-w-2xl ">
-                    Cabinet de psihologie specializat în <strong>terapie autism</strong> pentru copii și adulți în București.
-                    Oferim intervenție timpurie, evaluare profesională și suport pentru familii într-un mediu sigur și empatic.
+                    Cabinet de psihologie specializat în <strong>psihologie clinica si psihoterapie</strong> pentru copii și adulți în București si online.
+                    Oferim intervenție timpurie, evaluare profesională și suport psihologic într-un mediu sigur și empatic.
                   </Typography>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {benefits.slice(0, 4).map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="w-5 h-5 text-calming-300 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-calming-300 shrink-0" />
                         <span className="text-white/90 text-sm">{benefit}</span>
                       </div>
                   ))}
@@ -299,7 +318,7 @@ export default function HomePage() {
                         placeholder="blur"
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
                   </div>
 
                   {/* Floating card */}
@@ -346,7 +365,7 @@ export default function HomePage() {
           <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
             <Typography variant="h2" className="mb-6 text-center" family="serif">
               Servicii Specializate de
-              <span className="text-therapeutic text-center"> Psihologie Clinică</span>
+              <span className="text-therapeutic text-center"> Psihologie Clinică si Psihoterapie</span>
             </Typography>
             <Typography variant="lead" className="text-center">
               Oferim terapie profesională adaptată nevoilor fiecărui pacient,
@@ -385,7 +404,7 @@ export default function HomePage() {
                           <ul className="space-y-2">
                             {service.features.map((feature, idx) => (
                                 <li key={idx} className="flex items-start space-x-2 text-sm">
-                                  <CheckCircle className={`w-4 h-4 ${service.colorTxtFeature} mt-0.5 flex-shrink-0`} />
+                                  <CheckCircle className={`w-4 h-4 ${service.colorTxtFeature} mt-0.5 shrink-0`} />
                                   <span>{feature}</span>
                                 </li>
                             ))}
@@ -415,7 +434,7 @@ export default function HomePage() {
               </Typography>
               <Typography variant="lead">
                 Cu peste 10 ani de experiență, ofer servicii specializate în multiple
-                domenii ale psihologiei clinice și terapeutice.
+                domenii ale psihologiei clinice și psihoterapiei integrativa.
               </Typography>
             </AnimatedSection>
 
@@ -506,7 +525,7 @@ export default function HomePage() {
                       <Typography variant="body" className="text-gray-600">
                           Str. Lunei, Nr.7<br />
                         Sector 2, București<br />
-                        <span className="text-sm text-therapeutic-600">Lângă metrou Aviatorilor</span>
+                        <span className="text-sm text-therapeutic-600">Zona Mosilor</span>
                       </Typography>
                     </div>
                   </CardContent>
@@ -520,9 +539,10 @@ export default function HomePage() {
                     <div>
                       <Typography variant="h6" className="mb-2">Program</Typography>
                       <Typography variant="body" className="text-gray-600">
-                        Luni - Vineri: 09:00 - 18:00<br />
-                        Sâmbătă: 09:00 - 14:00<br />
-                        <span className="text-sm text-calming-600">Programări și în weekend</span>
+                        Luni - Vineri<br />
+                      </Typography>
+                      <Typography variant="body" className="text-gray-600">
+                        Online<br />
                       </Typography>
                     </div>
                   </CardContent>
@@ -561,7 +581,7 @@ export default function HomePage() {
               </Typography>
               <Typography variant="lead" className="text-white/90 mb-8 max-w-2xl mx-auto">
                 Nu aștepta să treacă de la sine. Fiecare zi de întârziere poate însemna progres pierdut.
-                Programează o consultație gratuită și să vedem împreună cum te pot ajuta.
+                Programează o consultație și să vedem împreună cum te pot ajuta.
               </Typography>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

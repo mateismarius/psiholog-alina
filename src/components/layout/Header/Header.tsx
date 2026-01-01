@@ -78,10 +78,7 @@ export function Header() {
                                 <span>Str. Lunei ,nr.7,sector 2, București sau Online</span>
                             </div>
                         </div>
-                        <div className="flex items-center space-x-4">
-                            <span className="text-therapeutic-200">Program: Lun-Vin 9:00-18:00</span>
 
-                        </div>
                     </div>
                 </Container>
             </div>
@@ -89,7 +86,7 @@ export function Header() {
             {/* Main header */}
             <header
                 className={cn(
-                    "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300",
+                    "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 transition-all duration-300",
                     isScrolled && "shadow-lg bg-background/98"
                 )}
             >
@@ -110,10 +107,10 @@ export function Header() {
                             </motion.div>
                             <div className="sm:block text-left sm:text-left ">
                                 <div className="font-bold text-xl lg:text-2xl text-therapeutic-700">
-                                    Psiholog Alina
+                                    Psiholog Patru Alina
                                 </div>
                                 <div className="text-sm lg:text-base text-muted-foreground">
-                                    Specialist Terapie Autism
+                                    Specialist psihologie clinica si psihoterapie
                                 </div>
                             </div>
                         </Link>

@@ -24,7 +24,7 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 
 export const metadata: Metadata = {
     title: 'Despre Mine',
-    description: 'Psiholog Alina - Specialist în terapie autism cu peste 10 ani experiență în psihologie clinică. Psiholog acreditat CPR, specializat în terapie comportamentală, psihoterapie individuală și de cuplu în București.',
+    description: 'Psiholog Patru Alina - Specialist în terapie autism cu peste 10 ani experiență în psihologie clinică. Psiholog acreditat CPR, specializat în terapie comportamentală, psihoterapie individuală și de cuplu în București.',
     keywords: [
         'psiholog alina bucuresti',
         'despre psiholog autism',
@@ -39,31 +39,31 @@ const personalInfo = {
     name: 'Alina Patru',
     title: 'Psiholog Clinician & Specialist Terapie Autism',
     experience: '10+ ani experiență',
-    clients: '500+ pacienți ajutați',
+    clients: '100+ pacienți ajutați',
     specialization: 'Terapie Autism, Psihoterapie, Consiliere',
-    registration: 'Membru acreditat CPR Nr. 12345',
+    registration: 'Membru acreditat CPR Nr. 25459',
 }
 
 const education = [
     {
-        degree: 'Master în Psihologie Clinică',
-        institution: 'Universitatea din București',
-        year: '2012-2014',
-        description: 'Specializare în diagnostic și intervenție psihologică',
-        honors: 'Magna Cum Laude'
+        degree: 'Master în Psihodiagnoza cognitiva si consiliere psihologica',
+        institution: 'Universitatea UEB din Bucuresti',
+        year: '2020-2022',
+        description: 'Specializare în diagnostic și consiliere',
+        honors: ''
     },
     {
         degree: 'Licență în Psihologie',
-        institution: 'Universitatea din București',
-        year: '2009-2012',
-        description: 'Psihologie generală cu specializare în psihologia dezvoltării',
-        honors: 'Summa Cum Laude'
+        institution: 'Universitatea Hyperion din București',
+        year: '2014-2017',
+        description: 'Psihologie generală',
+        honors: ''
     },
     {
-        degree: 'Formare Continuă în Terapie ABA',
-        institution: 'Autism Partnership',
-        year: '2015-2016',
-        description: 'Programa intensivă de formare în Applied Behavior Analysis'
+        degree: 'Formare de lunga durata in Psihoterapie integrativa',
+        institution: 'Asociatia de Cercetare, Consiliere si Psihoterapie Integrativa',
+        year: '2018-2021',
+        description: 'Curs de formare si dezvoltare personala cu acreditare in UE'
     }
 ]
 
@@ -214,7 +214,7 @@ export default function AboutPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="py-20 bg-gradient-to-br from-therapeutic-600 via-therapeutic-500 to-calming-500 text-white relative overflow-hidden">
+            <section className="py-20 bg-linear-to-br from-therapeutic-600 via-therapeutic-500 to-calming-500 text-white relative overflow-hidden">
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
                 <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-warm-500/20 rounded-full blur-3xl animate-blob" />
 
@@ -371,7 +371,7 @@ export default function AboutPage() {
                             {education.map((edu, index) => (
                                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                                     <div className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 bg-therapeutic-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <div className="w-12 h-12 bg-therapeutic-100 rounded-full flex items-center justify-center shrink-0">
                                             <GraduationCap className="w-6 h-6 text-therapeutic-600" />
                                         </div>
                                         <div className="flex-1">
@@ -574,7 +574,7 @@ export default function AboutPage() {
                             {achievements.map((achievement, index) => (
                                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                                     <div className="flex items-start space-x-4">
-                                        <div className="w-16 h-16 bg-warm-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <div className="w-16 h-16 bg-warm-100 rounded-full flex items-center justify-center shrink-0">
                                             <span className="text-warm-700 font-bold text-sm">{achievement.year}</span>
                                         </div>
                                         <div className="flex-1">
@@ -596,7 +596,7 @@ export default function AboutPage() {
                 </Container>
             </section>
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-r from-calming-600 via-calming-500 to-warm-600 text-white relative overflow-hidden">
+            <section className="py-20 bg-linear-to-r from-calming-600 via-calming-500 to-warm-600 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/10" />
                 <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
                 <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-therapeutic-500/20 rounded-full blur-3xl" />
