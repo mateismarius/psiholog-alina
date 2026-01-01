@@ -8,7 +8,6 @@ import {
     Calendar,
     MessageCircle,
     CheckCircle,
-    Heart,
     Navigation,
     Car,
     Bus,
@@ -114,14 +113,13 @@ export default function ContactPage() {
 
                 <Container className="relative z-10">
                     <AnimatedSection animation="fadeIn" className="text-center max-w-4xl mx-auto">
-                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
-                            <Heart className="w-4 h-4 mr-2 text-warm-300" />
-                            Hai să vorbim - primul pas către vindecarea ta
-                        </div>
+                        {/*<div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">*/}
+                        {/*    <Heart className="w-4 h-4 mr-2 text-warm-300" />*/}
+                        {/*    Hai să vorbim - primul pas către vindecarea ta*/}
+                        {/*</div>*/}
 
                         <Typography variant="h1" className="text-white mb-6 text-center" family="serif">
-                            Contactează-mă pentru o
-                            <span className="block text-warm-200 text-center">Consultație Gratuită</span>
+                            Informatii contact
                         </Typography>
 
                         <Typography variant="lead" className="text-white/90 mb-8 max-w-2xl mx-auto text-center">
@@ -132,14 +130,14 @@ export default function ContactPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
-                                <a href="tel:+40722123456">
+                                <a href="tel:+40724172996">
                                     <Phone className="w-5 h-5 mr-2" />
-                                    Sună acum: +40 722 123 456
+                                    Sună acum: +40 724 172 996
                                 </a>
                             </Button>
 
                             <Button asChild size="lg" variant="outline" className="border-white text-therapeutic-600 hover:bg-therapeutic-100 hover:text-therapeutic-700">
-                                <a href="mailto:contact@psiholog-alina.ro">
+                                <a href="mailto:psiholog.alina.patru@gmail.com">
                                     <Mail className="w-5 h-5 mr-2" />
                                     Trimite un email
                                 </a>

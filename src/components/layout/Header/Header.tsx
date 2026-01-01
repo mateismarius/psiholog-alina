@@ -203,11 +203,11 @@ export function Header() {
                                     <div className="pt-4 border-t space-y-3">
                                         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                                             <Phone className="h-4 w-4" />
-                                            <a href="tel:+40724172996">+40 724 172 996</a>
+                                            <a href="tel:+40724172996">+40 724 172 996 </a>
                                         </div>
                                         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                                             <Mail className="h-4 w-4" />
-                                            <a href="mailto:contact@psiholog-alina.ro">contact@psiholog-alina.ro</a>
+                                            <a href="mailto:psiholog.alina.patru@gmail.com">psiholog.alina.patru@gmail.com</a>
                                         </div>
                                         <div className="flex flex-col sm:flex-row gap-2 pt-2">
                                             <Button asChild variant="outline" size="sm" className="w-full sm:w-auto">

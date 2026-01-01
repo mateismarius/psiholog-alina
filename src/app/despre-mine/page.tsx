@@ -229,14 +229,13 @@ export default function AboutPage() {
                             </div>
 
                             <Typography variant="h1" className="text-white leading-tight" family="serif">
-                                Sunt <span className="text-warm-200">Alina</span>,
-                                <span className="block">Psihologul Tău</span>
+                                Sunt <span className="text-warm-200">Alina Patru</span>,
+                                <span className="block">Psiholog clinician si psihoterapeut integrativ</span>
                             </Typography>
 
                             <Typography variant="lead" className="text-white/90">
                                 Cu peste {personalInfo.experience.split('+')[0]} ani de experiență în psihologie clinică și
-                                terapie autism, am ajutat {personalInfo.clients.split('+')[0]} de familii și persoane
-                                să își depășească provocările și să își atingă potențialul.
+                                terapia copiilor cu probleme de neurodezvoltare (autism, ADHD etc..) si psihoterapie integrativa.
                             </Typography>
 
                             <div className="grid grid-cols-2 gap-6">
