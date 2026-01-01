@@ -22,12 +22,14 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 
 export const metadata: Metadata = {
     title: 'Contact',
-    description: 'Contactează Psiholog Alina pentru programări și informații. Cabinet de psihologie în București, specialist în terapie autism, psihoterapie individuală și de cuplu. Programări online și la cabinet.',
+    description: 'Contactează Psiholog Alina Patru pentru programări și informații. ' +
+        'Cabinet de psihologie în București, specialist în terapie autism si psihoterapie individuală. ' +
+        'Programări online și la cabinet.',
     keywords: [
         'contact psiholog bucuresti',
         'programare psiholog autism',
         'cabinet psihologie bucuresti contact',
-        'psiholog alina contact',
+        'psiholog alina patru contact',
         'programare terapie autism',
         'contact psihoterapie bucuresti'
     ],
@@ -105,7 +107,7 @@ export default function ContactPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="py-20 bg-gradient-to-br from-therapeutic-600 via-therapeutic-500 to-calming-500 text-white relative overflow-hidden">
+            <section className="py-20 bg-linear-to-br from-therapeutic-600 via-therapeutic-500 to-calming-500 text-white relative overflow-hidden">
                 {/* Background decorations */}
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
                 <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-warm-500/20 rounded-full blur-3xl animate-blob" />
@@ -124,7 +126,7 @@ export default function ContactPage() {
 
                         <Typography variant="lead" className="text-white/90 mb-8 max-w-2xl mx-auto text-center">
                             Sunt aici să te ajut. Indiferent de provocarea pe care o întâmpini,
-                            primul pas este să vorbim. Programează o consultație gratuită și
+                            primul pas este să vorbim. Programează o consultație și
                             să vedem împreună cum te pot sprijini.
                         </Typography>
 
@@ -310,7 +312,7 @@ export default function ContactPage() {
                                         <ul className="space-y-1">
                                             {officeInfo.nearbyLandmarks.map((landmark, index) => (
                                                 <li key={index} className="flex items-center space-x-2 text-sm text-gray-600">
-                                                    <CheckCircle className="w-4 h-4 text-therapeutic-500 flex-shrink-0" />
+                                                    <CheckCircle className="w-4 h-4 text-therapeutic-500 shrink-0" />
                                                     <span>{landmark}</span>
                                                 </li>
                                             ))}
@@ -455,7 +457,7 @@ export default function ContactPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-r from-calming-600 via-calming-500 to-warm-600 text-white relative overflow-hidden">
+            <section className="py-20 bg-linear-to-r from-calming-600 via-calming-500 to-warm-600 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/10" />
                 <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
                 <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-therapeutic-500/20 rounded-full blur-3xl" />

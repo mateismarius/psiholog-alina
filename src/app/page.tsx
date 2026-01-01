@@ -15,9 +15,8 @@ import {
   Clock,
   MapPin,
   ClipboardList,
-  Gamepad2,
   Trophy,
-  MessageSquare,
+  MessageSquare, SproutIcon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -75,7 +74,7 @@ const services = [
     duration: '50 minute'
   },
   {
-    icon: Gamepad2,
+    icon: SproutIcon,
     title: 'Intervenție pentru Recuperare',
     description: 'Terapie de recuperare prin joc pentru copii cu întârzieri în dezvoltare, ADHD, autism, întârzieri în vorbire. Părinții pot asista la ședințe.',
     features: [
@@ -91,28 +90,8 @@ const services = [
       colorTxtIcon: 'text-warm-600',
       colorTxtFeature: 'text-warm-500',
       colorBgIcon: 'bg-warm-100',
-    price: '250 RON/ședință',
-    duration: '100 minute'
-  },
-  {
-    icon: Gamepad2,
-    title: 'Intervenție pentru Recuperare',
-    description: 'Terapie de recuperare prin joc pentru copii cu întârzieri în dezvoltare, ADHD, autism, întârzieri în vorbire. Părinții pot asista la ședințe.',
-    features: [
-      'Terapie prin joc pentru copii',
-      'Recuperare autism și ADHD',
-      'Probleme de integrare senzorială si reflexe primare',
-      'Întârzieri în dezvoltare',
-      'Participarea părinților la ședințe',
-      'Plan de exerciții pentru acasă'
-    ],
-    href: '/servicii/interventie-recuperare',
-    color: 'bg-warm',
-    colorTxtIcon: 'text-warm-600',
-    colorTxtFeature: 'text-warm-500',
-    colorBgIcon: 'bg-warm-100',
-    price: '180 RON/ședință',
-    duration: '50 minute'
+    price: '250 RON/100 min sau 180 RON/50 min',
+    duration: '50 / 100 minute'
   },
   {
     icon: Trophy,
@@ -244,7 +223,7 @@ export default function HomePage() {
               <AnimatedSection animation="stagger" className="space-y-8">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
                   <Star className="w-4 h-4 mr-2 text-warm-300" />
-                  Psiholog specialist autism acreditat CPR
+                  Psiholog specialist acreditat CPR
                 </div>
 
                 <div className="space-y-6">
@@ -463,7 +442,7 @@ export default function HomePage() {
         <TestimonialSection>
           <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
             <Typography variant="h2" className="text-white mb-6" family="serif">
-              Mărturii de la Pacienții Noștri
+              Mărturii de la Clientii Noștri
             </Typography>
             <Typography variant="lead" className="text-white/90">
               Feedback-ul real de la familiile și persoanele pe care le-am ajutat
