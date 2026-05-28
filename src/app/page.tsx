@@ -62,6 +62,7 @@ const services = [
       'Chestionare și teste specializate',
       'Evaluare autism, ADHD, anxietate',
       'Raport psihologic detaliat',
+      'Raport în urma evaluării',
       'Recomandări de tratament',
     ],
     href: '/servicii/evaluare-psihologica',
@@ -90,7 +91,7 @@ const services = [
       colorTxtIcon: 'text-warm-600',
       colorTxtFeature: 'text-warm-500',
       colorBgIcon: 'bg-warm-100',
-    price: '250 RON/100 min sau 180 RON/50 min',
+    price: '250 RON/sedinta',
     duration: '50 / 100 minute'
   },
   {
@@ -150,7 +151,7 @@ const services = [
     colorTxtIcon: 'text-peace-600',
     colorTxtFeature: 'text-peace-500',
     colorBgIcon: 'bg-peace-100',
-    price: '180 RON/ședință',
+    price: '200 RON/ședință',
     duration: '45 minute'
   }
 ]
@@ -288,7 +289,7 @@ export default function HomePage() {
                 <div className="relative z-10">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                     <Image
-                        src="/images/psiholog-alina-hero.jpg"
+                        src="/images/alina-patru-psiholog-04.jpeg"
                         alt="Psiholog Alina în cabinet - Specialist terapie autism București"
                         width={600}
                         height={400}
@@ -301,17 +302,17 @@ export default function HomePage() {
                   </div>
 
                   {/* Floating card */}
-                  <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 backdrop-blur-sm animate-breathe">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-therapeutic-100 rounded-full flex items-center justify-center">
-                        <Heart className="w-6 h-6 text-therapeutic-600" />
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-therapeutic-600">100+</div>
-                        <div className="text-sm text-gray-600">Familii ajutate</div>
-                      </div>
-                    </div>
-                  </div>
+                  {/*<div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 backdrop-blur-sm animate-breathe">*/}
+                  {/*  <div className="flex items-center space-x-4">*/}
+                  {/*    <div className="w-12 h-12 bg-therapeutic-100 rounded-full flex items-center justify-center">*/}
+                  {/*      <Heart className="w-6 h-6 text-therapeutic-600" />*/}
+                  {/*    </div>*/}
+                  {/*    <div>*/}
+                  {/*      <div className="text-2xl font-bold text-therapeutic-600">100+</div>*/}
+                  {/*      <div className="text-sm text-gray-600">Familii ajutate</div>*/}
+                  {/*    </div>*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
                 </div>
               </AnimatedSection>
             </div>

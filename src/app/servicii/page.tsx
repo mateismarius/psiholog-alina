@@ -5,6 +5,7 @@ import {
     Trophy,
     MessageCircle,
     Gamepad2,
+    ClipboardList,
     Users,
     Target,
     Calendar,
@@ -44,7 +45,8 @@ const services = [
         color: 'therapeutic',
         href: '/servicii/psihoterapie',
         duration: '50 minute',
-        price: 'de la 200 RON',
+        price: '250 RON',
+        featured: false,
         highlights: [
             'Terapie individuală și de cuplu',
             'CBT, Gestalt, tehnici integrative',
@@ -63,7 +65,8 @@ const services = [
         color: 'warm',
         href: '/servicii/psihologie-sportiva',
         duration: '50 minute',
-        price: 'de la 180 RON',
+        price: '250 RON',
+        featured: false,
         highlights: [
             'Sporturi individuale și de echipă',
             'Concentrare și focus mental',
@@ -82,7 +85,8 @@ const services = [
         color: 'calming',
         href: '/servicii/logopedie',
         duration: '50 minute',
-        price: 'de la 180 RON',
+        price: '200 RON',
+        featured: false,
         highlights: [
             'Tulburări de articulare (dislalie)',
             'Întârzieri de limbaj',
@@ -101,7 +105,8 @@ const services = [
         color: 'therapeutic',
         href: '/servicii/interventie-recuperare',
         duration: '100 minute',
-        price: 'de la 250 RON',
+        price: '250 RON',
+        featured: false,
         highlights: [
             'Autism (TSA) și ADHD',
             'Întârzieri în dezvoltare',
@@ -111,7 +116,28 @@ const services = [
         ],
         targetAudience: 'Copii cu nevoi speciale (2-18 ani)',
         sessionTypes: ['Cabinet', 'Ședințe extinse']
-    }
+    },
+    {
+        title: 'Ședințe de Evaluare',
+        subtitle: 'Evaluare psihologică completă prin observație și teste',
+        description: 'Evaluare prin metoda observației și aplicarea de chestionare potrivite situației în care vă aflați. Diagnostic complet pentru autism, ADHD, anxietate și alte tulburări.',
+        icon: ClipboardList,
+        color: 'therapeutic',
+        href: '/servicii/evaluare-psihologica',
+        duration: '50 minute',
+        price: '350 RON',
+        featured: true,
+        highlights: [
+            'Observație clinică structurată',
+            'Chestionare și teste specializate',
+            'Evaluare autism, ADHD, anxietate',
+            'Raport psihologic detaliat',
+            'Raport în urma evaluării',
+            'Recomandări de tratament',
+        ],
+        targetAudience: 'Copii, adolescenți și adulți',
+        sessionTypes: ['Cabinet', 'Ședință extinsă']
+    },
 ]
 
 const whyChooseUs = [
@@ -195,17 +221,17 @@ export default function ServiciiPage() {
                                 Servicii complete de psihologie și logopedie
                             </div>
 
-                            <Typography variant="h1" className="text-white leading-tight" family="serif">
+                            <Typography variant="h1" className="text-white leading-tight text-center" family="serif">
                                 Servicii
                                 <span className="block text-warm-200">Specializate</span>
                             </Typography>
 
-                            <Typography variant="lead" className="text-white/90 max-w-3xl mx-auto">
+                            <Typography variant="lead" className="text-white/90 max-w-3xl mx-auto text-center">
                                 Oferă o gamă completă de servicii de psihologie și logopedie pentru copii, adolescenți și adulți.
                                 Fiecare serviciu este personalizat pentru a răspunde nevoilor tale specifice.
                             </Typography>
 
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+                            <div className="grid grid-cols-3 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                                     <Heart className="w-8 h-8 text-warm-300 mx-auto mb-2" />
                                     <div className="text-sm font-bold text-white">Psihoterapie</div>
@@ -222,6 +248,10 @@ export default function ServiciiPage() {
                                     <Gamepad2 className="w-8 h-8 text-therapeutic-300 mx-auto mb-2" />
                                     <div className="text-sm font-bold text-white">Recuperare</div>
                                 </div>
+                                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                                    <ClipboardList className="w-8 h-8 text-warm-200 mx-auto mb-2" />
+                                    <div className="text-sm font-bold text-white">Evaluare</div>
+                                </div>
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -231,7 +261,7 @@ export default function ServiciiPage() {
                                         Programează consultația
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="!bg-transparent !border-white !text-white hover:!bg-white hover:!text-therapeutic-600">
                                     <a href="tel:+40722123456">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discută gratuit
@@ -260,7 +290,10 @@ export default function ServiciiPage() {
                             {services.map((service, index) => {
                                 const Icon = service.icon
                                 return (
-                                    <Card key={index} className={`p-6 border-${service.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}>
+                                    <Card
+                                        key={index}
+                                        className={`p-6 border-${service.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group ${service.featured ? 'lg:col-span-2 lg:max-w-2xl lg:mx-auto w-full' : ''}`}
+                                    >
                                         <CardHeader className="pb-4">
                                             <div className="flex items-start justify-between mb-4">
                                                 <div className={`w-16 h-16 bg-${service.color}-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
@@ -314,8 +347,8 @@ export default function ServiciiPage() {
                                                     <div className="flex flex-wrap gap-1">
                                                         {service.sessionTypes.map((type, idx) => (
                                                             <span key={idx} className={`text-xs px-2 py-1 bg-${service.color}-100 text-${service.color}-700 rounded`}>
-                                {type}
-                              </span>
+                                                                {type}
+                                                            </span>
                                                         ))}
                                                     </div>
                                                 </div>
@@ -468,7 +501,7 @@ export default function ServiciiPage() {
                                 </Link>
                             </Button>
 
-                            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                            <Button asChild size="lg" variant="outline" className="!bg-transparent !border-white !text-white hover:!bg-white hover:!text-therapeutic-600">
                                 <Link href="/despre-mine">
                                     <Users className="w-5 h-5 mr-2" />
                                     Află mai multe despre mine

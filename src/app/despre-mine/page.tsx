@@ -269,7 +269,7 @@ export default function AboutPage() {
                             <div className="relative">
                                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                                     <Image
-                                        src="/images/psiholog-alina-hero.jpg"
+                                        src="/images/alina-patru-psiholog-02.jpeg"
                                         alt="Psiholog Alina Patru - Specialist terapie autism București"
                                         width={500}
                                         height={600}
@@ -556,44 +556,44 @@ export default function AboutPage() {
                 </Container>
             </section>
 
-            {/* Achievements & Recognition */}
-            <section className="py-20 bg-gray-50">
-                <Container>
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-                        <Typography variant="h2" className="mb-6" family="serif">
-                            Realizări și <span className="text-therapeutic">Recunoaștere</span>
-                        </Typography>
-                        <Typography variant="lead">
-                            Premii, publicații și contribuții la dezvoltarea domeniului psihologiei
-                        </Typography>
-                    </AnimatedSection>
+            {/*/!* Achievements & Recognition *!/*/}
+            {/*<section className="py-20 bg-gray-50">*/}
+            {/*    <Container>*/}
+            {/*        <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">*/}
+            {/*            <Typography variant="h2" className="mb-6" family="serif">*/}
+            {/*                Realizări și <span className="text-therapeutic">Recunoaștere</span>*/}
+            {/*            </Typography>*/}
+            {/*            <Typography variant="lead">*/}
+            {/*                Premii, publicații și contribuții la dezvoltarea domeniului psihologiei*/}
+            {/*            </Typography>*/}
+            {/*        </AnimatedSection>*/}
 
-                    <AnimatedSection animation="stagger">
-                        <div className="space-y-6 max-w-4xl mx-auto">
-                            {achievements.map((achievement, index) => (
-                                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="w-16 h-16 bg-warm-100 rounded-full flex items-center justify-center shrink-0">
-                                            <span className="text-warm-700 font-bold text-sm">{achievement.year}</span>
-                                        </div>
-                                        <div className="flex-1">
-                                            <Typography variant="h5" className="font-semibold text-therapeutic-700 mb-1">
-                                                {achievement.title}
-                                            </Typography>
-                                            <Typography variant="body" className="text-calming-600 font-medium mb-2">
-                                                {achievement.organization}
-                                            </Typography>
-                                            <Typography variant="body" className="text-gray-600 leading-relaxed">
-                                                {achievement.description}
-                                            </Typography>
-                                        </div>
-                                    </div>
-                                </Card>
-                            ))}
-                        </div>
-                    </AnimatedSection>
-                </Container>
-            </section>
+            {/*        <AnimatedSection animation="stagger">*/}
+            {/*            <div className="space-y-6 max-w-4xl mx-auto">*/}
+            {/*                {achievements.map((achievement, index) => (*/}
+            {/*                    <Card key={index} className="p-6 hover:shadow-lg transition-shadow">*/}
+            {/*                        <div className="flex items-start space-x-4">*/}
+            {/*                            <div className="w-16 h-16 bg-warm-100 rounded-full flex items-center justify-center shrink-0">*/}
+            {/*                                <span className="text-warm-700 font-bold text-sm">{achievement.year}</span>*/}
+            {/*                            </div>*/}
+            {/*                            <div className="flex-1">*/}
+            {/*                                <Typography variant="h5" className="font-semibold text-therapeutic-700 mb-1">*/}
+            {/*                                    {achievement.title}*/}
+            {/*                                </Typography>*/}
+            {/*                                <Typography variant="body" className="text-calming-600 font-medium mb-2">*/}
+            {/*                                    {achievement.organization}*/}
+            {/*                                </Typography>*/}
+            {/*                                <Typography variant="body" className="text-gray-600 leading-relaxed">*/}
+            {/*                                    {achievement.description}*/}
+            {/*                                </Typography>*/}
+            {/*                            </div>*/}
+            {/*                        </div>*/}
+            {/*                    </Card>*/}
+            {/*                ))}*/}
+            {/*            </div>*/}
+            {/*        </AnimatedSection>*/}
+            {/*    </Container>*/}
+            {/*</section>*/}
             {/* CTA Section */}
             <section className="py-20 bg-linear-to-r from-calming-600 via-calming-500 to-warm-600 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/10" />
@@ -619,8 +619,8 @@ export default function AboutPage() {
                                 </Link>
                             </Button>
 
-                            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-calming-600">
-                                <a href="tel:+40722123456">
+                            <Button asChild size="lg" variant="outline" className="border-calming-600  text-calming-600 hover:bg-white hover:text-calming-600">
+                                <a href="tel:+40724172996">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Sună pentru informații
                                 </a>
