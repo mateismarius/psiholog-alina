@@ -177,32 +177,32 @@ const values = [
     }
 ]
 
-const achievements = [
-    {
-        year: '2023',
-        title: 'Premiul "Psiholog al Anului"',
-        organization: 'Asociația Psihologilor din București',
-        description: 'Pentru contribuția excepțională în domeniul terapiei autism'
-    },
-    {
-        year: '2022',
-        title: 'Trainer Certificat ABA',
-        organization: 'Behavior Analyst Certification Board',
-        description: 'Autorizare pentru formarea altor specialiști în terapie comportamentală'
-    },
-    {
-        year: '2021',
-        title: 'Cercetare Publicată',
-        organization: 'Journal of Autism Research',
-        description: 'Studiu despre eficacitatea intervenției timpurii în autism'
-    },
-    {
-        year: '2020',
-        title: 'Membru în Comisia de Etică',
-        organization: 'Colegiul Psihologilor din România',
-        description: 'Contribuție la standardele etice în psihologie'
-    }
-]
+// const achievements = [
+//     {
+//         year: '2023',
+//         title: 'Premiul "Psiholog al Anului"',
+//         organization: 'Asociația Psihologilor din București',
+//         description: 'Pentru contribuția excepțională în domeniul terapiei autism'
+//     },
+//     {
+//         year: '2022',
+//         title: 'Trainer Certificat ABA',
+//         organization: 'Behavior Analyst Certification Board',
+//         description: 'Autorizare pentru formarea altor specialiști în terapie comportamentală'
+//     },
+//     {
+//         year: '2021',
+//         title: 'Cercetare Publicată',
+//         organization: 'Journal of Autism Research',
+//         description: 'Studiu despre eficacitatea intervenției timpurii în autism'
+//     },
+//     {
+//         year: '2020',
+//         title: 'Membru în Comisia de Etică',
+//         organization: 'Colegiul Psihologilor din România',
+//         description: 'Contribuție la standardele etice în psihologie'
+//     }
+// ]
 
 const personalStory = {
     motivation: "Pasiunea mea pentru psihologie și în special pentru lucrul cu persoanele cu autism a început încă din timpul facultății, când am avut primul contact cu un copil diagnosticat cu TSA. Am fost fascinată de complexitatea și frumusețea minții umane, și de puterea extraordinară a intervenției timpurii și a terapiei specializate.",
