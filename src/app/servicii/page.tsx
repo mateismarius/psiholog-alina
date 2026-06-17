@@ -17,7 +17,6 @@ import {
     MessageSquare,
     Puzzle,
     BadgeCheck,
-    ExternalLink,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -371,9 +370,9 @@ export default function ServiciiPage() {
                                 </p>
                             </div>
                         </div>
-                        <p className="text-therapeutic-100 text-sm text-center lg:text-right max-w-md">
-                            Anumite servicii pot fi decontate prin asigurarile de sanatate.
-                            Contacteaza-ne pentru detalii despre serviciile acoperite.
+                        <p className="text-therapeutic-100 text-sm text-center lg:text-left max-w-md">
+                            Diagnosticul TSA (F84.0) sedintele sunt decontate prin CASMB in limita locurilor disponibile.
+                            <br/>Contacteaza-ne pentru detalii despre serviciile acoperite.
                         </p>
                         <Button asChild size="sm" className="flex-shrink-0 bg-white text-therapeutic-700 hover:bg-therapeutic-50">
                             <Link href="/contact">Afla detalii</Link>
@@ -382,87 +381,87 @@ export default function ServiciiPage() {
                 </Container>
             </section>
 
-            {/* ─── Banner CASMB detaliat ─── */}
-            <section className="py-10 bg-therapeutic-50 border-b border-therapeutic-100">
-                <Container>
-                    <AnimatedSection animation="fadeIn">
-                        <Card className="border-therapeutic-200 bg-white overflow-hidden p-0">
-                            <div className="flex flex-col lg:flex-row">
-                                {/* Stanga - informatii contract */}
-                                <div className="flex-1 p-6 lg:p-8">
-                                    <div className="flex items-start gap-4 mb-6">
-                                        <div className="w-14 h-14 bg-therapeutic-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                                            <BadgeCheck className="w-8 h-8 text-therapeutic-600" />
-                                        </div>
-                                        <div>
-                                            <Typography variant="h4" className="text-therapeutic-700 mb-1">
-                                                Servicii decontate prin CASMB
-                                            </Typography>
-                                            <Typography variant="small" className="text-muted-foreground">
-                                                Casa de Asigurari de Sanatate a Municipiului Bucuresti
-                                            </Typography>
-                                        </div>
-                                    </div>
+            {/*/!* ─── Banner CASMB detaliat ─── *!/*/}
+            {/*<section className="py-10 bg-therapeutic-50 border-b border-therapeutic-100">*/}
+            {/*    <Container>*/}
+            {/*        <AnimatedSection animation="fadeIn">*/}
+            {/*            <Card className="border-therapeutic-200 bg-white overflow-hidden p-0">*/}
+            {/*                <div className="flex flex-col lg:flex-row">*/}
+            {/*                    /!* Stanga - informatii contract *!/*/}
+            {/*                    <div className="flex-1 p-6 lg:p-8">*/}
+            {/*                        <div className="flex items-start gap-4 mb-6">*/}
+            {/*                            <div className="w-14 h-14 bg-therapeutic-100 rounded-xl flex items-center justify-center flex-shrink-0">*/}
+            {/*                                <BadgeCheck className="w-8 h-8 text-therapeutic-600" />*/}
+            {/*                            </div>*/}
+            {/*                            <div>*/}
+            {/*                                <Typography variant="h4" className="text-therapeutic-700 mb-1">*/}
+            {/*                                    Servicii decontate prin CASMB*/}
+            {/*                                </Typography>*/}
+            {/*                                <Typography variant="small" className="text-muted-foreground">*/}
+            {/*                                    Casa de Asigurari de Sanatate a Municipiului Bucuresti*/}
+            {/*                                </Typography>*/}
+            {/*                            </div>*/}
+            {/*                        </div>*/}
 
-                                    <Typography variant="body" className="text-gray-700 leading-relaxed mb-6">
-                                        In urma incheierii contractului cu Casa de Asigurari de Sanatate a Municipiului
-                                        Bucuresti (CASMB), o parte din serviciile oferite pot fi decontate integral sau
-                                        partial prin asigurarile de sanatate. Aceasta facilitate permite accesul la
-                                        servicii psihologice de calitate fara costuri suplimentare pentru pacienti.
-                                    </Typography>
+            {/*                        <Typography variant="body" className="text-gray-700 leading-relaxed mb-6">*/}
+            {/*                            In urma incheierii contractului cu Casa de Asigurari de Sanatate a Municipiului*/}
+            {/*                            Bucuresti (CASMB), o parte din serviciile oferite pot fi decontate integral sau*/}
+            {/*                            partial prin asigurarile de sanatate. Aceasta facilitate permite accesul la*/}
+            {/*                            servicii psihologice de calitate fara costuri suplimentare pentru pacienti.*/}
+            {/*                        </Typography>*/}
 
-                                    <div className="space-y-3">
-                                        <div className="flex items-start gap-2">
-                                            <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">
-                                                Servicii decontate pentru asiguratii CASMB cu trimitere de la medicul de familie
-                                            </span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">
-                                                Valabil pentru rezidentii din Municipiul Bucuresti
-                                            </span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />
-                                            <span className="text-sm text-gray-700">
-                                                Contacteaza-ne pentru lista completa de servicii decontate si conditii
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+            {/*                        <div className="space-y-3">*/}
+            {/*                            <div className="flex items-start gap-2">*/}
+            {/*                                <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />*/}
+            {/*                                <span className="text-sm text-gray-700">*/}
+            {/*                                    Servicii decontate pentru asiguratii CASMB cu trimitere de la medicul de familie*/}
+            {/*                                </span>*/}
+            {/*                            </div>*/}
+            {/*                            <div className="flex items-start gap-2">*/}
+            {/*                                <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />*/}
+            {/*                                <span className="text-sm text-gray-700">*/}
+            {/*                                    Valabil pentru rezidentii din Municipiul Bucuresti*/}
+            {/*                                </span>*/}
+            {/*                            </div>*/}
+            {/*                            <div className="flex items-start gap-2">*/}
+            {/*                                <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />*/}
+            {/*                                <span className="text-sm text-gray-700">*/}
+            {/*                                    Contacteaza-ne pentru lista completa de servicii decontate si conditii*/}
+            {/*                                </span>*/}
+            {/*                            </div>*/}
+            {/*                        </div>*/}
+            {/*                    </div>*/}
 
-                                {/* Dreapta - CTA */}
-                                <div className="lg:w-72 bg-therapeutic-600 p-6 lg:p-8 flex flex-col justify-center items-center text-center text-white">
-                                    <BadgeCheck className="w-16 h-16 text-therapeutic-200 mb-4" />
-                                    <Typography variant="h6" className="text-white mb-2">
-                                        Ai asigurare CASMB?
-                                    </Typography>
-                                    <Typography variant="small" className="text-therapeutic-100 mb-6 leading-relaxed">
-                                        Contacteaza-ne pentru a verifica eligibilitatea si documentele necesare
-                                        pentru decontare.
-                                    </Typography>
-                                    <div className="space-y-3 w-full">
-                                        <Button asChild className="w-full bg-white text-therapeutic-600 hover:bg-therapeutic-50">
-                                            <Link href="/contact">
-                                                <Phone className="w-4 h-4 mr-2" />
-                                                Contacteaza-ne
-                                            </Link>
-                                        </Button>
-                                        <Button asChild variant="outline" size="sm" className="w-full border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
-                                            <a href="https://www.casmb.ro/casmb_portal" target="_blank" rel="noopener noreferrer">
-                                                <ExternalLink className="w-4 h-4 mr-2" />
-                                                Site CASMB
-                                            </a>
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                        </Card>
-                    </AnimatedSection>
-                </Container>
-            </section>
+            {/*                    /!* Dreapta - CTA *!/*/}
+            {/*                    <div className="lg:w-72 bg-therapeutic-600 p-6 lg:p-8 flex flex-col justify-center items-center text-center text-white">*/}
+            {/*                        <BadgeCheck className="w-16 h-16 text-therapeutic-200 mb-4" />*/}
+            {/*                        <Typography variant="h6" className="text-white mb-2">*/}
+            {/*                            Ai asigurare CASMB?*/}
+            {/*                        </Typography>*/}
+            {/*                        <Typography variant="small" className="text-therapeutic-100 mb-6 leading-relaxed">*/}
+            {/*                            Contacteaza-ne pentru a verifica eligibilitatea si documentele necesare*/}
+            {/*                            pentru decontare.*/}
+            {/*                        </Typography>*/}
+            {/*                        <div className="space-y-3 w-full">*/}
+            {/*                            <Button asChild className="w-full bg-white text-therapeutic-600 hover:bg-therapeutic-50">*/}
+            {/*                                <Link href="/contact">*/}
+            {/*                                    <Phone className="w-4 h-4 mr-2" />*/}
+            {/*                                    Contacteaza-ne*/}
+            {/*                                </Link>*/}
+            {/*                            </Button>*/}
+            {/*                            <Button asChild variant="outline" size="sm" className="w-full border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">*/}
+            {/*                                <a href="https://www.casmb.ro/casmb_portal" target="_blank" rel="noopener noreferrer">*/}
+            {/*                                    <ExternalLink className="w-4 h-4 mr-2" />*/}
+            {/*                                    Site CASMB*/}
+            {/*                                </a>*/}
+            {/*                            </Button>*/}
+            {/*                        </div>*/}
+            {/*                    </div>*/}
+            {/*                </div>*/}
+            {/*            </Card>*/}
+            {/*        </AnimatedSection>*/}
+            {/*    </Container>*/}
+            {/*</section>*/}
 
             {/* ─── Services Grid ─── */}
             <section className="py-20 bg-white">

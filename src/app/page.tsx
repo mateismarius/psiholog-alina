@@ -333,8 +333,9 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-              <p className="text-therapeutic-100 text-sm text-center sm:text-right max-w-md">
-                Anumite servicii pot fi decontate prin asigurarile de sanatate.
+              <p className="text-therapeutic-100 text-sm text-center lg:text-left max-w-md">
+                Diagnosticul TSA (F84.0) sedintele sunt decontate prin CASMB in limita locurilor disponibile.
+                <br/>Contacteaza-ne pentru detalii despre serviciile acoperite.
               </p>
               <Button asChild size="sm" className="flex-shrink-0 bg-white text-therapeutic-700 hover:bg-therapeutic-50">
                 <Link href="/servicii">Afla detalii</Link>
