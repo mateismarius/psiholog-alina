@@ -3,8 +3,6 @@ import Link from 'next/link'
 import {
     Heart,
     Trophy,
-    MessageCircle,
-    Gamepad2,
     ClipboardList,
     Users,
     Target,
@@ -15,6 +13,11 @@ import {
     Star,
     Sparkles,
     Shield,
+    SproutIcon,
+    MessageSquare,
+    Puzzle,
+    BadgeCheck,
+    ExternalLink,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -24,338 +27,521 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 
 export const metadata: Metadata = {
     title: 'Servicii',
-    description: 'Servicii complete de psihologie și logopedie în București: psihoterapie, psihologie sportivă, logopedie și ședințe de intervenție pentru copii. Consultații la cabinet și online.',
+    description: 'Servicii complete de psihologie si logopedie in Bucuresti: evaluare psihologica, interventie pentru recuperare, terapie senzoriala, psihologie sportiva, psihoterapie si logopedie. Consultatii la cabinet si online.',
     keywords: [
         'servicii psihologie bucuresti',
+        'evaluare psihologica autism',
+        'interventie recuperare copii',
+        'terapie senzoriala bucuresti',
+        'reflexe primare terapie',
+        'terapie ocupationala copii',
         'psihoterapie bucuresti',
         'psihologie sportiva',
         'logopedie copii',
-        'terapie recuperare',
         'psiholog clinician',
-        'consultatii psihologice'
     ],
 }
 
+// ─── Date servicii ──────────────────────────────────────────────────────────
+
 const services = [
     {
-        title: 'Psihoterapie',
-        subtitle: 'Terapie integrativă pentru adulți și adolescenți',
-        description: 'Un spațiu sigur pentru explorare, vindecare și creștere personală. Abordări integrate din diverse școli terapeutice pentru depășirea dificultăților emoționale.',
-        icon: Heart,
-        color: 'therapeutic',
-        href: '/servicii/psihoterapie',
-        duration: '50 minute',
-        price: '250 RON',
-        featured: false,
-        highlights: [
-            'Terapie individuală și de cuplu',
-            'CBT, Gestalt, tehnici integrative',
-            'Anxietate, depresie, traume',
-            'Dezvoltare personală',
-            'Mediu confidențial și sigur'
-        ],
-        targetAudience: 'Adulți și adolescenți',
-        sessionTypes: ['Cabinet', 'Online']
-    },
-    {
-        title: 'Psihologie Sportivă',
-        subtitle: 'Îmbunătățirea performanței mentale în sport',
-        description: 'Dezvoltarea abilităților mentale pentru sportivi de toate nivelurile. Concentrare, motivație, gestionarea presiunii și optimizarea performanței sportive.',
-        icon: Trophy,
-        color: 'warm',
-        href: '/servicii/psihologie-sportiva',
-        duration: '50 minute',
-        price: '250 RON',
-        featured: false,
-        highlights: [
-            'Sporturi individuale și de echipă',
-            'Concentrare și focus mental',
-            'Gestionarea anxietății de competiție',
-            'Motivație și stabilirea obiectivelor',
-            'Tehnici de activare optimă'
-        ],
-        targetAudience: 'Copii, adolescenți, adulți sportivi',
-        sessionTypes: ['Cabinet', 'Online']
-    },
-    {
-        title: 'Logopedie',
-        subtitle: 'Terapia vorbirii și limbajului',
-        description: 'Sprijin specializat pentru dezvoltarea și corectarea tulburărilor de vorbire, limbaj și comunicare pentru toate vârstele.',
-        icon: MessageCircle,
-        color: 'calming',
-        href: '/servicii/logopedie',
-        duration: '50 minute',
-        price: '200 RON',
-        featured: false,
-        highlights: [
-            'Tulburări de articulare (dislalie)',
-            'Întârzieri de limbaj',
-            'Tulburări de fluență (bâlbâială)',
-            'Probleme de deglutiție',
-            'Terapie prin joc pentru copii'
-        ],
-        targetAudience: 'Copii de la 2 ani și adulți',
-        sessionTypes: ['Cabinet', 'Cu participarea părinților']
-    },
-    {
-        title: 'Ședințe de Intervenție și Recuperare',
-        subtitle: 'Terapie specializată prin joc pentru copii',
-        description: 'Terapie de recuperare pentru copii cu autism, ADHD, întârzieri în dezvoltare și probleme de integrare senzorială.',
-        icon: Gamepad2,
-        color: 'therapeutic',
-        href: '/servicii/interventie-recuperare',
-        duration: '100 minute',
-        price: '250 RON',
-        featured: false,
-        highlights: [
-            'Autism (TSA) și ADHD',
-            'Întârzieri în dezvoltare',
-            'Probleme de integrare senzorială',
-            'Terapie prin joc structurat',
-            'Participarea activă a părinților'
-        ],
-        targetAudience: 'Copii cu nevoi speciale (2-18 ani)',
-        sessionTypes: ['Cabinet', 'Ședințe extinse']
-    },
-    {
-        title: 'Ședințe de Evaluare',
-        subtitle: 'Evaluare psihologică completă prin observație și teste',
-        description: 'Evaluare prin metoda observației și aplicarea de chestionare potrivite situației în care vă aflați. Diagnostic complet pentru autism, ADHD, anxietate și alte tulburări.',
         icon: ClipboardList,
-        color: 'therapeutic',
-        href: '/servicii/evaluare-psihologica',
-        duration: '50 minute',
-        price: '350 RON',
-        featured: true,
-        highlights: [
-            'Observație clinică structurată',
-            'Chestionare și teste specializate',
+        title: 'Sedinte de Evaluare',
+        subtitle: 'Diagnostic complet si plan de interventie personalizat',
+        description:
+            'Evaluare prin metoda observatiei si aplicarea de chestionare potrivite situatiei. Diagnostic complet pentru autism, ADHD, anxietate si alte tulburari, urmat de un raport detaliat cu recomandari.',
+        features: [
+            'Observatie clinica structurata',
+            'Chestionare si teste specializate',
             'Evaluare autism, ADHD, anxietate',
             'Raport psihologic detaliat',
-            'Raport în urma evaluării',
-            'Recomandări de tratament',
+            'Recomandari de tratament',
         ],
-        targetAudience: 'Copii, adolescenți și adulți',
-        sessionTypes: ['Cabinet', 'Ședință extinsă']
+        href: '/servicii/evaluare-psihologica',
+        color: 'therapeutic',
+        price: '350 RON',
+        duration: '50 minute',
+        audience: 'Copii, adolescenti, adulti',
+        sessionTypes: ['Cabinet', 'Online'],
+        featured: true,
+    },
+    {
+        icon: SproutIcon,
+        title: 'Interventie pentru Recuperare',
+        subtitle: 'Terapie specializata prin joc pentru copii cu nevoi speciale',
+        description:
+            'Terapie de recuperare prin joc pentru copii cu intarzieri in dezvoltare, ADHD, autism si intarzieri in vorbire. Parintii pot asista la sedinte si primesc un plan de exercitii pentru acasa.',
+        features: [
+            'Terapie prin joc pentru copii',
+            'Recuperare autism si ADHD',
+            'Probleme de integrare senzoriala',
+            'Intarzieri in dezvoltare',
+            'Participarea parintilor la sedinte',
+            'Plan de exercitii pentru acasa',
+        ],
+        href: '/servicii/interventie-recuperare',
+        color: 'warm',
+        price: '250 RON',
+        duration: '50 / 100 minute',
+        audience: 'Copii cu nevoi speciale (2-18 ani)',
+        sessionTypes: ['Cabinet', 'Sedinte extinse'],
+    },
+    {
+        icon: Puzzle,
+        title: 'Terapie Senzoriala, Reflexe Primare si Terapie Ocupationala',
+        subtitle: 'Integrare senzoriala si maturizarea reflexelor primare',
+        description:
+            'Programe specializate pentru copii cu dificultati de procesare senzoriala, reflexe primare neintegrate si probleme de coordonare. Terapia ocupationala ajuta la dobandirea autonomiei in activitatile zilnice.',
+        features: [
+            'Evaluare si terapie de integrare senzoriala',
+            'Integrarea reflexelor primare (MORO, Tonic, Palmar)',
+            'Terapie ocupationala pentru activitati zilnice',
+            'Exercitii de coordonare motorie fina si grosiera',
+            'Stimulare vestibulara si proprioceptiva',
+            'Ghid de exercitii pentru parinti acasa',
+        ],
+        href: '/servicii/terapie-senzoriala',
+        color: 'peace',
+        price: '200 RON',
+        duration: '50 minute',
+        audience: 'Copii de la 1 an, adolescenti',
+        sessionTypes: ['Cabinet', 'Cu parintii'],
+    },
+    {
+        icon: Trophy,
+        title: 'Psihologie Sportiva',
+        subtitle: 'Performanta mentala pentru sportivi de toate nivelurile',
+        description:
+            'Dedicata celor care fac sport si isi doresc imbunatatirea atitudinii, rezultatelor si in general a performantei in sportul pe care il practica, indiferent de nivel sau varsta.',
+        features: [
+            'Imbunatatirea performantei sportive',
+            'Gestionarea anxietatii de competitie',
+            'Dezvoltarea concentrarii si focusului',
+            'Motivatie si stabilirea obiectivelor',
+            'Sedinte la cabinet sau online',
+            'Pentru adulti, adolescenti si copii',
+        ],
+        href: '/servicii/psihologie-sportiva',
+        color: 'trust',
+        price: '250 RON',
+        duration: '50 minute',
+        audience: 'Copii, adolescenti, adulti sportivi',
+        sessionTypes: ['Cabinet', 'Online'],
+    },
+    {
+        icon: Heart,
+        title: 'Psihoterapie',
+        subtitle: 'Terapie integrativa pentru adulti, adolescenti si copii',
+        description:
+            'Sedinte de psihoterapie intr-un spatiu sigur si empatic. Tratament pentru anxietate, depresie, trauma si dezvoltare personala, adaptat nevoilor si varstei fiecarui client.',
+        features: [
+            'Terapie integrativa personalizata',
+            'Tratament anxietate si depresie',
+            'Procesarea traumelor si PTSD',
+            'Dezvoltare personala si crestere',
+            'Sedinte la cabinet sau online',
+            'Adaptat pentru toate varstele',
+        ],
+        href: '/servicii/psihoterapie',
+        color: 'empathy',
+        price: '250 RON',
+        duration: '50 minute',
+        audience: 'Adulti, adolescenti, copii',
+        sessionTypes: ['Cabinet', 'Online'],
+    },
+    {
+        icon: MessageSquare,
+        title: 'Logopedie',
+        subtitle: 'Terapia vorbirii si limbajului pentru copii',
+        description:
+            'Sedinte pentru copii in vederea recuperarii in urma intarzierilor in vorbire si corectarea sau insusirea anumitor sunete, cu exercitii continuate si acasa.',
+        features: [
+            'Recuperarea intarzierilor in vorbire',
+            'Corectarea defectelor de pronuntie',
+            'Invatarea sunetelor corecte',
+            'Dezvoltarea vocabularului',
+            'Imbunatatirea fluentei vorbirii',
+            'Exercitii pentru acasa cu parintii',
+        ],
+        href: '/servicii/logopedie',
+        color: 'calming',
+        price: '200 RON',
+        duration: '45 minute',
+        audience: 'Copii de la 2 ani',
+        sessionTypes: ['Cabinet', 'Cu parintii'],
     },
 ]
+
+// Clase Tailwind complet scrise (fara interpolari) pentru ca build-ul sa le detecteze
+const colorMap: Record<string, Record<string, string>> = {
+    therapeutic: {
+        strip:        'bg-therapeutic-400',
+        iconBg:       'bg-therapeutic-100',
+        iconText:     'text-therapeutic-600',
+        badgeBg:      'bg-therapeutic-100',
+        badgeText:    'text-therapeutic-700',
+        border:       'border-therapeutic-200',
+        featureText:  'text-therapeutic-500',
+        btnBg:        'bg-therapeutic-500 hover:bg-therapeutic-600',
+        subtitleText: 'text-therapeutic-600',
+    },
+    warm: {
+        strip:        'bg-warm-400',
+        iconBg:       'bg-warm-100',
+        iconText:     'text-warm-600',
+        badgeBg:      'bg-warm-100',
+        badgeText:    'text-warm-700',
+        border:       'border-warm-200',
+        featureText:  'text-warm-500',
+        btnBg:        'bg-warm-500 hover:bg-warm-600',
+        subtitleText: 'text-warm-600',
+    },
+    peace: {
+        strip:        'bg-peace-400',
+        iconBg:       'bg-peace-100',
+        iconText:     'text-peace-600',
+        badgeBg:      'bg-peace-100',
+        badgeText:    'text-peace-700',
+        border:       'border-peace-200',
+        featureText:  'text-peace-500',
+        btnBg:        'bg-peace-500 hover:bg-peace-600',
+        subtitleText: 'text-peace-600',
+    },
+    trust: {
+        strip:        'bg-trust-400',
+        iconBg:       'bg-trust-100',
+        iconText:     'text-trust-600',
+        badgeBg:      'bg-trust-100',
+        badgeText:    'text-trust-700',
+        border:       'border-trust-200',
+        featureText:  'text-trust-500',
+        btnBg:        'bg-trust-500 hover:bg-trust-600',
+        subtitleText: 'text-trust-600',
+    },
+    empathy: {
+        strip:        'bg-empathy-400',
+        iconBg:       'bg-empathy-100',
+        iconText:     'text-empathy-600',
+        badgeBg:      'bg-empathy-100',
+        badgeText:    'text-empathy-700',
+        border:       'border-empathy-200',
+        featureText:  'text-empathy-500',
+        btnBg:        'bg-empathy-500 hover:bg-empathy-600',
+        subtitleText: 'text-empathy-600',
+    },
+    calming: {
+        strip:        'bg-calming-400',
+        iconBg:       'bg-calming-100',
+        iconText:     'text-calming-600',
+        badgeBg:      'bg-calming-100',
+        badgeText:    'text-calming-700',
+        border:       'border-calming-200',
+        featureText:  'text-calming-500',
+        btnBg:        'bg-calming-500 hover:bg-calming-600',
+        subtitleText: 'text-calming-600',
+    },
+}
 
 const whyChooseUs = [
     {
         icon: Star,
-        title: 'Experiență și Specializare',
-        description: '12 ani de experiență în psihologie și formare continuă în cele mai noi tehnici terapeutice'
+        title: 'Experienta si Specializare',
+        description: '12 ani de experienta in psihologie si formare continua in cele mai noi tehnici terapeutice.',
     },
     {
         icon: Heart,
-        title: 'Abordare Personalizată',
-        description: 'Fiecare client primește un plan terapeutic personalizat, adaptat nevoilor și obiectivelor sale'
+        title: 'Abordare Personalizata',
+        description: 'Fiecare client primeste un plan terapeutic personalizat, adaptat nevoilor si obiectivelor sale.',
     },
     {
         icon: Shield,
-        title: 'Mediu Sigur și Confidențial',
-        description: 'Spațiu profesional, non-judgmental, unde poți fi autentic și te poți simți în siguranță'
+        title: 'Mediu Sigur si Confidential',
+        description: 'Spatiu profesional, non-judgmental, unde poti fi autentic si te poti simti in siguranta.',
     },
     {
         icon: Target,
-        title: 'Rezultate Măsurabile',
-        description: 'Monitorizez progresul constant și adaptez terapia pentru a obține cele mai bune rezultate'
-    }
+        title: 'Rezultate Masurabile',
+        description: 'Monitorizez progresul constant si adaptez terapia pentru a obtine cele mai bune rezultate.',
+    },
 ]
 
 const processSteps = [
-    {
-        step: '1',
-        title: 'Primul Contact',
-        description: 'Discuție telefonică gratuită pentru a înțelege nevoile tale și a răspunde la întrebări'
-    },
-    {
-        step: '2',
-        title: 'Evaluarea Inițială',
-        description: 'Prima ședință dedicate evaluării detaliate și stabilirii obiectivelor terapeutice'
-    },
-    {
-        step: '3',
-        title: 'Planul Terapeutic',
-        description: 'Elaborarea unui plan personalizat cu tehnicile și metodele cele mai potrivite'
-    },
-    {
-        step: '4',
-        title: 'Terapia Activă',
-        description: 'Ședințe regulate cu monitorizarea progresului și adaptarea planului după nevoie'
-    }
+    { step: '1', title: 'Primul Contact',    description: 'Discutie telefonica gratuita de 15 minute pentru a intelege nevoile tale si a raspunde la intrebari.' },
+    { step: '2', title: 'Evaluarea Initiala', description: 'Prima sedinta dedicata evaluarii detaliate si stabilirii obiectivelor terapeutice.' },
+    { step: '3', title: 'Planul Terapeutic',  description: 'Elaborarea unui plan personalizat cu tehnicile si metodele cele mai potrivite.' },
+    { step: '4', title: 'Terapia Activa',     description: 'Sedinte regulate cu monitorizarea progresului si adaptarea planului dupa nevoie.' },
 ]
 
 const faqs = [
     {
         question: 'Cum aleg serviciul potrivit pentru mine?',
-        answer: 'Oferă o consultație telefonică gratuită de 15 minute pentru a discuta nevoile tale și a recomanda cel mai potrivit serviciu. Fiecare situație este unică și merită o abordare personalizată.'
+        answer: 'Ofer o consultatie telefonica gratuita de 15 minute pentru a discuta nevoile tale si a recomanda cel mai potrivit serviciu. Fiecare situatie este unica si merita o abordare personalizata.',
     },
     {
         question: 'Pot combina mai multe servicii?',
-        answer: 'Da, adesea o abordare integrată aduce cele mai bune rezultate. De exemplu, un copil poate beneficia atât de logopedie cât și de ședințe de intervenție pentru dezvoltare.'
+        answer: 'Da, adesea o abordare integrata aduce cele mai bune rezultate. De exemplu, un copil poate beneficia atat de logopedie cat si de terapie senzoriala sau sedinte de interventie pentru dezvoltare.',
     },
     {
-        question: 'Ședințele online sunt la fel de eficiente?',
-        answer: 'Pentru majoritatea serviciilor, ședințele online sunt la fel de eficiente. Logopegia și intervențiile pentru copii se desfășoară însă mai bine față în față pentru interacțiunea directă.'
+        question: 'Sedintele online sunt la fel de eficiente?',
+        answer: 'Pentru majoritatea serviciilor, sedintele online sunt la fel de eficiente. Logopedia, terapia senzoriala si interventiile pentru copii se desfasoara insa mai bine fata in fata.',
     },
     {
-        question: 'Cât durează în general o terapie?',
-        answer: 'Durata variază în funcție de serviciul ales și obiectivele personale. Unele probleme pot fi rezolvate în 5-10 ședințe, altele pot necesita terapie pe termen mai lung.'
-    }
+        question: 'Cat dureaza in general o terapie?',
+        answer: 'Durata variaza in functie de serviciul ales si obiectivele personale. Unele probleme pot fi rezolvate in 5-10 sedinte, altele pot necesita terapie pe termen mai lung.',
+    },
 ]
+
+// ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function ServiciiPage() {
     return (
         <>
-            {/* Hero Section */}
-            <section className="py-20 bg-gradient-to-br from-therapeutic-600 via-calming-500 to-empathy-500 text-white relative overflow-hidden">
+            {/* ─── Hero ─── */}
+            <section className="py-20 lg:py-28 bg-gradient-to-br from-therapeutic-600 via-calming-500 to-empathy-500 text-white relative overflow-hidden">
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
-                <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-warm-500/20 rounded-full blur-3xl animate-blob" />
+                <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-warm-500/20 rounded-full blur-3xl animate-blob" />
 
                 <Container className="relative z-10">
-                    <div className="text-center max-w-4xl mx-auto">
-                        <AnimatedSection animation="slideUp" className="space-y-8">
-                            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
+                    <AnimatedSection animation="slideUp">
+                        <div className="text-center max-w-4xl mx-auto space-y-8">
+                            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm">
                                 <Sparkles className="w-4 h-4 mr-2 text-warm-300" />
-                                Servicii complete de psihologie și logopedie
+                                Servicii complete de psihologie si logopedie
                             </div>
 
-                            <Typography variant="h1" className="text-white leading-tight text-center" family="serif">
+                            <Typography variant="h1" className="text-white flex justify-center gap-x-3" family="serif">
                                 Servicii
-                                <span className="block text-warm-200">Specializate</span>
+                                <span className="text-warm-200">Specializate</span>
                             </Typography>
 
-                            <Typography variant="lead" className="text-white/90 max-w-3xl mx-auto text-center">
-                                Oferă o gamă completă de servicii de psihologie și logopedie pentru copii, adolescenți și adulți.
-                                Fiecare serviciu este personalizat pentru a răspunde nevoilor tale specifice.
+                            <Typography variant="lead" className="text-white/90 max-w-2xl mx-auto">
+                                O gama completa de servicii de psihologie si logopedie pentru copii, adolescenti
+                                si adulti, fiecare personalizat pentru a raspunde nevoilor tale specifice.
                             </Typography>
 
-                            <div className="grid grid-cols-3 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
-                                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                                    <Heart className="w-8 h-8 text-warm-300 mx-auto mb-2" />
-                                    <div className="text-sm font-bold text-white">Psihoterapie</div>
-                                </div>
-                                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                                    <Trophy className="w-8 h-8 text-empathy-300 mx-auto mb-2" />
-                                    <div className="text-sm font-bold text-white">Sport</div>
-                                </div>
-                                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                                    <MessageCircle className="w-8 h-8 text-calming-300 mx-auto mb-2" />
-                                    <div className="text-sm font-bold text-white">Logopedie</div>
-                                </div>
-                                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                                    <Gamepad2 className="w-8 h-8 text-therapeutic-300 mx-auto mb-2" />
-                                    <div className="text-sm font-bold text-white">Recuperare</div>
-                                </div>
-                                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                                    <ClipboardList className="w-8 h-8 text-warm-200 mx-auto mb-2" />
-                                    <div className="text-sm font-bold text-white">Evaluare</div>
-                                </div>
+                            {/* Servicii quick icons */}
+                            <div className="grid grid-cols-3 md:grid-cols-6 gap-3 max-w-3xl mx-auto pt-2">
+                                {[
+                                    { icon: ClipboardList, label: 'Evaluare',   color: 'text-therapeutic-200' },
+                                    { icon: SproutIcon,    label: 'Recuperare', color: 'text-warm-200'         },
+                                    { icon: Puzzle,        label: 'Senzorial',  color: 'text-peace-200'        },
+                                    { icon: Trophy,        label: 'Sport',      color: 'text-trust-200'        },
+                                    { icon: Heart,         label: 'Terapie',    color: 'text-empathy-200'      },
+                                    { icon: MessageSquare, label: 'Logopedie',  color: 'text-calming-200'      },
+                                ].map(({ icon: Icon, label, color }) => (
+                                    <div key={label} className="bg-white/10 backdrop-blur-sm rounded-xl p-3 text-center hover:bg-white/20 transition-colors">
+                                        <Icon className={`w-6 h-6 mx-auto mb-1 ${color}`} />
+                                        <div className="text-xs font-semibold text-white">{label}</div>
+                                    </div>
+                                ))}
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-base px-8">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
-                                        Programează consultația
+                                        Programeaza consultatie
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="!bg-transparent !border-white !text-white hover:!bg-white hover:!text-therapeutic-600">
-                                    <a href="tel:+40722123456">
+                                <Button asChild size="lg" variant="outline" className="border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
+                                    <a href="tel:+40724172996">
                                         <Phone className="w-5 h-5 mr-2" />
-                                        Discută gratuit
+                                        Discuta gratuit
                                     </a>
                                 </Button>
                             </div>
-                        </AnimatedSection>
+                        </div>
+                    </AnimatedSection>
+                </Container>
+            </section>
+
+            {/* ─── Banner CASMB ─── */}
+            <section className="py-6 bg-therapeutic-600 text-white">
+                <Container>
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+                        <div className="flex items-center gap-4">
+                            <div className="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                <BadgeCheck className="w-7 h-7 text-therapeutic-600" />
+                            </div>
+                            <div>
+                                <p className="font-bold text-lg leading-tight">Contract cu CASMB</p>
+                                <p className="text-therapeutic-100 text-sm">
+                                    Casa de Asigurari de Sanatate a Municipiului Bucuresti
+                                </p>
+                            </div>
+                        </div>
+                        <p className="text-therapeutic-100 text-sm text-center lg:text-right max-w-md">
+                            Anumite servicii pot fi decontate prin asigurarile de sanatate.
+                            Contacteaza-ne pentru detalii despre serviciile acoperite.
+                        </p>
+                        <Button asChild size="sm" className="flex-shrink-0 bg-white text-therapeutic-700 hover:bg-therapeutic-50">
+                            <Link href="/contact">Afla detalii</Link>
+                        </Button>
                     </div>
                 </Container>
             </section>
 
-            {/* Services Grid */}
+            {/* ─── Banner CASMB detaliat ─── */}
+            <section className="py-10 bg-therapeutic-50 border-b border-therapeutic-100">
+                <Container>
+                    <AnimatedSection animation="fadeIn">
+                        <Card className="border-therapeutic-200 bg-white overflow-hidden p-0">
+                            <div className="flex flex-col lg:flex-row">
+                                {/* Stanga - informatii contract */}
+                                <div className="flex-1 p-6 lg:p-8">
+                                    <div className="flex items-start gap-4 mb-6">
+                                        <div className="w-14 h-14 bg-therapeutic-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <BadgeCheck className="w-8 h-8 text-therapeutic-600" />
+                                        </div>
+                                        <div>
+                                            <Typography variant="h4" className="text-therapeutic-700 mb-1">
+                                                Servicii decontate prin CASMB
+                                            </Typography>
+                                            <Typography variant="small" className="text-muted-foreground">
+                                                Casa de Asigurari de Sanatate a Municipiului Bucuresti
+                                            </Typography>
+                                        </div>
+                                    </div>
+
+                                    <Typography variant="body" className="text-gray-700 leading-relaxed mb-6">
+                                        In urma incheierii contractului cu Casa de Asigurari de Sanatate a Municipiului
+                                        Bucuresti (CASMB), o parte din serviciile oferite pot fi decontate integral sau
+                                        partial prin asigurarile de sanatate. Aceasta facilitate permite accesul la
+                                        servicii psihologice de calitate fara costuri suplimentare pentru pacienti.
+                                    </Typography>
+
+                                    <div className="space-y-3">
+                                        <div className="flex items-start gap-2">
+                                            <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />
+                                            <span className="text-sm text-gray-700">
+                                                Servicii decontate pentru asiguratii CASMB cu trimitere de la medicul de familie
+                                            </span>
+                                        </div>
+                                        <div className="flex items-start gap-2">
+                                            <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />
+                                            <span className="text-sm text-gray-700">
+                                                Valabil pentru rezidentii din Municipiul Bucuresti
+                                            </span>
+                                        </div>
+                                        <div className="flex items-start gap-2">
+                                            <CheckCircle className="w-5 h-5 text-therapeutic-500 mt-0.5 flex-shrink-0" />
+                                            <span className="text-sm text-gray-700">
+                                                Contacteaza-ne pentru lista completa de servicii decontate si conditii
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Dreapta - CTA */}
+                                <div className="lg:w-72 bg-therapeutic-600 p-6 lg:p-8 flex flex-col justify-center items-center text-center text-white">
+                                    <BadgeCheck className="w-16 h-16 text-therapeutic-200 mb-4" />
+                                    <Typography variant="h6" className="text-white mb-2">
+                                        Ai asigurare CASMB?
+                                    </Typography>
+                                    <Typography variant="small" className="text-therapeutic-100 mb-6 leading-relaxed">
+                                        Contacteaza-ne pentru a verifica eligibilitatea si documentele necesare
+                                        pentru decontare.
+                                    </Typography>
+                                    <div className="space-y-3 w-full">
+                                        <Button asChild className="w-full bg-white text-therapeutic-600 hover:bg-therapeutic-50">
+                                            <Link href="/contact">
+                                                <Phone className="w-4 h-4 mr-2" />
+                                                Contacteaza-ne
+                                            </Link>
+                                        </Button>
+                                        <Button asChild variant="outline" size="sm" className="w-full border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
+                                            <a href="https://www.casmb.ro/casmb_portal" target="_blank" rel="noopener noreferrer">
+                                                <ExternalLink className="w-4 h-4 mr-2" />
+                                                Site CASMB
+                                            </a>
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+                        </Card>
+                    </AnimatedSection>
+                </Container>
+            </section>
+
+            {/* ─── Services Grid ─── */}
             <section className="py-20 bg-white">
                 <Container>
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-                        <Typography variant="h2" className="mb-6" family="serif">
+                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-14">
+                        <Typography variant="h2" className="mb-4" family="serif">
                             Serviciile <span className="text-therapeutic">Mele</span>
                         </Typography>
                         <Typography variant="lead">
-                            Fiecare serviciu este conceput pentru a răspunde nevoilor specifice ale fiecărei vârste și situații
+                            Fiecare serviciu este conceput pentru a raspunde nevoilor specifice ale fiecarei varste si situatii
                         </Typography>
                     </AnimatedSection>
 
                     <AnimatedSection animation="stagger">
-                        <div className="grid lg:grid-cols-2 gap-8">
-                            {services.map((service, index) => {
+                        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                            {services.map((service) => {
                                 const Icon = service.icon
+                                const c = colorMap[service.color]
                                 return (
                                     <Card
-                                        key={index}
-                                        className={`p-6 border-${service.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group ${service.featured ? 'lg:col-span-2 lg:max-w-2xl lg:mx-auto w-full' : ''}`}
+                                        key={service.title}
+                                        className={`relative flex flex-col h-full border ${c.border} hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group overflow-hidden p-0`}
                                     >
-                                        <CardHeader className="pb-4">
+                                        {service.featured && (
+                                            <div className="absolute top-4 right-4 z-10 bg-therapeutic-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                                                Cel mai solicitat
+                                            </div>
+                                        )}
+
+                                        {/* banda colorata sus */}
+                                        <div className={`h-1.5 w-full ${c.strip}`} />
+
+                                        <CardHeader className="pt-6 px-6 pb-2">
                                             <div className="flex items-start justify-between mb-4">
-                                                <div className={`w-16 h-16 bg-${service.color}-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                                                    <Icon className={`w-8 h-8 text-${service.color}-600`} />
+                                                <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${c.iconBg} ${c.iconText} group-hover:scale-110 transition-transform`}>
+                                                    <Icon className="w-7 h-7" />
                                                 </div>
                                                 <div className="text-right">
-                                                    <div className={`text-lg font-bold text-${service.color}-600`}>{service.price}</div>
-                                                    <div className="text-sm text-gray-500">{service.duration}</div>
+                                                    <div className={`text-xl font-bold ${c.subtitleText}`}>{service.price}</div>
+                                                    <div className="text-sm text-muted-foreground mt-0.5">{service.duration}</div>
                                                 </div>
                                             </div>
-
-                                            <CardTitle className="text-2xl mb-2">{service.title}</CardTitle>
-                                            <Typography variant="body" className={`text-${service.color}-600 font-medium mb-3`}>
+                                            <CardTitle className="text-xl mb-1">{service.title}</CardTitle>
+                                            <Typography variant="small" className={`${c.subtitleText} font-medium`}>
                                                 {service.subtitle}
-                                            </Typography>
-                                            <Typography variant="body" className="text-gray-600 leading-relaxed">
-                                                {service.description}
                                             </Typography>
                                         </CardHeader>
 
-                                        <CardContent className="space-y-6">
-                                            {/* Highlights */}
-                                            <div>
-                                                <Typography variant="small" className="font-medium text-gray-700 mb-3">
-                                                    Principalele beneficii:
-                                                </Typography>
-                                                <ul className="space-y-2">
-                                                    {service.highlights.map((highlight, idx) => (
-                                                        <li key={idx} className="flex items-start space-x-2 text-sm">
-                                                            <CheckCircle className={`w-4 h-4 text-${service.color}-500 mt-0.5 flex-shrink-0`} />
-                                                            <span className="text-gray-700">{highlight}</span>
-                                                        </li>
+                                        <CardContent className="flex flex-col flex-1 gap-5 px-6 pb-6">
+                                            <Typography variant="body" className="text-muted-foreground leading-relaxed">
+                                                {service.description}
+                                            </Typography>
+
+                                            {/* Features 2-col */}
+                                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
+                                                {service.features.map((f) => (
+                                                    <li key={f} className="flex items-start gap-2 text-sm text-foreground">
+                                                        <CheckCircle className={`w-4 h-4 mt-0.5 flex-shrink-0 ${c.featureText}`} />
+                                                        {f}
+                                                    </li>
+                                                ))}
+                                            </ul>
+
+                                            {/* Meta row */}
+                                            <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-border mt-auto">
+                                                <div className="text-sm text-muted-foreground">
+                                                    <span className="font-medium">Pentru: </span>
+                                                    {service.audience}
+                                                </div>
+                                                <div className="flex flex-wrap gap-1.5 ml-auto">
+                                                    {service.sessionTypes.map((t) => (
+                                                        <span key={t} className={`text-xs px-2.5 py-1 rounded-full font-medium ${c.badgeBg} ${c.badgeText}`}>
+                                                            {t}
+                                                        </span>
                                                     ))}
-                                                </ul>
-                                            </div>
-
-                                            {/* Target Audience & Session Types */}
-                                            <div className="grid grid-cols-1 gap-4 pt-4 border-t border-gray-100">
-                                                <div>
-                                                    <Typography variant="small" className="font-medium text-gray-700 mb-1">
-                                                        Pentru:
-                                                    </Typography>
-                                                    <Typography variant="small" className="text-gray-600">
-                                                        {service.targetAudience}
-                                                    </Typography>
-                                                </div>
-                                                <div>
-                                                    <Typography variant="small" className="font-medium text-gray-700 mb-2">
-                                                        Modalități:
-                                                    </Typography>
-                                                    <div className="flex flex-wrap gap-1">
-                                                        {service.sessionTypes.map((type, idx) => (
-                                                            <span key={idx} className={`text-xs px-2 py-1 bg-${service.color}-100 text-${service.color}-700 rounded`}>
-                                                                {type}
-                                                            </span>
-                                                        ))}
-                                                    </div>
                                                 </div>
                                             </div>
 
-                                            {/* CTA Button */}
-                                            <Button asChild className={`w-full bg-${service.color} text-white hover:bg-${service.color}/90 group-hover:shadow-lg transition-all`}>
+                                            <Button asChild className={`w-full text-white ${c.btnBg} transition-all group-hover:shadow-md`}>
                                                 <Link href={service.href}>
                                                     Detalii complete
                                                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -370,33 +556,33 @@ export default function ServiciiPage() {
                 </Container>
             </section>
 
-            {/* Why Choose Us */}
+            {/* ─── Why Choose Us ─── */}
             <section className="py-20 bg-gray-50">
                 <Container>
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-                        <Typography variant="h2" className="mb-6" family="serif">
-                            De ce să <span className="text-therapeutic">Alegi</span> Serviciile Mele?
+                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-14">
+                        <Typography variant="h2" className="mb-4" family="serif">
+                            De ce sa <span className="text-therapeutic">Alegi</span> Serviciile Mele?
                         </Typography>
                         <Typography variant="lead">
-                            Peste 12 ani de experiență în psihologie, cu o abordare integrativă și personalizată
+                            Peste 12 ani de experienta, cu o abordare integrativa si personalizata
                         </Typography>
                     </AnimatedSection>
 
                     <AnimatedSection animation="stagger">
-                        <div className="grid md:grid-cols-2 gap-8">
-                            {whyChooseUs.map((reason, index) => {
+                        <div className="grid sm:grid-cols-2 gap-6">
+                            {whyChooseUs.map((reason) => {
                                 const Icon = reason.icon
                                 return (
-                                    <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                                        <CardContent className="flex items-start space-x-4">
+                                    <Card key={reason.title} className="p-6 hover:shadow-lg transition-shadow">
+                                        <CardContent className="flex items-start gap-5 p-0">
                                             <div className="w-14 h-14 bg-therapeutic-100 rounded-xl flex items-center justify-center flex-shrink-0">
                                                 <Icon className="w-7 h-7 text-therapeutic-600" />
                                             </div>
                                             <div>
-                                                <Typography variant="h6" className="mb-3 text-therapeutic-700">
+                                                <Typography variant="h6" className="mb-2 text-therapeutic-700">
                                                     {reason.title}
                                                 </Typography>
-                                                <Typography variant="body" className="text-gray-600 leading-relaxed">
+                                                <Typography variant="body" className="text-muted-foreground leading-relaxed">
                                                     {reason.description}
                                                 </Typography>
                                             </div>
@@ -409,33 +595,33 @@ export default function ServiciiPage() {
                 </Container>
             </section>
 
-            {/* Process Steps */}
+            {/* ─── Process Steps ─── */}
             <section className="py-20 bg-therapeutic-50">
                 <Container>
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-                        <Typography variant="h2" className="mb-6" family="serif">
-                            Cum <span className="text-therapeutic">Funcționează</span>?
+                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-14">
+                        <Typography variant="h2" className="mb-4" family="serif">
+                            Cum <span className="text-therapeutic">Functioneaza</span>?
                         </Typography>
                         <Typography variant="lead">
-                            Procesul simplu și structurat pentru a începe călătoria ta către o viață mai bună
+                            Procesul simplu si structurat pentru a incepe calatoria ta catre o viata mai buna
                         </Typography>
                     </AnimatedSection>
 
                     <AnimatedSection animation="stagger">
-                        <div className="grid md:grid-cols-4 gap-6">
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             {processSteps.map((step, index) => (
-                                <Card key={index} className="p-6 bg-white text-center hover:shadow-lg transition-shadow relative">
+                                <Card key={step.step} className="p-6 bg-white text-center hover:shadow-lg transition-shadow relative">
                                     {index < processSteps.length - 1 && (
-                                        <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-therapeutic-200 z-10" />
+                                        <div className="hidden lg:block absolute top-10 -right-3 w-6 h-0.5 bg-therapeutic-200 z-10" />
                                     )}
-                                    <CardContent className="space-y-4">
-                                        <div className="w-16 h-16 bg-therapeutic-100 rounded-full flex items-center justify-center mx-auto relative z-20">
+                                    <CardContent className="space-y-4 p-0">
+                                        <div className="w-16 h-16 bg-therapeutic-100 rounded-full flex items-center justify-center mx-auto">
                                             <span className="text-2xl font-bold text-therapeutic-600">{step.step}</span>
                                         </div>
                                         <Typography variant="h6" className="font-semibold text-therapeutic-700">
                                             {step.title}
                                         </Typography>
-                                        <Typography variant="body" className="text-gray-600 text-sm leading-relaxed">
+                                        <Typography variant="small" className="text-muted-foreground leading-relaxed block">
                                             {step.description}
                                         </Typography>
                                     </CardContent>
@@ -446,27 +632,27 @@ export default function ServiciiPage() {
                 </Container>
             </section>
 
-            {/* FAQ */}
+            {/* ─── FAQ ─── */}
             <section className="py-20 bg-white">
-                <Container>
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-                        <Typography variant="h2" className="mb-6" family="serif">
-                            Întrebări <span className="text-therapeutic">Frecvente</span>
+                <Container size="md">
+                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-14">
+                        <Typography variant="h2" className="mb-4" family="serif">
+                            Intrebari <span className="text-therapeutic">Frecvente</span>
                         </Typography>
                         <Typography variant="lead">
-                            Răspunsuri la întrebările comune despre serviciile oferite
+                            Raspunsuri la intrebarile comune despre serviciile oferite
                         </Typography>
                     </AnimatedSection>
 
-                    <AnimatedSection animation="stagger" className="max-w-4xl mx-auto">
-                        <div className="space-y-6">
-                            {faqs.map((faq, index) => (
-                                <Card key={index} className="p-6 hover:shadow-md transition-shadow">
-                                    <CardContent>
-                                        <Typography variant="h6" className="mb-3 text-therapeutic-700">
+                    <AnimatedSection animation="stagger">
+                        <div className="space-y-5">
+                            {faqs.map((faq) => (
+                                <Card key={faq.question} className="p-6 hover:shadow-md transition-shadow border-l-4 border-l-therapeutic-300">
+                                    <CardContent className="p-0">
+                                        <Typography variant="h6" className="mb-2 text-therapeutic-700">
                                             {faq.question}
                                         </Typography>
-                                        <Typography variant="body" className="text-gray-600 leading-relaxed">
+                                        <Typography variant="body" className="text-muted-foreground leading-relaxed">
                                             {faq.answer}
                                         </Typography>
                                     </CardContent>
@@ -477,42 +663,42 @@ export default function ServiciiPage() {
                 </Container>
             </section>
 
-            {/* CTA Section */}
+            {/* ─── CTA ─── */}
             <section className="py-20 bg-gradient-to-r from-therapeutic-600 via-calming-500 to-warm-600 text-white relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/10" />
                 <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-therapeutic-500/20 rounded-full blur-3xl" />
+                <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-white/5 rounded-full blur-3xl" />
 
                 <Container className="relative z-10">
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-4xl mx-auto">
-                        <Typography variant="h2" className="text-white mb-6" family="serif">
-                            Începe Călătoria ta de Schimbare Astăzi
-                        </Typography>
-                        <Typography variant="lead" className="text-white/90 mb-8">
-                            Fiecare pas către o viață mai bună începe cu o decizie. Sunt aici să te sprijin
-                            în această călătorie, indiferent de provocările cu care te confrunți.
-                        </Typography>
-
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
-                                <Link href="/contact">
-                                    <Calendar className="w-5 h-5 mr-2" />
-                                    Programează consultația gratuită
-                                </Link>
-                            </Button>
-
-                            <Button asChild size="lg" variant="outline" className="!bg-transparent !border-white !text-white hover:!bg-white hover:!text-therapeutic-600">
-                                <Link href="/despre-mine">
-                                    <Users className="w-5 h-5 mr-2" />
-                                    Află mai multe despre mine
-                                </Link>
-                            </Button>
-                        </div>
-
-                        <div className="mt-8 pt-8 border-t border-white/20">
-                            <Typography variant="small" className="text-white/80">
-                                💬 Consultația telefonică inițială (15 minute) este <strong>gratuită</strong>
+                    <AnimatedSection animation="fadeIn">
+                        <div className="text-center max-w-3xl mx-auto space-y-6">
+                            <Typography variant="h2" className="text-white" family="serif">
+                                Incepe Calatoria ta de Schimbare Astazi
                             </Typography>
+                            <Typography variant="lead" className="text-white/90">
+                                Fiecare pas catre o viata mai buna incepe cu o decizie. Sunt aici sa te sprijin
+                                in aceasta calatorie, indiferent de provocarile cu care te confrunti.
+                            </Typography>
+
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-base px-8">
+                                    <Link href="/contact">
+                                        <Calendar className="w-5 h-5 mr-2" />
+                                        Programeaza consultatie gratuita
+                                    </Link>
+                                </Button>
+                                <Button asChild size="lg" variant="outline" className="border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
+                                    <Link href="/despre-mine">
+                                        <Users className="w-5 h-5 mr-2" />
+                                        Afla mai mult despre mine
+                                    </Link>
+                                </Button>
+                            </div>
+
+                            <p className="text-sm text-white/70 pt-2">
+                                Consultatie telefonica initiala (15 minute) —{' '}
+                                <strong className="text-white">gratuita</strong>
+                            </p>
                         </div>
                     </AnimatedSection>
                 </Container>

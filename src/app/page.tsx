@@ -16,7 +16,7 @@ import {
   MapPin,
   ClipboardList,
   Trophy,
-  MessageSquare, SproutIcon,
+  MessageSquare, SproutIcon, BadgeCheck,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -318,6 +318,30 @@ export default function HomePage() {
             </div>
           </Container>
         </HeroSection>
+        {/* CASMB Banner */}
+        <section className="py-6 bg-therapeutic-600 text-white">
+          <Container>
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                  <BadgeCheck className="w-7 h-7 text-therapeutic-600" />
+                </div>
+                <div>
+                  <p className="font-bold text-lg leading-tight">Contract cu CASMB</p>
+                  <p className="text-therapeutic-100 text-sm">
+                    Casa de Asigurari de Sanatate a Municipiului Bucuresti
+                  </p>
+                </div>
+              </div>
+              <p className="text-therapeutic-100 text-sm text-center sm:text-right max-w-md">
+                Anumite servicii pot fi decontate prin asigurarile de sanatate.
+              </p>
+              <Button asChild size="sm" className="flex-shrink-0 bg-white text-therapeutic-700 hover:bg-therapeutic-50">
+                <Link href="/servicii">Afla detalii</Link>
+              </Button>
+            </div>
+          </Container>
+        </section>
 
         {/* Stats Section */}
         <StatsSection>
