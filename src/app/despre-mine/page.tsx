@@ -6,13 +6,11 @@ import {
     Award,
     Heart,
     Users,
-    Brain,
     Star,
     Calendar,
     Phone,
     Target,
     Shield,
-    Lightbulb,
     Clock,
     Quote,
 } from 'lucide-react'
@@ -67,68 +65,68 @@ const education = [
     }
 ]
 
-const certifications = [
-    {
-        title: 'Certificare Terapie Comportamentală Aplicată (ABA)',
-        issuer: 'Behavior Analyst Certification Board',
-        year: '2016',
-        type: 'Certificare Internațională',
-        icon: Brain,
-        color: 'therapeutic',
-        description: 'Certificare specializată pentru terapia copiilor și adulților cu autism',
-        skills: ['Evaluare comportamentală', 'Planuri de intervenție', 'Training părinți']
-    },
-    {
-        title: 'Terapie Cognitiv-Comportamentală',
-        issuer: 'Asociația Română de Terapie Cognitiv-Comportamentală',
-        year: '2018',
-        type: 'Certificare Națională',
-        icon: Lightbulb,
-        color: 'calming',
-        description: 'Specializare în TCC pentru anxietate, depresie și tulburări de dispoziție',
-        skills: ['Tehnici TCC', 'Reestructurare cognitivă', 'Terapie scurtă']
-    },
-    {
-        title: 'Terapie de Cuplu și Familie',
-        issuer: 'European Family Therapy Association',
-        year: '2019',
-        type: 'Certificare Europeană',
-        icon: Heart,
-        color: 'warm',
-        description: 'Abordare sistemică pentru terapia cuplurilor și familiilor',
-        skills: ['Terapie sistemică', 'Medierea conflictelor', 'Comunicare în cuplu']
-    },
-    {
-        title: 'Supervisor în Psihologie Clinică',
-        issuer: 'Colegiul Psihologilor din România',
-        year: '2020',
-        type: 'Acreditare CPR',
-        icon: Shield,
-        color: 'trust',
-        description: 'Autorizare pentru supervizarea stagiarilor și psihologilor juniori',
-        skills: ['Supervizare', 'Formare profesională', 'Evaluare competențe']
-    },
-    {
-        title: 'Intervenție în Criză și Traumă',
-        issuer: 'International Society for Traumatic Stress Studies',
-        year: '2021',
-        type: 'Certificare Internațională',
-        icon: Shield,
-        color: 'empathy',
-        description: 'Specializare în tratamentul traumelor și intervențiile de criză',
-        skills: ['EMDR', 'Trauma-Focused CBT', 'Intervenție criză']
-    },
-    {
-        title: 'ADHD și Tulburări de Atenție',
-        issuer: 'ADHD Europe',
-        year: '2022',
-        type: 'Certificare Europeană',
-        icon: Target,
-        color: 'peace',
-        description: 'Diagnostic și intervenție pentru ADHD la copii și adulți',
-        skills: ['Diagnostic ADHD', 'Terapie comportamentală', 'Coaching ADHD']
-    }
-]
+// const certifications = [
+//     {
+//         title: 'Certificare Terapie Comportamentală Aplicată (ABA)',
+//         issuer: 'Behavior Analyst Certification Board',
+//         year: '2016',
+//         type: 'Certificare Internațională',
+//         icon: Brain,
+//         color: 'therapeutic',
+//         description: 'Certificare specializată pentru terapia copiilor și adulților cu autism',
+//         skills: ['Evaluare comportamentală', 'Planuri de intervenție', 'Training părinți']
+//     },
+//     {
+//         title: 'Terapie Cognitiv-Comportamentală',
+//         issuer: 'Asociația Română de Terapie Cognitiv-Comportamentală',
+//         year: '2018',
+//         type: 'Certificare Națională',
+//         icon: Lightbulb,
+//         color: 'calming',
+//         description: 'Specializare în TCC pentru anxietate, depresie și tulburări de dispoziție',
+//         skills: ['Tehnici TCC', 'Reestructurare cognitivă', 'Terapie scurtă']
+//     },
+//     {
+//         title: 'Terapie de Cuplu și Familie',
+//         issuer: 'European Family Therapy Association',
+//         year: '2019',
+//         type: 'Certificare Europeană',
+//         icon: Heart,
+//         color: 'warm',
+//         description: 'Abordare sistemică pentru terapia cuplurilor și familiilor',
+//         skills: ['Terapie sistemică', 'Medierea conflictelor', 'Comunicare în cuplu']
+//     },
+//     {
+//         title: 'Supervisor în Psihologie Clinică',
+//         issuer: 'Colegiul Psihologilor din România',
+//         year: '2020',
+//         type: 'Acreditare CPR',
+//         icon: Shield,
+//         color: 'trust',
+//         description: 'Autorizare pentru supervizarea stagiarilor și psihologilor juniori',
+//         skills: ['Supervizare', 'Formare profesională', 'Evaluare competențe']
+//     },
+//     {
+//         title: 'Intervenție în Criză și Traumă',
+//         issuer: 'International Society for Traumatic Stress Studies',
+//         year: '2021',
+//         type: 'Certificare Internațională',
+//         icon: Shield,
+//         color: 'empathy',
+//         description: 'Specializare în tratamentul traumelor și intervențiile de criză',
+//         skills: ['EMDR', 'Trauma-Focused CBT', 'Intervenție criză']
+//     },
+//     {
+//         title: 'ADHD și Tulburări de Atenție',
+//         issuer: 'ADHD Europe',
+//         year: '2022',
+//         type: 'Certificare Europeană',
+//         icon: Target,
+//         color: 'peace',
+//         description: 'Diagnostic și intervenție pentru ADHD la copii și adulți',
+//         skills: ['Diagnostic ADHD', 'Terapie comportamentală', 'Coaching ADHD']
+//     }
+// ]
 
 const expertise = [
     {
@@ -401,65 +399,65 @@ export default function AboutPage() {
                 </Container>
             </section>
 
-            {/* Certifications & Specializations */}
-            <section className="py-20 bg-white">
-                <Container>
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-                        <Typography variant="h2" className="mb-6" family="serif">
-                            Certificări și <span className="text-therapeutic">Specializări</span>
-                        </Typography>
-                        <Typography variant="lead">
-                            Acreditări profesionale și specializări continue pentru a oferi cele mai bune servicii
-                        </Typography>
-                    </AnimatedSection>
+            {/*/!* Certifications & Specializations *!/*/}
+            {/*<section className="py-20 bg-white">*/}
+            {/*    <Container>*/}
+            {/*        <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">*/}
+            {/*            <Typography variant="h2" className="mb-6" family="serif">*/}
+            {/*                Certificări și <span className="text-therapeutic">Specializări</span>*/}
+            {/*            </Typography>*/}
+            {/*            <Typography variant="lead">*/}
+            {/*                Acreditări profesionale și specializări continue pentru a oferi cele mai bune servicii*/}
+            {/*            </Typography>*/}
+            {/*        </AnimatedSection>*/}
 
-                    <AnimatedSection animation="stagger">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {certifications.map((cert, index) => {
-                                const Icon = cert.icon
-                                return (
-                                    <Card key={index} className={`p-6 border-${cert.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
-                                        <CardHeader className="pb-4">
-                                            <div className={`w-14 h-14 bg-${cert.color}-100 rounded-xl flex items-center justify-center mb-4`}>
-                                                <Icon className={`w-7 h-7 text-${cert.color}-600`} />
-                                            </div>
-                                            <CardTitle className="text-lg leading-tight mb-2">
-                                                {cert.title}
-                                            </CardTitle>
-                                            <div className="flex items-center justify-between text-sm">
-                        <span className={`px-2 py-1 rounded bg-${cert.color}-100 text-${cert.color}-700 font-medium`}>
-                          {cert.type}
-                        </span>
-                                                <span className="text-gray-500 font-medium">{cert.year}</span>
-                                            </div>
-                                        </CardHeader>
-                                        <CardContent className="space-y-4">
-                                            <Typography variant="body" className="text-gray-600 text-sm">
-                                                <strong className={`text-${cert.color}-700`}>{cert.issuer}</strong>
-                                            </Typography>
-                                            <Typography variant="body" className="text-gray-700 leading-relaxed">
-                                                {cert.description}
-                                            </Typography>
-                                            <div>
-                                                <Typography variant="small" className="font-medium text-gray-700 mb-2">
-                                                    Competențe dobândite:
-                                                </Typography>
-                                                <div className="flex flex-wrap gap-1">
-                                                    {cert.skills.map((skill, idx) => (
-                                                        <span key={idx} className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">
-                              {skill}
-                            </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                )
-                            })}
-                        </div>
-                    </AnimatedSection>
-                </Container>
-            </section>
+            {/*        <AnimatedSection animation="stagger">*/}
+            {/*            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">*/}
+            {/*                {certifications.map((cert, index) => {*/}
+            {/*                    const Icon = cert.icon*/}
+            {/*                    return (*/}
+            {/*                        <Card key={index} className={`p-6 border-${cert.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>*/}
+            {/*                            <CardHeader className="pb-4">*/}
+            {/*                                <div className={`w-14 h-14 bg-${cert.color}-100 rounded-xl flex items-center justify-center mb-4`}>*/}
+            {/*                                    <Icon className={`w-7 h-7 text-${cert.color}-600`} />*/}
+            {/*                                </div>*/}
+            {/*                                <CardTitle className="text-lg leading-tight mb-2">*/}
+            {/*                                    {cert.title}*/}
+            {/*                                </CardTitle>*/}
+            {/*                                <div className="flex items-center justify-between text-sm">*/}
+            {/*            <span className={`px-2 py-1 rounded bg-${cert.color}-100 text-${cert.color}-700 font-medium`}>*/}
+            {/*              {cert.type}*/}
+            {/*            </span>*/}
+            {/*                                    <span className="text-gray-500 font-medium">{cert.year}</span>*/}
+            {/*                                </div>*/}
+            {/*                            </CardHeader>*/}
+            {/*                            <CardContent className="space-y-4">*/}
+            {/*                                <Typography variant="body" className="text-gray-600 text-sm">*/}
+            {/*                                    <strong className={`text-${cert.color}-700`}>{cert.issuer}</strong>*/}
+            {/*                                </Typography>*/}
+            {/*                                <Typography variant="body" className="text-gray-700 leading-relaxed">*/}
+            {/*                                    {cert.description}*/}
+            {/*                                </Typography>*/}
+            {/*                                <div>*/}
+            {/*                                    <Typography variant="small" className="font-medium text-gray-700 mb-2">*/}
+            {/*                                        Competențe dobândite:*/}
+            {/*                                    </Typography>*/}
+            {/*                                    <div className="flex flex-wrap gap-1">*/}
+            {/*                                        {cert.skills.map((skill, idx) => (*/}
+            {/*                                            <span key={idx} className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">*/}
+            {/*                  {skill}*/}
+            {/*                </span>*/}
+            {/*                                        ))}*/}
+            {/*                                    </div>*/}
+            {/*                                </div>*/}
+            {/*                            </CardContent>*/}
+            {/*                        </Card>*/}
+            {/*                    )*/}
+            {/*                })}*/}
+            {/*            </div>*/}
+            {/*        </AnimatedSection>*/}
+            {/*    </Container>*/}
+            {/*</section>*/}
 
             {/* Expertise Areas */}
             <section className="py-20 bg-therapeutic-50">
