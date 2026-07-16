@@ -56,7 +56,7 @@ const services = [
   {
     icon: ClipboardList,
     title: 'Ședințe de Evaluare',
-    description: 'Evaluare prin metoda observației și aplicarea de chestionare potrivite situației în care vă aflați. Diagnostic complet pentru autism, ADHD, anxietate și alte tulburări.',
+    description: 'Evaluare prin metoda observației, interviul cu parintii / apartinatorii si beneficiarul cat si prin aplicarea chestionarelor potrivite fiecarei situatii.',
     features: [
       'Observație clinică structurată',
       'Chestionare și teste specializate',
