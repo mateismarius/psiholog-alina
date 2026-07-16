@@ -47,9 +47,9 @@ const services = [
     {
         icon: ClipboardList,
         title: 'Sedinte de Evaluare',
-        subtitle: 'Diagnostic complet si plan de interventie personalizat',
+        subtitle: 'Evaluare si plan de interventie personalizat',
         description:
-            'Evaluare prin metoda observatiei si aplicarea de chestionare potrivite situatiei. Diagnostic complet pentru autism, ADHD, anxietate si alte tulburari, urmat de un raport detaliat cu recomandari.',
+            'Evaluare prin metoda observatiei, interviul cu parintii/apartinatorii si beneficiarul cat si prin aplicarea chestionarelor potrivite fiecarei situatii.',
         features: [
             'Observatie clinica structurata',
             'Chestionare si teste specializate',
