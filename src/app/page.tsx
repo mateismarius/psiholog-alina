@@ -91,8 +91,8 @@ const services = [
       colorTxtIcon: 'text-warm-600',
       colorTxtFeature: 'text-warm-500',
       colorBgIcon: 'bg-warm-100',
-    price: '250 RON/sedinta',
-    duration: '50 / 100 minute'
+    price: '260 RON/sedinta',
+    duration: '100 minute'
   },
   {
     icon: Trophy,
