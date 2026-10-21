@@ -75,21 +75,20 @@ const officeInfo = {
     ]
 }
 
-const schedule = [
+const schedule: { day: string, hours: string, available: boolean, note?: string }[] = [
     { day: 'Luni - Vineri', hours: '09:00 - 18:00', available: true },
-    { day: 'Sâmbătă', hours: '09:00 - 14:00', available: true },
-    { day: 'Duminică', hours: 'Închis', available: false, note: 'Urgențe la telefon' }
+    { day: 'Sâmbătă - Duminică', hours: 'Închis', available: false }
 ]
 
 
 const faqs = [
     {
         question: 'Cum pot programa o consultație?',
-        answer: 'Poți suna direct la +40 724 172 996, să trimiți un email sau să folosești formularul de contact. Răspund personal în maxim 24h.'
+        answer: 'Poți suna direct la +40 724 172 996, să trimiți un email sau un mesaj pe WhatsApp. Răspund personal în maxim 24h.'
     },
     {
         question: 'Care sunt tarifele pentru consultații?',
-        answer: 'Terapie autism: 200 RON/ședință, Psihoterapie individuală: 180 RON/ședință, Terapie de cuplu: 220 RON/ședință. Prima consultație este gratuită.'
+        answer: 'Ședințe de evaluare: 350 RON (50 minute), intervenție pentru recuperare: 260 RON (100 minute), terapie senzorială, psihologie sportivă și psihoterapie: 250 RON (50 minute), logopedie: 200 RON (45 minute). Prima discuție telefonică, de 15 minute, este gratuită.'
     },
     {
         question: 'Oferiți consultații online?',

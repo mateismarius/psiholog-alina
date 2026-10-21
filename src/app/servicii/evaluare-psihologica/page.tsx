@@ -154,7 +154,7 @@ const benefits = [
 ]
 
 const pricing = {
-    standard: 200,
+    standard: 350,
     includes: [
         'Ședința de evaluare (50 minute)',
         'Aplicarea instrumentelor de evaluare',

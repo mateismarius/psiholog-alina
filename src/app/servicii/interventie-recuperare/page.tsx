@@ -148,7 +148,7 @@ const sessionStructure = [
 ]
 
 const pricing = {
-    standard: 250,
+    standard: 260,
     duration: '100 minute',
     includes: [
         'Ședința de terapie (100 minute)',

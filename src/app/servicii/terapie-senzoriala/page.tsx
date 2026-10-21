@@ -83,7 +83,7 @@ const areas = [
 ]
 
 const pricing = {
-    standard: 200,
+    standard: 250,
     duration: '50 minute',
     includes: [
         'Sedinta de terapie (50 minute)',

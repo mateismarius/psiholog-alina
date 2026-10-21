@@ -240,8 +240,8 @@ const benefits = [
 ]
 
 const pricing = {
-    individual: 180,
-    duration: '50 minute',
+    individual: 200,
+    duration: '45 minute',
     packages: [
         {
             name: 'Evaluare inițială',
@@ -251,21 +251,21 @@ const pricing = {
         },
         {
             name: 'Ședință individuală',
-            price: 180,
-            duration: '50 minute',
+            price: 200,
+            duration: '45 minute',
             description: 'Ședință de logopedie personalizată pentru toate vârstele'
         },
         {
             name: 'Pachet 5 ședințe',
             price: 850,
-            duration: '5 × 50 minute',
+            duration: '5 × 45 minute',
             description: 'Pachet pentru progres constant cu economie de 50 RON',
             savings: 50
         },
         {
             name: 'Pachet 10 ședințe',
             price: 1600,
-            duration: '10 × 50 minute',
+            duration: '10 × 45 minute',
             description: 'Program complet cu economie de 200 RON',
             savings: 200
         }
@@ -578,7 +578,7 @@ export default function LogopediePage() {
                             Structura unei <span className="text-calming">Ședințe</span>
                         </Typography>
                         <Typography variant="lead">
-                            Fiecare ședință de 50 minute este structurată pentru rezultate optime
+                            Fiecare ședință de 45 de minute este structurată pentru rezultate optime
                         </Typography>
                     </AnimatedSection>
 

@@ -184,12 +184,12 @@ const sessionTypes = [
 ]
 
 const pricing = {
-    standard: 180,
+    standard: 250,
     duration: '50 minute',
     packages: [
         {
             name: 'Sesiune individuală',
-            price: 180,
+            price: 250,
             sessions: 1,
             description: 'Perfect pentru evaluare inițială sau probleme punctuale'
         },

@@ -100,7 +100,7 @@ const services = [
       colorTxtIcon: 'text-warm-600',
       colorTxtFeature: 'text-warm-500',
       colorBgIcon: 'bg-warm-100',
-    price: '260 RON/sedinta',
+    price: '260 RON/ședință',
     duration: '100 minute'
   },
   {

@@ -208,13 +208,13 @@ const sessionStructure = [
 ]
 
 const pricing = {
-    individual: 200,
+    individual: 250,
     couple: 250,
     duration: '50 minute',
     packages: [
         {
             name: 'Sesiune individuală',
-            price: 200,
+            price: 250,
             type: 'individual',
             description: 'Perfect pentru început sau probleme punctuale'
         },
