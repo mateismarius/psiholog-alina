@@ -187,3 +187,48 @@ Legendă: impact **Mare / Medie / Mică** · efort **S** (< 1 h), **M** (1–4 h
 2. **S4, S6, S7, S10, S11**: OG, sitemap/robots, redirecturi, paginile legale, metadata lipsă.
 3. **Upgrade Next 16 + ESLint 10** (secțiunea 3.4).
 4. **D1 / D7** (decizii de design), apoi S12–S18.
+
+---
+
+## 7. Runda a doua — implementat după raport
+
+Commit-uri: `56a39ec` (SEO), `57e5fba` (UX), `05d00de` (Next 16). Lint, `tsc` și build trec. Regresia automată (12 pagini × 3 lățimi) nu arată overflow, conținut ascuns, H1 multiplu, probleme de contrast sau target-uri sub 44 px pe touch.
+
+| Punct | Status | Ce s-a făcut |
+|---|---|---|
+| S1 | ✅ | `withPageMeta()` (`src/lib/seo.ts`): fiecare pagină are canonical, Open Graph și Twitter proprii |
+| S2 | ✅ | JSON-LD `MedicalBusiness` construit din `src/lib/site.ts`: adresă, cod poștal 023995, geo, telefon, email reale, program L–V 09–18, `areaServed` (Sector 2, Sector 3, București), servicii cu URL. **`aggregateRating` eliminat.** Notă: `Psychologist` nu există în schema.org, iar `MedicalBusiness` e tipul potrivit. |
+| S3 | ✅ | Placeholder-ul `+40722123456` a fost înlocuit în toate cele 15 linkuri `tel:` și în răspunsul FAQ de pe /contact |
+| S4 | ✅ | `public/images/og-image.jpg` (1200×630, fotografie + nume + zonă), setat pe toate paginile |
+| S5 | ✅ parțial | `src/lib/site.ts` e sursa unică pentru NAP, folosită de Header, Footer, Contact, JSON-LD, sitemap. Adresa e afișată uniform: „Strada Lunei nr. 7, Sector 2, București”. Rămân de decis textele marcate în 7.1. |
+| S6 | ✅ | `src/app/sitemap.ts` (11 URL-uri, fără /testimoniale) și `src/app/robots.ts` |
+| S7 | ✅ parțial | Linkurile legale care dădeau 404 sunt ascunse din footer; lista de servicii din footer duce acum la paginile reale. **Paginile legale lipsesc** (vezi 7.1). |
+| S8 | ✅ | `<title>` manual eliminat. Șablonul e acum `%s \| Psiholog Patru Alina`, deci titlurile nu mai au 90+ caractere. |
+| S9 | ✅ | Domeniul e fixat în `siteConfig.url` (`https://psiholog-alina.ro`); `NEXT_PUBLIC_SITE_URL` nu mai e folosit |
+| S10 | ✅ | /faq e server component cu `metadata`; acordeonul e separat în `FaqAccordion.tsx` |
+| S11 | ✅ | Home: „Psiholog Patru Alina – Cabinet de psihologie în Sector 2, București”, cu descriere locală (Moșilor, Izvorul Rece) |
+| S12 | ✅ | `FAQPage` pe /faq (32 de întrebări). Răspunsurile sunt acum în HTML (atributul `hidden`), nu doar după click. |
+| S13 | ✅ | `BreadcrumbList` JSON-LD pe cele 6 pagini de servicii |
+| S14 | ✅ | Prin S1 |
+| S17 | ✅ | Componenta `RelatedServices` („Alte servicii”) pe fiecare pagină de serviciu |
+| S18 | ✅ parțial | GA prin `next/script`, încărcat doar dacă `NEXT_PUBLIC_GA_ID` există. **Banner-ul de consimțământ cookie lipsește** (vezi 7.1). |
+| S19 | ✅ | Preconnect-urile Google Fonts eliminate; hero-ul nu mai așteaptă JS (`AnimatedSection immediate`, animație doar CSS); imaginile hero folosesc `preload` |
+| D1 | ✅ | `bg-therapeutic-gradient` definit (cercul logo-ului); `design-system.css` șters. Decorurile `animate-float/blob` rămân statice intenționat (blur animat = cost de performanță). |
+| D3 | ✅ | Subtitlul din header e ascuns sub 640 px |
+| D5 | ✅ parțial | `aria-label` în română; „Află detalii”, „Informații contact” corectate |
+| Accesibilitate | ✅ | Acordeon FAQ cu butoane reale (`aria-expanded`, tastatură); link „Sari la conținut”; adresa din footer în `<address>`, cu link spre Google Maps |
+| Next 16 | ✅ | next 16.4.2, eslint-config-next 16.4.2 (config flat nativ, `eslint .`), @types/node 22, override PostCSS eliminat. 0 vulnerabilități în producție. |
+| ESLint 10 | ⏸ | Amânat: `eslint-plugin-react`, `-import` și `-jsx-a11y` (din eslint-config-next) acceptă doar ESLint ≤ 9 |
+
+### 7.1 Necesită decizia sau datele proprietarului
+
+1. **Paginile legale**: politica de confidențialitate / GDPR și politica de cookies sunt obligatorii, mai ales cu Google Analytics. Necesită datele operatorului (denumire juridică, CUI/cod CIP, sediu). Linkurile sunt pregătite, comentate, în `Footer.tsx`.
+2. **Consimțământ cookie** pentru GA (GDPR, Consent Mode v2). Necesită o decizie de produs: banner propriu sau serviciu extern.
+3. **Program inconsecvent**: /contact afișează „Sâmbătă 09:00–14:00” și „Duminică — Urgențe la telefon”, iar Home și Footer spun „Luni–Vineri / Online”. JSON-LD folosește L–V 09:00–18:00. Confirmați programul real.
+4. **Prețuri în FAQ-ul de pe /contact**: „Terapie autism 200 RON, Psihoterapie 180 RON, Terapie de cuplu 220 RON, prima consultație gratuită”. Ar putea fi depășite după ultimele commit-uri de prețuri.
+5. **Denumirea juridică**: footer-ul are „© Cabinet Individual de Psihologie Alina”, iar restul site-ului „Psiholog Patru Alina”. Confirmați denumirea oficială, pentru footer și pentru Google Business Profile.
+6. **Textul SEO din footer** menționează „terapie de cuplu”, „Ilfov”, „toate sectoarele”, „online în toată România”. Trebuie verificat dacă e încă valabil.
+7. **Diacritice lipsă** pe toată pagina /servicii și pe /servicii/terapie-senzoriala (ex. „Sedinte de Evaluare”, „Interventie”). Pot corecta, dar e mult text și merită o recitire din partea voastră.
+8. **/testimoniale** nu e legată din meniu (linkul a fost comentat) și nu e în sitemap. Decideți: o publicați (cu testimoniale reale și cu acord), îi puneți `noindex` sau o ștergeți.
+9. **Vercel**: verificați Node.js 22.x și redirect-ul `www.psiholog-alina.ro` → `psiholog-alina.ro` (Settings → Domains). După deploy, trimiteți `https://psiholog-alina.ro/sitemap.xml` în Google Search Console.
+10. **Google Business Profile** cu același NAP; apoi URL-ul profilului se adaugă în JSON-LD ca `sameAs`.
