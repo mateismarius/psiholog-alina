@@ -14,7 +14,8 @@ import {
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { MotionConfig, motion } from 'framer-motion'
-import { siteConfig, services } from '@/lib/site'
+import { legalInfo, siteConfig, services } from '@/lib/site'
+import { CookieSettingsButton } from '@/components/layout/CookieSettingsButton'
 
 const footerSections = {
     // Linkuri catre paginile reale de servicii (lista centrala din lib/site)
@@ -23,14 +24,10 @@ const footerSections = {
         { name: 'Despre Mine', href: '/despre-mine' },
         { name: 'Întrebări Frecvente', href: '/faq' },
     ],
-    // Paginile legale nu exista inca (link-urile duceau la 404); se reactiveaza cand sunt create
     legal: [
-        // { name: 'Politica de Confidențialitate', href: '/confidentialitate' },
-        // { name: 'Termeni și Condiții', href: '/termeni' },
-        // { name: 'Politica Cookies', href: '/cookies' },
-        // { name: 'GDPR', href: '/gdpr' },
-        // { name: 'Cod Deontologic', href: '/cod-deontologic' },
-    ] as { name: string, href: string }[]
+        { name: 'Politica de Confidențialitate', href: '/confidentialitate' },
+        { name: 'Politica Cookies', href: '/cookies' },
+    ]
 }
 
 // const socialLinks = [
@@ -231,7 +228,7 @@ export function Footer() {
                                     <div className="text-gray-300">
                                         <div className="font-medium text-white mb-2">Program Cabinet:</div>
                                         <div className="text-sm space-y-1">
-                                            <div>Luni - Vineri</div>
+                                            <div>{siteConfig.openingDaysDisplay}, {siteConfig.openingHoursDisplay}</div>
                                             <div>Online</div>
                                         </div>
                                     </div>
@@ -326,7 +323,7 @@ export function Footer() {
                             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                                 <div className="text-gray-400 text-sm text-center md:text-left">
                                     <p>
-                                        © {currentYear} Cabinet Individual de Psihologie Alina. Toate drepturile rezervate.
+                                        © {currentYear} {legalInfo.entityName}. Toate drepturile rezervate.
                                     </p>
                                     <p className="mt-1">
                                         Psiholog clinician acreditat - Colegiul Psihologilor din România
@@ -343,6 +340,7 @@ export function Footer() {
                                             {link.name}
                                         </Link>
                                     ))}
+                                    <CookieSettingsButton variant="link" className="text-gray-400 hover:text-white" />
                                 </div>
                             </div>
 

@@ -19,6 +19,7 @@ import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { colorClasses } from '@/lib/colorMap'
 import { withPageMeta } from '@/lib/seo'
+import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = withPageMeta('/contact', {
     title: 'Contact',
@@ -63,7 +64,7 @@ const contactInfo = [
 ]
 
 const officeInfo = {
-    address: 'Strada Lunei nr. 7, Sector 2, București',
+    address: siteConfig.addressDisplay,
     nearbyLandmarks: [
         'Parcul Izvorul Rece',
         'Zona Moșilor'
@@ -76,7 +77,7 @@ const officeInfo = {
 }
 
 const schedule: { day: string, hours: string, available: boolean, note?: string }[] = [
-    { day: 'Luni - Vineri', hours: '09:00 - 18:00', available: true },
+    { day: siteConfig.openingDaysDisplay, hours: siteConfig.openingHoursDisplay, available: true },
     { day: 'Sâmbătă - Duminică', hours: 'Închis', available: false }
 ]
 

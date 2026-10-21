@@ -28,8 +28,27 @@ export const siteConfig = {
         opens: '09:00',
         closes: '18:00',
     },
+    // Programul afisat pe site (Home, Footer, Contact)
+    openingDaysDisplay: 'Luni - Vineri',
+    openingHoursDisplay: '09:00 - 18:00',
     locale: 'ro_RO',
 } as const
+
+// Date juridice folosite in paginile legale si in footer.
+// TODO: de completat cu datele oficiale; campurile null nu sunt afisate pe site.
+export const legalInfo: {
+    entityName: string
+    fiscalCode: string | null
+    cprCode: string | null
+    registeredOffice: string
+    lastUpdated: string
+} = {
+    entityName: 'Cabinet Individual de Psihologie Patru Alina',
+    fiscalCode: null, // cod de identificare fiscala (CIF)
+    cprCode: null, // cod de inregistrare in Registrul unic al psihologilor (CPR)
+    registeredOffice: siteConfig.addressDisplay,
+    lastUpdated: '21 octombrie 2026',
+}
 
 export interface ServiceLink {
     name: string

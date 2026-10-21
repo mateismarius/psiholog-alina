@@ -4,7 +4,7 @@ import type { Metadata, Viewport } from 'next'
 import { Header } from '@/components/layout/Header/Header'
 import { Footer } from '@/components/layout/Footer/Footer'
 import { ScrollToTopWrapper } from '@/components/ui/ScrollToTop'
-import Script from 'next/script'
+import { CookieConsent } from '@/components/layout/CookieConsent'
 import { cn } from '@/lib/utils'
 import { siteConfig } from '@/lib/site'
 import { localBusinessJsonLd, ogImage } from '@/lib/seo'
@@ -134,23 +134,8 @@ export default function RootLayout({
         {/* Scroll to top button */}
         <ScrollToTopWrapper />
 
-        {/* Google Analytics: doar in productie si doar daca ID-ul este configurat */}
-        {process.env.NODE_ENV === 'production' && gaId && (
-            <>
-                <Script
-                    src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-                    strategy="afterInteractive"
-                />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', '${gaId}');
-                    `}
-                </Script>
-            </>
-        )}
+        {/* Google Analytics doar in productie, daca ID-ul e configurat si doar cu consimtamant */}
+        {process.env.NODE_ENV === 'production' && gaId && <CookieConsent gaId={gaId} />}
         </body>
         </html>
     )

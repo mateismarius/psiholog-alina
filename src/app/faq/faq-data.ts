@@ -196,7 +196,7 @@ export const faqCategories: FaqCategory[] = [
             },
             {
                 question: 'Există posibilitatea de ședințe în weekend?',
-                answer: 'Da, în funcție de disponibilitate, pot programa ședințe și în weekend pentru a acomoda familiile cu program încărcat în timpul săptămânii.'
+                answer: 'Nu. Programul cabinetului este de luni până vineri, între 09:00 și 18:00. Stabilim împreună intervalul din aceste zile care se potrivește cel mai bine programului familiei.'
             },
             {
                 question: 'Se decontează prin asigurări de sănătate?',

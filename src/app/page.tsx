@@ -26,6 +26,7 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 import { hoverBgMap } from '@/lib/colorMap'
 import type { Metadata } from 'next'
 import { withPageMeta } from '@/lib/seo'
+import { siteConfig } from '@/lib/site'
 
 // Titlu si descriere orientate pe cautari locale (Sector 2, zona Mosilor / Izvorul Rece)
 export const metadata: Metadata = withPageMeta('/', {
@@ -486,7 +487,7 @@ export default function HomePage() {
                     <div>
                       <Typography variant="h6" className="mb-2">Program</Typography>
                       <Typography variant="body" className="text-gray-600">
-                        Luni - Vineri<br />
+                        {siteConfig.openingDaysDisplay}, {siteConfig.openingHoursDisplay}
                       </Typography>
                       <Typography variant="body" className="text-gray-600">
                         Online<br />
