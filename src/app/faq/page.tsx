@@ -47,7 +47,7 @@ export default function IntrebariFrecventePage() {
 
                 <Container className="relative z-10">
                     <div className="text-center max-w-4xl mx-auto">
-                        <AnimatedSection animation="slideUp" className="space-y-8">
+                        <AnimatedSection immediate animation="slideUp" className="space-y-8">
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
                                 <HelpCircle className="w-4 h-4 mr-2 text-warm-300" />
                                 Răspunsuri la toate întrebările tale

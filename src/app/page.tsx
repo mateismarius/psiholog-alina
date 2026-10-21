@@ -230,7 +230,7 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
 
               {/* Content */}
-              <AnimatedSection animation="stagger" className="space-y-8">
+              <AnimatedSection immediate animation="stagger" className="space-y-8">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
                   <Star className="w-4 h-4 mr-2 text-warm-300" />
                   Psiholog specialist acreditat CPR
@@ -294,7 +294,7 @@ export default function HomePage() {
               </AnimatedSection>
 
               {/* Image */}
-              <AnimatedSection animation="slideUp" className="relative">
+              <AnimatedSection immediate animation="slideUp" className="relative">
                 <div className="relative z-10">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                     <Image
@@ -347,7 +347,7 @@ export default function HomePage() {
                 <br/>Contacteaza-ne pentru detalii despre serviciile acoperite.
               </p>
               <Button asChild size="sm" className="flex-shrink-0 bg-white text-therapeutic-700 hover:bg-therapeutic-50">
-                <Link href="/servicii">Afla detalii</Link>
+                <Link href="/servicii">Află detalii</Link>
               </Button>
             </div>
           </Container>

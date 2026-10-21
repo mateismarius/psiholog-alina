@@ -303,7 +303,7 @@ export default function ServiciiPage() {
                 <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-warm-500/20 rounded-full blur-3xl animate-blob" />
 
                 <Container className="relative z-10">
-                    <AnimatedSection animation="slideUp">
+                    <AnimatedSection immediate animation="slideUp">
                         <div className="text-center max-w-4xl mx-auto space-y-8">
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm">
                                 <Sparkles className="w-4 h-4 mr-2 text-warm-300" />
@@ -376,7 +376,7 @@ export default function ServiciiPage() {
                             <br/>Contacteaza-ne pentru detalii despre serviciile acoperite.
                         </p>
                         <Button asChild size="sm" className="flex-shrink-0 bg-white text-therapeutic-700 hover:bg-therapeutic-50">
-                            <Link href="/contact">Afla detalii</Link>
+                            <Link href="/contact">Află detalii</Link>
                         </Button>
                     </div>
                 </Container>

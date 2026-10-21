@@ -221,7 +221,7 @@ export default function AboutPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
 
                         {/* Content */}
-                        <AnimatedSection animation="slideUp" className="space-y-8">
+                        <AnimatedSection immediate animation="slideUp" className="space-y-8">
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
                                 <Award className="w-4 h-4 mr-2 text-warm-300" />
                                 {personalInfo.registration}
@@ -264,7 +264,7 @@ export default function AboutPage() {
                         </AnimatedSection>
 
                         {/* Photo */}
-                        <AnimatedSection animation="slideUp" className="relative">
+                        <AnimatedSection immediate animation="slideUp" className="relative">
                             <div className="relative">
                                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                                     <Image

@@ -65,6 +65,8 @@ interface TypographyProps extends VariantProps<typeof typographyVariants> {
     children: ReactNode
     className?: string
     as?: keyof JSX.IntrinsicElements
+    // Necesar pentru aria-labelledby
+    id?: string
 }
 
 export function Typography({

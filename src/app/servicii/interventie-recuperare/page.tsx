@@ -22,6 +22,7 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 import { colorClasses } from '@/lib/colorMap'
 import { serviceBreadcrumbJsonLd, withPageMeta } from '@/lib/seo'
 import { JsonLd } from '@/components/seo/JsonLd'
+import { RelatedServices } from '@/components/core/RelatedServices'
 
 export const metadata: Metadata = withPageMeta('/servicii/interventie-recuperare', {
     title: 'Ședințe de Intervenție pentru Recuperare',
@@ -215,7 +216,7 @@ export default function InterventiePage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
 
                         {/* Content */}
-                        <AnimatedSection animation="slideUp" className="space-y-8">
+                        <AnimatedSection immediate animation="slideUp" className="space-y-8">
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
                                 <Gamepad2 className="w-4 h-4 mr-2 text-warm-300" />
                                 Terapie specializată prin joc
@@ -262,7 +263,7 @@ export default function InterventiePage() {
                         </AnimatedSection>
 
                         {/* Features */}
-                        <AnimatedSection animation="slideUp" className="space-y-6">
+                        <AnimatedSection immediate animation="slideUp" className="space-y-6">
                             {therapyFeatures.map((feature, index) => {
                                 const Icon = feature.icon
                                 return (
@@ -556,6 +557,9 @@ export default function InterventiePage() {
                     </AnimatedSection>
                 </Container>
             </section>
+
+            {/* Linkuri interne catre celelalte servicii */}
+            <RelatedServices currentPath="/servicii/interventie-recuperare" />
         </>
     )
 }

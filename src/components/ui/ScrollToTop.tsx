@@ -41,7 +41,7 @@ export function ScrollToTop() {
                 motion-safe:hover:scale-110 hover:shadow-xl
                 ${isVisible ? 'animate-fade-in' : ''}
             `}
-            aria-label="Scroll to top"
+            aria-label="Înapoi la începutul paginii"
         >
             <ChevronUp className="h-5 w-5" />
         </button>

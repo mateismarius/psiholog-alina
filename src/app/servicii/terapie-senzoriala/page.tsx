@@ -20,6 +20,7 @@ import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { serviceBreadcrumbJsonLd, withPageMeta } from '@/lib/seo'
 import { JsonLd } from '@/components/seo/JsonLd'
+import { RelatedServices } from '@/components/core/RelatedServices'
 
 export const metadata: Metadata = withPageMeta('/servicii/terapie-senzoriala', {
     title: 'Terapie Senzoriala, Reflexe Primare si Terapie Ocupationala',
@@ -125,7 +126,7 @@ export default function TerapieSenzorialaPage() {
 
                 <Container className="relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <AnimatedSection animation="slideUp" className="space-y-8">
+                        <AnimatedSection immediate animation="slideUp" className="space-y-8">
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
                                 <Puzzle className="w-4 h-4 mr-2 text-warm-300" />
                                 Integrare senzoriala si dezvoltare
@@ -171,7 +172,7 @@ export default function TerapieSenzorialaPage() {
                             </div>
                         </AnimatedSection>
 
-                        <AnimatedSection animation="slideUp" className="relative">
+                        <AnimatedSection immediate animation="slideUp" className="relative">
                             <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20 text-white">
                                 <CardHeader className="pb-6">
                                     <CardTitle className="text-2xl text-white">Ce Include Terapia</CardTitle>
@@ -359,6 +360,9 @@ export default function TerapieSenzorialaPage() {
                     </AnimatedSection>
                 </Container>
             </section>
+
+            {/* Linkuri interne catre celelalte servicii */}
+            <RelatedServices currentPath="/servicii/terapie-senzoriala" />
         </>
     )
 }

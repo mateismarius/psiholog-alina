@@ -111,14 +111,14 @@ export default function ContactPage() {
                 <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-warm-500/20 rounded-full blur-3xl animate-blob" />
 
                 <Container className="relative z-10">
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-4xl mx-auto">
+                    <AnimatedSection immediate animation="fadeIn" className="text-center max-w-4xl mx-auto">
                         {/*<div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">*/}
                         {/*    <Heart className="w-4 h-4 mr-2 text-warm-300" />*/}
                         {/*    Hai să vorbim - primul pas către vindecarea ta*/}
                         {/*</div>*/}
 
                         <Typography variant="h1" className="text-white mb-6 text-center" family="serif">
-                            Informatii contact
+                            Informații contact
                         </Typography>
 
                         <Typography variant="lead" className="text-white/90 mb-8 max-w-2xl mx-auto text-center">

@@ -105,13 +105,13 @@ export function Header() {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                <Heart className="h-6 w-6 lg:h-7 lg:w-7 text-therapeutic-700" />
+                                <Heart className="h-6 w-6 lg:h-7 lg:w-7 text-white" aria-hidden="true" />
                             </motion.div>
                             <div className="sm:block text-left sm:text-left ">
                                 <div className="font-bold text-xl lg:text-2xl text-therapeutic-700">
                                     Psiholog Patru Alina
                                 </div>
-                                <div className="text-sm lg:text-base text-muted-foreground">
+                                <div className="hidden sm:block text-sm lg:text-base text-muted-foreground">
                                     Specialist psihologie clinica si psihoterapie
                                 </div>
                             </div>
@@ -164,7 +164,7 @@ export function Header() {
                             size="icon"
                             className="lg:hidden size-11"
                             onClick={() => setIsOpen(!isOpen)}
-                            aria-label="Toggle menu"
+                            aria-label={isOpen ? 'Închide meniul' : 'Deschide meniul'}
                             aria-expanded={isOpen}
                             aria-controls="mobile-navigation"
                         >

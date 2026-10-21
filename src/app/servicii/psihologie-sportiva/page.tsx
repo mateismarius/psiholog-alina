@@ -27,6 +27,7 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 import { colorClasses } from '@/lib/colorMap'
 import { serviceBreadcrumbJsonLd, withPageMeta } from '@/lib/seo'
 import { JsonLd } from '@/components/seo/JsonLd'
+import { RelatedServices } from '@/components/core/RelatedServices'
 
 export const metadata: Metadata = withPageMeta('/servicii/psihologie-sportiva', {
     title: 'Psihologie Sportivă',
@@ -266,7 +267,7 @@ export default function PsihologieSportivaPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
 
                         {/* Content */}
-                        <AnimatedSection animation="slideUp" className="space-y-8">
+                        <AnimatedSection immediate animation="slideUp" className="space-y-8">
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
                                 <Trophy className="w-4 h-4 mr-2 text-warm-300" />
                                 Psihologie pentru toate nivelurile sportive
@@ -318,7 +319,7 @@ export default function PsihologieSportivaPage() {
                         </AnimatedSection>
 
                         {/* Sports Icons */}
-                        <AnimatedSection animation="slideUp" className="relative">
+                        <AnimatedSection immediate animation="slideUp" className="relative">
                             <div className="grid grid-cols-3 gap-6">
                                 {[Trophy, Target, TrendingUp, Focus, Zap, Star].map((Icon, index) => (
                                     <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-colors">
@@ -705,6 +706,9 @@ export default function PsihologieSportivaPage() {
                     </AnimatedSection>
                 </Container>
             </section>
+
+            {/* Linkuri interne catre celelalte servicii */}
+            <RelatedServices currentPath="/servicii/psihologie-sportiva" />
         </>
     )
 }
