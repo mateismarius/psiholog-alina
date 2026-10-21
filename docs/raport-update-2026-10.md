@@ -248,3 +248,13 @@ Commit-uri: `a652b5c`, `824f20c`, `cce8114`, `b15357d`.
 | 6. Testimoniale | Ștergere | Pagina /testimoniale a fost ștearsă (redirect 301 → /); secțiunile de pe Home și /servicii/psihologie-sportiva au fost eliminate. |
 
 **Rămân deschise:** datele juridice complete, prețurile pachetelor, verificarea juridică a textelor legale, setările Vercel (Node 22.x, redirect www) și Google Business Profile.
+
+---
+
+## 9. Runda a patra (21.10.2026)
+
+- **Date juridice:** „Patru Alina - Cabinet Individual de Psihologie”, CIF 44613430, sediul la adresa cabinetului. Apar în politica de confidențialitate și în footer (© … · CIF 44613430).
+- **Pachete eliminate:** logopedie (5 / 10 ședințe) și psihologie sportivă (5 / 10). Rămân: logopedie (evaluare inițială 200 RON / 60 min, ședință 200 RON / 45 min), psihologie sportivă (ședință 250 RON / 50 min), psihoterapie (individuală și de cuplu, 250 RON / 50 min). Răspunsurile din FAQ despre reduceri la pachete și plata în rate au fost scoase.
+- **Fără gratuități:** au fost eliminate toate mențiunile de consultație sau evaluare gratuită, discuția telefonică „gratuită de 15 minute”, „consultația de urmărire gratuită”, „Parcare gratuită” și butoanele „Discută gratuit”. Formulările noi sunt neutre („Sună-mă și discutăm…”, „Programează o consultație”).
+- **Aliniere:** `Typography` avea `align: 'left'` implicit, care suprascria `text-center` al containerelor. De aceea titlurile secțiunilor și textul din cardurile centrate (ex. „Structura unei ședințe”) apăreau la stânga. Valoarea implicită a fost eliminată, iar textul moștenește acum alinierea containerului. Verificat automat pe toate paginile și vizual la 1440 / 375 px.
+- **Carduri de preț:** butoanele „Programează” nu aveau link; acum duc la /contact. Butonul stă jos în card, indiferent de lungimea descrierii.

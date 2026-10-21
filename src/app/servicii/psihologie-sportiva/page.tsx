@@ -192,20 +192,6 @@ const pricing = {
             price: 250,
             sessions: 1,
             description: 'Perfect pentru evaluare inițială sau probleme punctuale'
-        },
-        {
-            name: 'Pachet performanță',
-            price: 800,
-            sessions: 5,
-            description: 'Dezvoltarea abilităților mentale pe termen mediu',
-            savings: 100
-        },
-        {
-            name: 'Program complet',
-            price: 1500,
-            sessions: 10,
-            description: 'Transformare completă a performanței mentale',
-            savings: 300
         }
     ]
 }
@@ -288,7 +274,7 @@ export default function PsihologieSportivaPage() {
                                 <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40724172996">
                                         <Phone className="w-5 h-5 mr-2" />
-                                        Discută gratuit
+                                        Discută cu mine
                                     </a>
                                 </Button>
                             </div>
@@ -514,23 +500,18 @@ export default function PsihologieSportivaPage() {
                 <Container>
                     <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
                         <Typography variant="h2" className="mb-6" family="serif">
-                            Tarife și <span className="text-therapeutic">Pachete</span>
+                            <span className="text-therapeutic">Tarif</span>
                         </Typography>
                         <Typography variant="lead">
-                            Opțiuni flexibile pentru toate nevoile și bugetele
+                            Ședințe la cabinet sau online
                         </Typography>
                     </AnimatedSection>
 
                     <AnimatedSection animation="stagger">
-                        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        <div className="grid gap-6 max-w-md mx-auto">
                             {pricing.packages.map((package_, index) => (
-                                <Card key={index} className={`p-6 text-center ${index === 1 ? 'border-therapeutic-300 shadow-therapeutic ring-2 ring-therapeutic-200' : 'border-gray-200'} hover:shadow-lg transition-shadow relative`}>
-                                    <CardHeader className="pb-4">
-                                        {index === 1 && (
-                                            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-therapeutic-500 text-white px-4 py-1 rounded-full text-xs font-semibold">
-                                                Cel mai popular
-                                            </div>
-                                        )}
+                                <Card key={index} className="h-full p-6 text-center border-therapeutic-200 hover:shadow-lg transition-shadow">
+                                    <CardHeader className="pb-0">
                                         <CardTitle className="text-xl mb-2">{package_.name}</CardTitle>
                                         <div className="text-3xl font-bold text-therapeutic-600 mb-1">
                                             {package_.price} RON
@@ -538,19 +519,16 @@ export default function PsihologieSportivaPage() {
                                         <Typography variant="small" className="text-gray-600">
                                             {package_.sessions} {package_.sessions === 1 ? 'ședință' : 'ședințe'} × 50 minute
                                         </Typography>
-                                        {package_.savings && (
-                                            <div className="text-sm text-green-700 font-medium mt-2">
-                                                Economisești {package_.savings} RON
-                                            </div>
-                                        )}
                                     </CardHeader>
-                                    <CardContent className="space-y-4">
+                                    <CardContent className="flex flex-1 flex-col gap-4">
                                         <Typography variant="body" className="text-gray-600 text-sm">
                                             {package_.description}
                                         </Typography>
-                                        <Button className={`w-full ${index === 1 ? 'bg-therapeutic text-white hover:bg-therapeutic/90' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
-                                            <Calendar className="w-4 h-4 mr-2" />
-                                            Alege acest pachet
+                                        <Button asChild className="mt-auto w-full bg-therapeutic text-white hover:bg-therapeutic/90">
+                                            <Link href="/contact">
+                                                <Calendar className="w-4 h-4 mr-2" />
+                                                Programează ședința
+                                            </Link>
                                         </Button>
                                     </CardContent>
                                 </Card>
@@ -561,16 +539,16 @@ export default function PsihologieSportivaPage() {
                     <AnimatedSection animation="fadeIn" className="text-center mt-12">
                         <div className="bg-therapeutic-50 rounded-2xl p-8 max-w-2xl mx-auto">
                             <Typography variant="h6" className="mb-4">
-                                Nu ești sigur ce pachet să alegi?
+                                Ai întrebări înainte de programare?
                             </Typography>
                             <Typography variant="body" className="text-gray-600 mb-6">
-                                Programează o consultație gratuită de 15 minute pentru a discuta obiectivele tale
+                                Sună-mă și discutăm despre obiectivele tale sportive.
                             </Typography>
                             <Button asChild className="bg-therapeutic text-white hover:bg-therapeutic/90">
-                                <Link href="/contact">
+                                <a href="tel:+40724172996">
                                     <Phone className="w-4 h-4 mr-2" />
-                                    Consultație gratuită
-                                </Link>
+                                    Sună acum
+                                </a>
                             </Button>
                         </div>
                     </AnimatedSection>
@@ -622,7 +600,7 @@ export default function PsihologieSportivaPage() {
                         </Typography>
                         <Typography variant="lead" className="text-white/90 mb-8">
                             Primul pas către o performanță sportivă îmbunătățită începe cu o conversație.
-                            Programează o ședință sau discută gratuit despre obiectivele tale.
+                            Programează o ședință sau sună-mă pentru a discuta despre obiectivele tale.
                         </Typography>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">

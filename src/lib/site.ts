@@ -35,7 +35,7 @@ export const siteConfig = {
 } as const
 
 // Date juridice folosite in paginile legale si in footer.
-// TODO: de completat cu datele oficiale; campurile null nu sunt afisate pe site.
+// Campurile null nu sunt afisate pe site.
 export const legalInfo: {
     entityName: string
     fiscalCode: string | null
@@ -43,8 +43,8 @@ export const legalInfo: {
     registeredOffice: string
     lastUpdated: string
 } = {
-    entityName: 'Cabinet Individual de Psihologie Patru Alina',
-    fiscalCode: null, // cod de identificare fiscala (CIF)
+    entityName: 'Patru Alina - Cabinet Individual de Psihologie',
+    fiscalCode: '44613430', // cod de identificare fiscala (CIF)
     cprCode: null, // cod de inregistrare in Registrul unic al psihologilor (CPR)
     registeredOffice: siteConfig.addressDisplay,
     lastUpdated: '21 octombrie 2026',

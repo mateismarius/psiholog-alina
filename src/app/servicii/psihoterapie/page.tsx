@@ -564,8 +564,8 @@ export default function PsihoterapiePage() {
                     <AnimatedSection animation="stagger">
                         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                             {pricing.packages.map((package_, index) => (
-                                <Card key={index} className="p-8 text-center border-therapeutic-200 hover:shadow-lg transition-shadow">
-                                    <CardHeader className="pb-6">
+                                <Card key={index} className="h-full p-8 text-center border-therapeutic-200 hover:shadow-lg transition-shadow">
+                                    <CardHeader className="pb-0">
                                         <div className="w-20 h-20 bg-therapeutic-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                             {package_.type === 'individual' ? (
                                                 <Brain className="w-10 h-10 text-therapeutic-600" />
@@ -579,13 +579,15 @@ export default function PsihoterapiePage() {
                                             Sesiune de {pricing.duration}
                                         </Typography>
                                     </CardHeader>
-                                    <CardContent className="space-y-4">
+                                    <CardContent className="flex flex-1 flex-col gap-4">
                                         <Typography variant="body" className="text-gray-600">
                                             {package_.description}
                                         </Typography>
-                                        <Button className="w-full bg-therapeutic text-white hover:bg-therapeutic/90">
-                                            <Calendar className="w-5 h-5 mr-2" />
-                                            Programează {package_.type === 'individual' ? 'ședința' : 'terapia'}
+                                        <Button asChild className="mt-auto w-full bg-therapeutic text-white hover:bg-therapeutic/90">
+                                            <Link href="/contact">
+                                                <Calendar className="w-5 h-5 mr-2" />
+                                                Programează {package_.type === 'individual' ? 'ședința' : 'terapia'}
+                                            </Link>
                                         </Button>
                                     </CardContent>
                                 </Card>

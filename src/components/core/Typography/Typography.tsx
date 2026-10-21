@@ -55,7 +55,7 @@ const typographyVariants = cva('', {
     defaultVariants: {
         variant: 'body',
         color: 'default',
-        align: 'left',
+        // Fara aliniere implicita: textul mosteneste alinierea containerului (ex: text-center)
         weight: 'normal',
         family: 'sans',
     },

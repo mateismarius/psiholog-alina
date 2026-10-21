@@ -267,7 +267,7 @@ const whyChooseUs = [
 ]
 
 const processSteps = [
-    { step: '1', title: 'Primul Contact',    description: 'Discuție telefonică gratuită de 15 minute, pentru a înțelege nevoile tale și a răspunde la întrebări.' },
+    { step: '1', title: 'Primul Contact',    description: 'O scurtă discuție telefonică, pentru a înțelege nevoile tale și a răspunde la întrebări.' },
     { step: '2', title: 'Evaluarea Inițială', description: 'Prima ședință, dedicată evaluării detaliate și stabilirii obiectivelor terapeutice.' },
     { step: '3', title: 'Planul Terapeutic',  description: 'Elaborarea unui plan personalizat, cu tehnicile și metodele cele mai potrivite.' },
     { step: '4', title: 'Terapia Activă',     description: 'Ședințe regulate, cu monitorizarea progresului și adaptarea planului după nevoie.' },
@@ -276,7 +276,7 @@ const processSteps = [
 const faqs = [
     {
         question: 'Cum aleg serviciul potrivit pentru mine?',
-        answer: 'Ofer o consultație telefonică gratuită de 15 minute, pentru a discuta nevoile tale și a-ți recomanda cel mai potrivit serviciu. Fiecare situație este unică și merită o abordare personalizată.',
+        answer: 'Sună-mă și discutăm despre nevoile tale, ca să îți pot recomanda cel mai potrivit serviciu. Fiecare situație este unică și merită o abordare personalizată.',
     },
     {
         question: 'Pot combina mai multe servicii?',
@@ -347,7 +347,7 @@ export default function ServiciiPage() {
                                 <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40724172996">
                                         <Phone className="w-5 h-5 mr-2" />
-                                        Discută gratuit
+                                        Discută cu mine
                                     </a>
                                 </Button>
                             </div>
@@ -684,7 +684,7 @@ export default function ServiciiPage() {
                                 <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-base px-8">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
-                                        Programează consultație gratuită
+                                        Programează o consultație
                                     </Link>
                                 </Button>
                                 <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
@@ -694,11 +694,6 @@ export default function ServiciiPage() {
                                     </Link>
                                 </Button>
                             </div>
-
-                            <p className="text-sm text-white/70 pt-2">
-                                Consultație telefonică inițială (15 minute) —{' '}
-                                <strong className="text-white">gratuită</strong>
-                            </p>
                         </div>
                     </AnimatedSection>
                 </Container>

@@ -156,9 +156,9 @@ export default function IntrebariFrecventePage() {
 
                                 <Card className="p-4 border-empathy-200 text-center">
                                     <Calendar className="w-8 h-8 text-empathy-600 mx-auto mb-2" />
-                                    <Typography variant="h6" className="mb-1">Consultație</Typography>
+                                    <Typography variant="h6" className="mb-1">Program</Typography>
                                     <Typography variant="small" className="text-gray-600">
-                                        15 min gratuit la telefon
+                                        Luni - Vineri, 09:00 - 18:00
                                     </Typography>
                                 </Card>
                             </div>

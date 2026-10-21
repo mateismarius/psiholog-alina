@@ -37,7 +37,7 @@ export const faqCategories: FaqCategory[] = [
         faqs: [
             {
                 question: 'Cum aleg serviciul potrivit pentru mine sau copilul meu?',
-                answer: 'Oferă o consultație telefonică gratuită de 15 minute pentru a discuta nevoile tale și a recomanda cel mai potrivit serviciu. Evaluez situația specifică și recomand cea mai bună abordare terapeutică.'
+                answer: 'Sună-mă și discutăm despre nevoile tale, ca să îți pot recomanda cel mai potrivit serviciu. Evaluez situația specifică și recomand cea mai bună abordare terapeutică.'
             },
             {
                 question: 'Care este diferența dintre psiholog, psihoterapeut și psihiatru?',
@@ -180,19 +180,15 @@ export const faqCategories: FaqCategory[] = [
         faqs: [
             {
                 question: 'Cum pot programa o ședință?',
-                answer: 'Poți programa prin telefon, WhatsApp sau formularul de contact de pe site. Oferă și o consultație telefonică gratuită de 15 minute pentru a discuta nevoile tale.'
+                answer: 'Poți programa prin telefon, WhatsApp sau e-mail. Datele de contact sunt pe pagina Contact.'
             },
             {
                 question: 'Cum se fac plățile?',
-                answer: 'Plățile se pot face cash la cabinet, prin transfer bancar sau card. Pentru pachete de ședințe, oferă și opțiunea de plată în rate.'
+                answer: 'Plățile se pot face cash la cabinet, prin transfer bancar sau card.'
             },
             {
                 question: 'Pot anula sau reprograma o ședință?',
                 answer: 'Da, cu condiția să anunți cu cel puțin 24 ore înainte. Anulările târzii pot fi taxate pentru a respecta timpul rezervat în program.'
-            },
-            {
-                question: 'Oferă reduceri pentru pachete de ședințe?',
-                answer: 'Da! Pachetele de 5 sau 10 ședințe vin cu reduceri semnificative. De asemenea, am tarife speciale pentru familii cu mai mulți copii în terapie.'
             },
             {
                 question: 'Există posibilitatea de ședințe în weekend?',
@@ -215,9 +211,9 @@ export const quickFacts: QuickFact[] = [
     },
     {
         icon: Phone,
-        title: 'Consultație gratuită',
-        value: '15 minute',
-        description: 'Telefonic pentru a clarifica întrebările'
+        title: 'Program',
+        value: 'Luni - Vineri',
+        description: '09:00 - 18:00, la cabinet și online'
     },
     {
         icon: Users,

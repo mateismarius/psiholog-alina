@@ -323,7 +323,7 @@ export function Footer() {
                             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                                 <div className="text-gray-400 text-sm text-center md:text-left">
                                     <p>
-                                        © {currentYear} {legalInfo.entityName}. Toate drepturile rezervate.
+                                        © {currentYear} {legalInfo.entityName}{legalInfo.fiscalCode && ` · CIF ${legalInfo.fiscalCode}`}. Toate drepturile rezervate.
                                     </p>
                                     <p className="mt-1">
                                         Psiholog clinician acreditat - Colegiul Psihologilor din România

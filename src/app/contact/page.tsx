@@ -69,7 +69,6 @@ const officeInfo = {
         'Parcul Izvorul Rece',
         'Zona Moșilor'
     ],
-    parkingInfo: 'Parcare gratuită disponibilă în zona',
     publicTransport: [
         { icon: TramFront, text: 'Tramvaiul 21' },
         { icon: Bus, text: 'Troleibuzele 66, 69, 85, 90, 92' }
@@ -89,7 +88,7 @@ const faqs = [
     },
     {
         question: 'Care sunt tarifele pentru consultații?',
-        answer: 'Ședințe de evaluare: 350 RON (50 minute), intervenție pentru recuperare: 260 RON (100 minute), terapie senzorială, psihologie sportivă și psihoterapie: 250 RON (50 minute), logopedie: 200 RON (45 minute). Prima discuție telefonică, de 15 minute, este gratuită.'
+        answer: 'Ședințe de evaluare: 350 RON (50 minute), intervenție pentru recuperare: 260 RON (100 minute), terapie senzorială, psihologie sportivă și psihoterapie: 250 RON (50 minute), logopedie: 200 RON (45 minute).'
     },
     {
         question: 'Oferiți consultații online?',
@@ -466,7 +465,7 @@ export default function ContactPage() {
                         </Typography>
                         <Typography variant="lead" className="text-white/90 mb-8">
                             Nu mai aștepta. Fiecare zi în care amâni să ceri ajutorul poate fi o zi pierdută din procesul tău de vindecare.
-                            Contactează-mă astăzi pentru o consultație gratuită.
+                            Contactează-mă astăzi pentru o programare.
                         </Typography>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

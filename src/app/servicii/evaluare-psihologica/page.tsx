@@ -160,8 +160,7 @@ const pricing = {
         'Aplicarea instrumentelor de evaluare',
         'Observația clinică specializată',
         'Raport psihologic detaliat',
-        'Recomandări de tratament',
-        'Consultație de urmărire (gratuită)'
+        'Recomandări de tratament'
     ]
 }
 
@@ -256,8 +255,7 @@ export default function EvaluarePage() {
                                         'Chestionare și teste specializate',
                                         'Evaluarea comportamentală',
                                         'Raport psihologic detaliat',
-                                        'Recomandări de tratament',
-                                        'Consultație de urmărire gratuită'
+                                        'Recomandări de tratament'
                                     ].map((feature, index) => (
                                         <div key={index} className="flex items-center space-x-3">
                                             <CheckCircle className="w-5 h-5 text-warm-300 flex-shrink-0" />

@@ -254,20 +254,6 @@ const pricing = {
             price: 200,
             duration: '45 minute',
             description: 'Ședință de logopedie personalizată pentru toate vârstele'
-        },
-        {
-            name: 'Pachet 5 ședințe',
-            price: 850,
-            duration: '5 × 45 minute',
-            description: 'Pachet pentru progres constant cu economie de 50 RON',
-            savings: 50
-        },
-        {
-            name: 'Pachet 10 ședințe',
-            price: 1600,
-            duration: '10 × 45 minute',
-            description: 'Program complet cu economie de 200 RON',
-            savings: 200
         }
     ]
 }
@@ -667,15 +653,10 @@ export default function LogopediePage() {
                     </AnimatedSection>
 
                     <AnimatedSection animation="stagger">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                             {pricing.packages.map((package_, index) => (
-                                <Card key={index} className={`p-6 text-center ${index === 2 ? 'border-calming-300 shadow-calming ring-2 ring-calming-200' : 'border-gray-200'} hover:shadow-lg transition-shadow relative`}>
-                                    <CardHeader className="pb-4">
-                                        {index === 2 && (
-                                            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-calming-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                                                Recomandat
-                                            </div>
-                                        )}
+                                <Card key={index} className="h-full p-6 text-center border-calming-200 hover:shadow-lg transition-shadow">
+                                    <CardHeader className="pb-0">
                                         <div className="w-16 h-16 bg-calming-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                             <MessageCircle className="w-8 h-8 text-calming-600" />
                                         </div>
@@ -684,19 +665,17 @@ export default function LogopediePage() {
                                         <Typography variant="small" className="text-gray-600">
                                             {package_.duration}
                                         </Typography>
-                                        {package_.savings && (
-                                            <div className="text-sm text-green-700 font-medium mt-2">
-                                                Economii {package_.savings} RON
-                                            </div>
-                                        )}
                                     </CardHeader>
-                                    <CardContent className="space-y-4">
+                                    {/* Butonul ramane jos indiferent de lungimea descrierii */}
+                                    <CardContent className="flex flex-1 flex-col gap-4">
                                         <Typography variant="body" className="text-gray-600 text-sm">
                                             {package_.description}
                                         </Typography>
-                                        <Button className={`w-full ${index === 2 ? 'bg-calming text-white hover:bg-calming/90' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
-                                            <Calendar className="w-4 h-4 mr-2" />
-                                            Programează
+                                        <Button asChild className="mt-auto w-full bg-calming text-white hover:bg-calming/90">
+                                            <Link href="/contact">
+                                                <Calendar className="w-4 h-4 mr-2" />
+                                                Programează
+                                            </Link>
                                         </Button>
                                     </CardContent>
                                 </Card>
@@ -707,17 +686,17 @@ export default function LogopediePage() {
                     <AnimatedSection animation="fadeIn" className="text-center mt-12">
                         <div className="bg-calming-50 rounded-2xl p-8 max-w-2xl mx-auto">
                             <Typography variant="h6" className="mb-4">
-                                Evaluare gratuită de 15 minute
+                                Ai întrebări înainte de programare?
                             </Typography>
                             <Typography variant="body" className="text-gray-600 mb-6">
-                                Oferă o scurtă evaluare telefonică pentru a înțelege nevoile copilului
-                                și a stabili cel mai potrivit plan terapeutic.
+                                Sună-mă și discutăm despre nevoile copilului și despre cel mai potrivit
+                                plan terapeutic.
                             </Typography>
                             <Button asChild className="bg-calming text-white hover:bg-calming/90">
-                                <Link href="/contact">
+                                <a href="tel:+40724172996">
                                     <Phone className="w-4 h-4 mr-2" />
-                                    Evaluare gratuită
-                                </Link>
+                                    Sună acum
+                                </a>
                             </Button>
                         </div>
                     </AnimatedSection>
