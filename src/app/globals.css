@@ -136,7 +136,7 @@
 :root {
   --radius: 0.625rem;
 
-  /* Font families - definite în layout.tsx cu Inter și Merriweather */
+  /* Font families - fonturi gazduite local, declarate in fonts.css */
   --font-sans: Inter, system-ui, -apple-system, sans-serif;
   --font-serif: Merriweather, Georgia, serif;
 

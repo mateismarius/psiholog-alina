@@ -1,5 +1,6 @@
+import './fonts.css'
 import './globals.css'
-import { Inter, Merriweather } from 'next/font/google'
+import { preload } from 'react-dom'
 import type { Metadata, Viewport } from 'next'
 import { Header } from '@/components/layout/Header/Header'
 import { Footer } from '@/components/layout/Footer/Footer'
@@ -10,18 +11,9 @@ import { siteConfig } from '@/lib/site'
 import { localBusinessJsonLd, ogImage } from '@/lib/seo'
 import { JsonLd } from '@/components/seo/JsonLd'
 
-const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-sans',
-    display: 'swap',
-})
-
-const merriweather = Merriweather({
-    weight: ['300', '400', '700'],
-    subsets: ['latin'],
-    variable: '--font-serif',
-    display: 'swap',
-})
+// Fonturile sunt gazduite local (vezi fonts.css). Preincarcam subsetul latin,
+// folosit de primul ecran, ca textul sa apara cu fontul final cat mai repede.
+const fontPreloads = ['/fonts/inter-latin.woff2', '/fonts/merriweather-latin.woff2']
 
 export const viewport: Viewport = {
     width: 'device-width',
@@ -108,8 +100,10 @@ export default function RootLayout({
                                    }: {
     children: React.ReactNode
 }) {
+    fontPreloads.forEach((href) => preload(href, { as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' }))
+
     return (
-        <html lang="ro" className={cn(inter.variable, merriweather.variable)}>
+        <html lang="ro">
         <body className={cn(
             "min-h-screen bg-background font-sans antialiased",
             "selection:bg-therapeutic-200 selection:text-therapeutic-900"
