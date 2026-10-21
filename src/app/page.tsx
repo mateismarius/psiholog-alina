@@ -10,7 +10,6 @@ import {
   CheckCircle,
   Phone,
   Award,
-  Smile,
   Target,
   Clock,
   MapPin,
@@ -22,7 +21,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
-import { HeroSection, ServicesSection, TestimonialSection, CtaSection, StatsSection } from "@/components/core/SectionComponents"
+import { HeroSection, ServicesSection, CtaSection, StatsSection } from "@/components/core/SectionComponents"
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { hoverBgMap } from '@/lib/colorMap'
 import type { Metadata } from 'next'
@@ -162,30 +161,6 @@ const services = [
     colorBgIcon: 'bg-peace-100',
     price: '200 RON/ședință',
     duration: '45 minute'
-  }
-]
-
-const testimonials = [
-  {
-    name: 'Maria Popescu',
-    role: 'Mamă copil cu autism',
-    content: 'Psiholog Alina ne-a ajutat enorm cu copilul nostru diagnosticat cu autism. Profesionalismul și empatia ei au fost excepționale. În doar câteva luni am văzut progrese uriașe în comunicare și comportament.',
-    rating: 5,
-    location: 'București, Sector 2'
-  },
-  {
-    name: 'Alexandru Marinescu',
-    role: 'Pacient terapie individuală',
-    content: 'Am reușit să depășesc anxietatea care mă bloca de ani de zile. Alina mi-a oferit exact instrumentele de care aveam nevoie pentru a-mi recăpăta încrederea și a-mi gestiona stresul zilnic.',
-    rating: 5,
-    location: 'București, Sector 1'
-  },
-  {
-    name: 'Diana și Cătălin',
-    role: 'Cuplu în terapie',
-    content: 'Terapia de cuplu ne-a salvat relația. Am învățat să comunicăm mai bine și să ne înțelegem nevoile reciproce. Suntem recunoscători pentru această experiență transformatoare.',
-    rating: 5,
-    location: 'București, Sector 3'
   }
 ]
 
@@ -472,48 +447,6 @@ export default function HomePage() {
             </AnimatedSection>
           </Container>
         </section>
-
-        {/* Testimonials Section */}
-        <TestimonialSection>
-          <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-            <Typography variant="h2" className="text-white mb-6" family="serif">
-              Mărturii de la Clientii Noștri
-            </Typography>
-            <Typography variant="lead" className="text-white/90">
-              Feedback-ul real de la familiile și persoanele pe care le-am ajutat
-              să își depășească provocările și să își atingă potențialul.
-            </Typography>
-          </AnimatedSection>
-
-          <AnimatedSection animation="stagger">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                  <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white h-full">
-                    <CardContent className="p-6">
-                      <div className="flex items-center mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 text-warm-300 fill-current" />
-                        ))}
-                      </div>
-                      <Typography variant="body" className="text-white/90 mb-6 italic">
-                        &#34;{testimonial.content}&#34;
-                      </Typography>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                          <Smile className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-white">{testimonial.name}</div>
-                          <div className="text-sm text-white/70">{testimonial.role}</div>
-                          <div className="text-xs text-white/60">{testimonial.location}</div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-              ))}
-            </div>
-          </AnimatedSection>
-        </TestimonialSection>
 
         {/* Contact Info Section */}
         <section className="py-16 bg-gray-50">

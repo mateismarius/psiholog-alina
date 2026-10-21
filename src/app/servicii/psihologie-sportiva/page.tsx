@@ -210,30 +210,6 @@ const pricing = {
     ]
 }
 
-const testimonials = [
-    {
-        name: 'Alex M.',
-        sport: 'Tenis',
-        age: '16 ani',
-        quote: 'Am învățat să gestionez mult mai bine presiunea în meciurile importante. Rezultatele s-au îmbunătățit considerabil!',
-        improvement: 'Creștere cu 40% a ratei de câștig în turnee'
-    },
-    {
-        name: 'Maria S.',
-        sport: 'Înot',
-        age: '22 ani',
-        quote: 'Psihologia sportivă m-a ajutat să îmi depășesc barierele mentale și să ating timpii pe care îi visam.',
-        improvement: 'Recorduri personale la toate stilurile'
-    },
-    {
-        name: 'Echipa FC Junior',
-        sport: 'Fotbal',
-        age: '14-16 ani',
-        quote: 'Coeziunea echipei s-a îmbunătățit dramatic. Comunicăm mai bine și suntem mai uniți în teren.',
-        improvement: 'Promovare în liga superioară'
-    }
-]
-
 const faqs = [
     {
         question: 'Cum poate psihologia sportivă să îmi îmbunătățească performanța?',
@@ -528,47 +504,6 @@ export default function PsihologieSportivaPage() {
                                     </Card>
                                 )
                             })}
-                        </div>
-                    </AnimatedSection>
-                </Container>
-            </section>
-
-            {/* Testimonials */}
-            <section className="py-20 bg-gray-50">
-                <Container>
-                    <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
-                        <Typography variant="h2" className="mb-6" family="serif">
-                            Rezultate <span className="text-therapeutic">Reale</span>
-                        </Typography>
-                        <Typography variant="lead">
-                            Sportivi care și-au îmbunătățit performanța prin psihologie sportivă
-                        </Typography>
-                    </AnimatedSection>
-
-                    <AnimatedSection animation="stagger">
-                        <div className="grid md:grid-cols-3 gap-6">
-                            {testimonials.map((testimonial, index) => (
-                                <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                                    <CardContent className="space-y-4">
-                                        <div className="flex items-center space-x-2 mb-3">
-                                            <Trophy className="w-5 h-5 text-warm-500" />
-                                            <span className="font-medium text-therapeutic-700">{testimonial.sport}</span>
-                                            <span className="text-sm text-gray-500">• {testimonial.age}</span>
-                                        </div>
-                                        <Typography variant="body" className="text-gray-700 italic leading-relaxed">
-                                            &#34;{testimonial.quote}&#34;
-                                        </Typography>
-                                        <div className="border-t pt-3">
-                                            <Typography variant="small" className="font-medium text-gray-900">
-                                                {testimonial.name}
-                                            </Typography>
-                                            <div className="text-xs text-therapeutic-600 font-medium mt-1">
-                                                ✓ {testimonial.improvement}
-                                            </div>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            ))}
                         </div>
                     </AnimatedSection>
                 </Container>

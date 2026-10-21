@@ -22,7 +22,6 @@ const footerSections = {
     informatii: [
         { name: 'Despre Mine', href: '/despre-mine' },
         { name: 'Întrebări Frecvente', href: '/faq' },
-        // { name: 'Testimoniale', href: '/testimoniale' },
     ],
     // Paginile legale nu exista inca (link-urile duceau la 404); se reactiveaza cand sunt create
     legal: [

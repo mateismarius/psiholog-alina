@@ -2,7 +2,6 @@
 import type { MetadataRoute } from 'next'
 import { absoluteUrl, services } from '@/lib/site'
 
-// /testimoniale nu este inclus: pagina nu este legata din meniu (ascunsa intentionat)
 const staticPages: { path: string, priority: number, changeFrequency: 'monthly' | 'yearly' }[] = [
     { path: '/', priority: 1, changeFrequency: 'monthly' },
     { path: '/servicii', priority: 0.9, changeFrequency: 'monthly' },
