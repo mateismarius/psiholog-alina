@@ -9,9 +9,8 @@ import {
     MessageCircle,
     CheckCircle,
     Navigation,
-    Car,
     Bus,
-    Train,
+    TramFront,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -64,15 +63,13 @@ const contactInfo = [
 const officeInfo = {
     address: 'Strada Lunei nr. 7, Sector 2, București',
     nearbyLandmarks: [
-        'Lângă metrou Aviatorilor (3 min pe jos)',
-        'Aproape de Piața Victoriei',
-        'În zona Herastrau Park'
+        'Parcul Izvorul Rece',
+        'Zona Moșilor'
     ],
     parkingInfo: 'Parcare gratuită disponibilă în zona',
     publicTransport: [
-        { icon: Train, text: 'Metro: Aviatorilor (Linia M2)' },
-        { icon: Bus, text: 'Autobuze: 131, 301, 331' },
-        { icon: Car, text: 'Parcare: Strada laterală gratuită' }
+        { icon: TramFront, text: 'Tramvaiul 21' },
+        { icon: Bus, text: 'Troleibuzele 66, 69, 85, 90, 92' }
     ]
 }
 
@@ -310,7 +307,7 @@ export default function ContactPage() {
                                         <ul className="space-y-1">
                                             {officeInfo.nearbyLandmarks.map((landmark, index) => (
                                                 <li key={index} className="flex items-center space-x-2 text-sm text-gray-600">
-                                                    <CheckCircle className="w-4 h-4 text-therapeutic-500 shrink-0" />
+                                                    <CheckCircle className="w-4 h-4 text-therapeutic-500 shrink-0" aria-hidden="true" />
                                                     <span>{landmark}</span>
                                                 </li>
                                             ))}
@@ -318,18 +315,18 @@ export default function ContactPage() {
                                     </div>
 
                                     <div>
-                                        <Typography variant="h6" className="mb-2">Transport:</Typography>
-                                        <div className="space-y-2">
+                                        <Typography variant="h6" className="mb-2">Transport în comun:</Typography>
+                                        <ul className="space-y-2">
                                             {officeInfo.publicTransport.map((transport, index) => {
                                                 const Icon = transport.icon
                                                 return (
-                                                    <div key={index} className="flex items-center space-x-2 text-sm text-gray-600">
-                                                        <Icon className="w-4 h-4 text-calming-500" />
+                                                    <li key={index} className="flex items-center space-x-2 text-sm text-gray-600">
+                                                        <Icon className="w-4 h-4 text-calming-500 shrink-0" aria-hidden="true" />
                                                         <span>{transport.text}</span>
-                                                    </div>
+                                                    </li>
                                                 )
                                             })}
-                                        </div>
+                                        </ul>
                                     </div>
 
                                     <Button asChild variant="outline" className="w-full">

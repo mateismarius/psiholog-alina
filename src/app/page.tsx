@@ -530,7 +530,7 @@ export default function HomePage() {
                       <Typography variant="body" className="text-gray-600">
                           Str. Lunei, Nr.7<br />
                         Sector 2, București<br />
-                        <span className="text-sm text-therapeutic-600">Zona Mosilor</span>
+                        <span className="text-sm text-therapeutic-600">Zona Moșilor</span>
                       </Typography>
                     </div>
                   </CardContent>
