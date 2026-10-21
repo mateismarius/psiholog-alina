@@ -69,6 +69,24 @@ interface TypographyProps extends VariantProps<typeof typographyVariants> {
     id?: string
 }
 
+// Elementul HTML implicit pentru fiecare varianta (constanta de modul, nu creata la render)
+const defaultElementMap: Record<string, keyof JSX.IntrinsicElements> = {
+    h1: 'h1',
+    h2: 'h2',
+    h3: 'h3',
+    h4: 'h4',
+    h5: 'h5',
+    h6: 'h6',
+    subtitle: 'p',
+    body: 'p',
+    'body-large': 'p',
+    small: 'small',
+    lead: 'p',
+    muted: 'p',
+    quote: 'blockquote',
+    caption: 'caption',
+}
+
 export function Typography({
                                children,
                                variant,
@@ -80,7 +98,7 @@ export function Typography({
                                as,
                                ...props
                            }: TypographyProps) {
-    const Component = as || getDefaultElement(variant || 'body')
+    const Component = as ?? defaultElementMap[variant ?? 'body'] ?? 'p'
 
     return (
         <Component
@@ -90,24 +108,4 @@ export function Typography({
             {children}
         </Component>
     )
-}
-
-function getDefaultElement(variant: string): keyof JSX.IntrinsicElements {
-    const elementMap: Record<string, keyof JSX.IntrinsicElements> = {
-        h1: 'h1',
-        h2: 'h2',
-        h3: 'h3',
-        h4: 'h4',
-        h5: 'h5',
-        h6: 'h6',
-        subtitle: 'p',
-        body: 'p',
-        'body-large': 'p',
-        small: 'small',
-        lead: 'p',
-        muted: 'p',
-        quote: 'blockquote',
-        caption: 'caption',
-    }
-    return elementMap[variant] || 'p'
 }

@@ -45,9 +45,12 @@ export function Header() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    useEffect(() => {
+    // Inchide meniul mobil la schimbarea paginii (ajustare de stare in render, fara effect)
+    const [prevPathname, setPrevPathname] = useState(pathname)
+    if (pathname !== prevPathname) {
+        setPrevPathname(pathname)
         setIsOpen(false)
-    }, [pathname])
+    }
 
     return (
         // Animatiile framer-motion respecta prefers-reduced-motion
