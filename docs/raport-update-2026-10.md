@@ -232,3 +232,19 @@ Commit-uri: `56a39ec` (SEO), `57e5fba` (UX), `05d00de` (Next 16). Lint, `tsc` ș
 8. **/testimoniale** nu e legată din meniu (linkul a fost comentat) și nu e în sitemap. Decideți: o publicați (cu testimoniale reale și cu acord), îi puneți `noindex` sau o ștergeți.
 9. **Vercel**: verificați Node.js 22.x și redirect-ul `www.psiholog-alina.ro` → `psiholog-alina.ro` (Settings → Domains). După deploy, trimiteți `https://psiholog-alina.ro/sitemap.xml` în Google Search Console.
 10. **Google Business Profile** cu același NAP; apoi URL-ul profilului se adaugă în JSON-LD ca `sameAs`.
+
+---
+
+## 8. Runda a treia — deciziile proprietarului (21.10.2026)
+
+Commit-uri: `a652b5c`, `824f20c`, `cce8114`, `b15357d`.
+
+| Punct din 7.1 | Decizie | Ce s-a făcut |
+|---|---|---|
+| 1–2. Pagini legale și consimțământ | Date generice acum, datele juridice complete se adaugă ulterior | /confidentialitate (GDPR) și /cookies. Datele juridice sunt în `legalInfo` din `src/lib/site.ts`; CIF-ul și codul CPR apar automat când sunt completate. Banner de consimțământ: GA se încarcă doar după „Accept”, cu buton „Setări cookie” în footer. Flux testat: refuz, reîncărcare, redeschidere, acceptare. **Textele legale sunt generice și trebuie verificate juridic.** |
+| 3. Program | Luni – Vineri | Afișat unitar „Luni - Vineri, 09:00 - 18:00” pe Home, Footer și Contact (din `siteConfig`). Weekendul a fost scos de pe /contact; răspunsul din FAQ despre weekend a fost actualizat. |
+| 4. Prețuri | Cele din lista /servicii | Prețul pe ședință aliniat pe paginile de detaliu: evaluare 350, intervenție 260, terapie senzorială 250, psihologie sportivă 250, psihoterapie 250, logopedie 200 (45 min). FAQ-ul de tarife de pe /contact a fost rescris. **Rămân de confirmat:** pachetele de logopedie (5 / 10 ședințe: 850 / 1600 RON), de psihologie sportivă (5 / 10: 800 / 1500 RON) și terapia de cuplu (250 RON). Sunt calculate pe vechile prețuri. |
+| 5. Diacritice | Corectare | Tot textul vizibil e corectat; scanarea HTML-ului randat nu mai găsește cuvinte fără diacritice. |
+| 6. Testimoniale | Ștergere | Pagina /testimoniale a fost ștearsă (redirect 301 → /); secțiunile de pe Home și /servicii/psihologie-sportiva au fost eliminate. |
+
+**Rămân deschise:** datele juridice complete, prețurile pachetelor, verificarea juridică a textelor legale, setările Vercel (Node 22.x, redirect www) și Google Business Profile.
