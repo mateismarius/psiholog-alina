@@ -25,8 +25,10 @@ import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { colorClasses } from '@/lib/colorMap'
+import { serviceBreadcrumbJsonLd, withPageMeta } from '@/lib/seo'
+import { JsonLd } from '@/components/seo/JsonLd'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageMeta('/servicii/psihologie-sportiva', {
     title: 'Psihologie Sportivă',
     description: 'Psihologie sportivă pentru adulți, adolescenți și copii în București. Îmbunătățirea performanței, atitudinii și rezultatelor sportive. Ședințe de 50 minute la cabinet sau online.',
     keywords: [
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
         'motivatie sportiva',
         'concentrare sport'
     ],
-}
+})
 
 const sportsAreas = [
     {
@@ -253,6 +255,8 @@ const faqs = [
 export default function PsihologieSportivaPage() {
     return (
         <>
+            {/* Fir de navigare pentru motoarele de cautare */}
+            <JsonLd data={serviceBreadcrumbJsonLd('/servicii/psihologie-sportiva')} />
             {/* Hero Section */}
             <section className="py-20 bg-gradient-to-br from-therapeutic-600 via-therapeutic-500 to-calming-500 text-white relative overflow-hidden">
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
@@ -305,7 +309,7 @@ export default function PsihologieSportivaPage() {
                                     </Link>
                                 </Button>
                                 <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
-                                    <a href="tel:+40722123456">
+                                    <a href="tel:+40724172996">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discută gratuit
                                     </a>
@@ -692,7 +696,7 @@ export default function PsihologieSportivaPage() {
                                 </Link>
                             </Button>
                             <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
-                                <a href="tel:+40722123456">
+                                <a href="tel:+40724172996">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Sună pentru informații
                                 </a>

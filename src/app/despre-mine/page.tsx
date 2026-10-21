@@ -19,8 +19,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { withPageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageMeta('/despre-mine', {
     title: 'Despre Mine',
     description: 'Psiholog Patru Alina - Specialist în terapie autism cu peste 10 ani experiență în psihologie clinică. Psiholog acreditat CPR, specializat în terapie comportamentală, psihoterapie individuală și de cuplu în București.',
     keywords: [
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
         'specialist terapie autism bucuresti',
         'psiholog acreditat cpr'
     ],
-}
+})
 
 const personalInfo = {
     name: 'Alina Patru',

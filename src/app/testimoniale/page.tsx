@@ -23,8 +23,9 @@ import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { colorClasses } from '@/lib/colorMap'
+import { withPageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageMeta('/testimoniale', {
     title: 'Testimoniale',
     description: 'Poveștile de succes ale clienților mei - testimoniale reale despre serviciile de psihologie și logopedie oferite în București. Rezultate concrete și transformări pozitive.',
     keywords: [
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
         'evaluari servicii psihologice',
         'recomandari psiholog'
     ],
-}
+})
 
 const testimonialCategories = [
     {
@@ -342,7 +343,7 @@ export default function TestimonialePage() {
                                     </Link>
                                 </Button>
                                 <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
-                                    <a href="tel:+40722123456">
+                                    <a href="tel:+40724172996">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discută cu mine
                                     </a>
@@ -606,7 +607,7 @@ export default function TestimonialePage() {
                             </Button>
 
                             <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
-                                <a href="tel:+40722123456">
+                                <a href="tel:+40724172996">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Vorbește cu mine acum
                                 </a>

@@ -14,27 +14,24 @@ import {
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { MotionConfig, motion } from 'framer-motion'
+import { siteConfig, services } from '@/lib/site'
 
 const footerSections = {
-    servicii: [
-        { name: 'Terapie Autism', href: '/servicii' },
-        { name: 'Psihoterapie Individuală', href: '/servicii'},
-        { name: 'Terapie de Cuplu', href: '/servicii'},
-        { name: 'Consiliere Familială', href: '/servicii' },
-        { name: 'Evaluare Psihologică', href: '/servicii' },
-    ],
+    // Linkuri catre paginile reale de servicii (lista centrala din lib/site)
+    servicii: services,
     informatii: [
         { name: 'Despre Mine', href: '/despre-mine' },
         { name: 'Întrebări Frecvente', href: '/faq' },
         // { name: 'Testimoniale', href: '/testimoniale' },
     ],
+    // Paginile legale nu exista inca (link-urile duceau la 404); se reactiveaza cand sunt create
     legal: [
-        { name: 'Politica de Confidențialitate', href: '/confidentialitate' },
-        { name: 'Termeni și Condiții', href: '/termeni' },
-        { name: 'Politica Cookies', href: '/cookies' },
-        { name: 'GDPR', href: '/gdpr' },
-        { name: 'Cod Deontologic', href: '/cod-deontologic' },
-    ]
+        // { name: 'Politica de Confidențialitate', href: '/confidentialitate' },
+        // { name: 'Termeni și Condiții', href: '/termeni' },
+        // { name: 'Politica Cookies', href: '/cookies' },
+        // { name: 'GDPR', href: '/gdpr' },
+        // { name: 'Cod Deontologic', href: '/cod-deontologic' },
+    ] as { name: string, href: string }[]
 }
 
 // const socialLinks = [
@@ -196,31 +193,38 @@ export function Footer() {
                                     Contact
                                 </Typography>
                                 <div className="flex items-center space-x-3 mb-1">
-                                    <Phone className="h-5 w-5 text-therapeutic-400 shrink-0" />
+                                    <Phone className="h-5 w-5 text-therapeutic-400 shrink-0" aria-hidden="true" />
                                     <a
-                                        href="tel:+40724172996"
+                                        href={`tel:${siteConfig.phone}`}
                                         className="text-gray-300 hover:text-white transition-colors inline-flex items-center min-h-11"
                                     >
-                                        +40 724 172 996
+                                        {siteConfig.phoneDisplay}
                                     </a>
                                 </div>
 
                                 <div className="flex items-center space-x-3 mb-1">
-                                    <Mail className="h-5 w-5 text-therapeutic-400 shrink-0" />
+                                    <Mail className="h-5 w-5 text-therapeutic-400 shrink-0" aria-hidden="true" />
                                     <a
-                                        href="mailto:psiholog.alina.patru@gmail.com"
+                                        href={`mailto:${siteConfig.email}`}
                                         className="text-gray-300 hover:text-white transition-colors inline-flex items-center min-h-11 break-all"
                                     >
-                                        psiholog.alina.patru@gmail.com
+                                        {siteConfig.email}
                                     </a>
                                 </div>
 
                                 <div className="flex items-start space-x-3 mb-1">
-                                    <MapPin className="h-5 w-5 text-therapeutic-400 shrink-0 mt-0.5" />
-                                    <div className="text-gray-300">
-                                        <div>Strada Lunei nr. 7</div>
-                                        <div>Sector 2, București</div>
-                                    </div>
+                                    <MapPin className="h-5 w-5 text-therapeutic-400 shrink-0 mt-0.5" aria-hidden="true" />
+                                    <address className="text-gray-300 not-italic">
+                                        <a
+                                            href={siteConfig.mapsUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-white transition-colors"
+                                        >
+                                            <span className="block">{siteConfig.address.street}</span>
+                                            <span className="block">{siteConfig.address.sector}, {siteConfig.address.locality}</span>
+                                        </a>
+                                    </address>
                                 </div>
 
                                 <div className="flex items-start space-x-3 space-y-5 mt-5 ">

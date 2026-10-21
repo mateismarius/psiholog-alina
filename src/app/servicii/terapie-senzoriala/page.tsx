@@ -18,8 +18,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { serviceBreadcrumbJsonLd, withPageMeta } from '@/lib/seo'
+import { JsonLd } from '@/components/seo/JsonLd'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageMeta('/servicii/terapie-senzoriala', {
     title: 'Terapie Senzoriala, Reflexe Primare si Terapie Ocupationala',
     description: 'Terapie de integrare senzoriala, integrarea reflexelor primare si terapie ocupationala pentru copii in Bucuresti. Sedinte de 50 minute pentru coordonare, autonomie si dezvoltare.',
     keywords: [
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
         'reflexe MORO tonic palmar',
         'coordonare motorie copii',
     ],
-}
+})
 
 const areas = [
     {
@@ -114,6 +116,8 @@ const faqs = [
 export default function TerapieSenzorialaPage() {
     return (
         <>
+            {/* Fir de navigare pentru motoarele de cautare */}
+            <JsonLd data={serviceBreadcrumbJsonLd('/servicii/terapie-senzoriala')} />
             {/* Hero */}
             <section className="py-20 bg-gradient-to-br from-peace-600 via-peace-500 to-calming-500 text-white relative overflow-hidden">
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />

@@ -25,6 +25,14 @@ import { Container } from '@/components/core/Container'
 import { HeroSection, ServicesSection, TestimonialSection, CtaSection, StatsSection } from "@/components/core/SectionComponents"
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { hoverBgMap } from '@/lib/colorMap'
+import type { Metadata } from 'next'
+import { withPageMeta } from '@/lib/seo'
+
+// Titlu si descriere orientate pe cautari locale (Sector 2, zona Mosilor / Izvorul Rece)
+export const metadata: Metadata = withPageMeta('/', {
+    title: { absolute: 'Psiholog Patru Alina – Cabinet de psihologie în Sector 2, București' },
+    description: 'Cabinet de psihologie în Sector 2, București (zona Moșilor, lângă Parcul Izvorul Rece): evaluare psihologică, intervenție pentru autism și ADHD, terapie senzorială, logopedie și psihoterapie. La cabinet și online.',
+})
 
 const stats = [
   {

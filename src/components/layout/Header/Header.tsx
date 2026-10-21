@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Container } from '@/components/core'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
+import { siteConfig } from '@/lib/site'
 
 
 const navigationItems = [
@@ -59,24 +60,24 @@ export function Header() {
                             <div className="flex items-center space-x-2">
                                 <Phone className="h-4 w-4" />
                                 <a
-                                    href="tel:+40724172996"
+                                    href={`tel:${siteConfig.phone}`}
                                     className="hover:text-therapeutic-200 transition-colors"
                                 >
-                                    +40 724 172 996
+                                    {siteConfig.phoneDisplay}
                                 </a>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Mail className="h-4 w-4" />
                                 <a
-                                    href="mailto:psiholog.alina.patru@gmail.com"
+                                    href={`mailto:${siteConfig.email}`}
                                     className="hover:text-therapeutic-200 transition-colors"
                                 >
-                                    psiholog.alina.patru@gmail.com
+                                    {siteConfig.email}
                                 </a>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <MapPin className="h-4 w-4" />
-                                <span>Str. Lunei ,nr.7,sector 2, București sau Online</span>
+                                <span>{siteConfig.addressDisplay} sau online</span>
                             </div>
                         </div>
 
@@ -150,7 +151,7 @@ export function Header() {
                                 </Link>
                             </Button>
                             <Button asChild className="bg-therapeutic text-white hover:bg-therapeutic/90">
-                                <Link href="mailto:psiholog.alina.patru@gmail.com">
+                                <Link href={`mailto:${siteConfig.email}`}>
                                     <Mail className="h-4 w-4 mr-2" />
                                     Programare
                                 </Link>
@@ -207,11 +208,11 @@ export function Header() {
                                     <div className="pt-4 border-t space-y-3">
                                         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                                             <Phone className="h-4 w-4" />
-                                            <a href="tel:+40724172996" className="inline-flex items-center min-h-11">+40 724 172 996 </a>
+                                            <a href={`tel:${siteConfig.phone}`} className="inline-flex items-center min-h-11">{siteConfig.phoneDisplay}</a>
                                         </div>
                                         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                                             <Mail className="h-4 w-4" />
-                                            <a href="mailto:psiholog.alina.patru@gmail.com" className="inline-flex items-center min-h-11 break-all">psiholog.alina.patru@gmail.com</a>
+                                            <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center min-h-11 break-all">{siteConfig.email}</a>
                                         </div>
                                         <div className="flex flex-col sm:flex-row gap-2 pt-2">
                                             <Button asChild variant="outline" size="sm" className="w-full sm:w-auto min-h-11">

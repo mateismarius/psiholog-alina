@@ -23,8 +23,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { withPageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageMeta('/servicii', {
     title: 'Servicii',
     description: 'Servicii complete de psihologie si logopedie in Bucuresti: evaluare psihologica, interventie pentru recuperare, terapie senzoriala, psihologie sportiva, psihoterapie si logopedie. Consultatii la cabinet si online.',
     keywords: [
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
         'logopedie copii',
         'psiholog clinician',
     ],
-}
+})
 
 // ─── Date servicii ──────────────────────────────────────────────────────────
 
