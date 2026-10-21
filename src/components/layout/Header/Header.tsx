@@ -115,7 +115,7 @@ export function Header() {
                                     Psiholog Patru Alina
                                 </div>
                                 <div className="hidden sm:block text-sm lg:text-base text-muted-foreground">
-                                    Specialist psihologie clinica si psihoterapie
+                                    Specialist în psihologie clinică și psihoterapie
                                 </div>
                             </div>
                         </Link>

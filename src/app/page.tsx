@@ -57,7 +57,7 @@ const stats = [
     icon: Shield,
     value: '100%',
     label: 'Confidențialitate',
-    description: 'Cabinet acreditat CPR si la nivel UE'
+    description: 'Cabinet acreditat CPR și la nivel UE'
   }
 ]
 
@@ -65,7 +65,7 @@ const services = [
   {
     icon: ClipboardList,
     title: 'Ședințe de Evaluare',
-    description: 'Evaluare prin metoda observației, interviul cu parintii / apartinatorii si beneficiarul cat si prin aplicarea chestionarelor potrivite fiecarei situatii.',
+    description: 'Evaluare prin metoda observației, interviul cu părinții/aparținătorii și cu beneficiarul, precum și prin aplicarea chestionarelor potrivite fiecărei situații.',
     features: [
       'Observație clinică structurată',
       'Chestionare și teste specializate',
@@ -187,13 +187,13 @@ const expertise = [
   },
   {
     icon: Users,
-    title: 'Psihologia sportiva',
-    description: 'Interventie pentru imbunatatire preformantelor sportive'
+    title: 'Psihologia sportivă',
+    description: 'Intervenție pentru îmbunătățirea performanțelor sportive'
   },
   {
     icon: Shield,
     title: 'Psihologie Clinică',
-    description: 'Evaluări psihologice complete și planuri de interventie'
+    description: 'Evaluări psihologice complete și planuri de intervenție'
   }
 ]
 
@@ -224,7 +224,7 @@ export default function HomePage() {
                   </Typography>
 
                   <Typography variant="lead" className="text-white/90 max-w-2xl ">
-                    Cabinet de psihologie specializat în <strong>psihologie clinica si psihoterapie</strong> pentru copii și adulți în București si online.
+                    Cabinet de psihologie specializat în <strong>psihologie clinică și psihoterapie</strong> pentru copii și adulți, în București și online.
                     Oferim intervenție timpurie, evaluare profesională și suport psihologic într-un mediu sigur și empatic.
                   </Typography>
                 </div>
@@ -314,13 +314,13 @@ export default function HomePage() {
                 <div>
                   <p className="font-bold text-lg leading-tight">Contract cu CASMB</p>
                   <p className="text-therapeutic-100 text-sm">
-                    Casa de Asigurari de Sanatate a Municipiului Bucuresti
+                    Casa de Asigurări de Sănătate a Municipiului București
                   </p>
                 </div>
               </div>
               <p className="text-therapeutic-100 text-sm text-center lg:text-left max-w-md">
-                Diagnosticul TSA (F84.0) sedintele sunt decontate prin CASMB in limita locurilor disponibile.
-                <br/>Contacteaza-ne pentru detalii despre serviciile acoperite.
+                Pentru diagnosticul TSA (F84.0), ședințele sunt decontate prin CASMB, în limita locurilor disponibile.
+                <br/>Contactează-ne pentru detalii despre serviciile acoperite.
               </p>
               <Button asChild size="sm" className="flex-shrink-0 bg-white text-therapeutic-700 hover:bg-therapeutic-50">
                 <Link href="/servicii">Află detalii</Link>
@@ -355,7 +355,7 @@ export default function HomePage() {
           <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
             <Typography variant="h2" className="mb-6 text-center" family="serif">
               Servicii Specializate de
-              <span className="text-therapeutic text-center"> Psihologie Clinică si Psihoterapie</span>
+              <span className="text-therapeutic text-center"> Psihologie Clinică și Psihoterapie</span>
             </Typography>
             <Typography variant="lead" className="text-center">
               Oferim terapie profesională adaptată nevoilor fiecărui pacient,

@@ -27,7 +27,7 @@ import { withPageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = withPageMeta('/servicii', {
     title: 'Servicii',
-    description: 'Servicii complete de psihologie si logopedie in Bucuresti: evaluare psihologica, interventie pentru recuperare, terapie senzoriala, psihologie sportiva, psihoterapie si logopedie. Consultatii la cabinet si online.',
+    description: 'Servicii complete de psihologie și logopedie în București: evaluare psihologică, intervenție pentru recuperare, terapie senzorială, psihologie sportivă, psihoterapie și logopedie. Consultații la cabinet și online.',
     keywords: [
         'servicii psihologie bucuresti',
         'evaluare psihologica autism',
@@ -47,129 +47,129 @@ export const metadata: Metadata = withPageMeta('/servicii', {
 const services = [
     {
         icon: ClipboardList,
-        title: 'Sedinte de Evaluare',
-        subtitle: 'Evaluare si plan de interventie personalizat',
+        title: 'Ședințe de Evaluare',
+        subtitle: 'Evaluare și plan de intervenție personalizat',
         description:
-            'Evaluare prin metoda observatiei, interviul cu parintii/apartinatorii si beneficiarul cat si prin aplicarea chestionarelor potrivite fiecarei situatii.',
+            'Evaluare prin metoda observației, interviul cu părinții/aparținătorii și cu beneficiarul, precum și prin aplicarea chestionarelor potrivite fiecărei situații.',
         features: [
-            'Observatie clinica structurata',
-            'Chestionare si teste specializate',
+            'Observație clinică structurată',
+            'Chestionare și teste specializate',
             'Evaluare autism, ADHD, anxietate',
             'Raport psihologic detaliat',
-            'Recomandari de tratament',
+            'Recomandări de tratament',
         ],
         href: '/servicii/evaluare-psihologica',
         color: 'therapeutic',
         price: '350 RON',
         duration: '50 minute',
-        audience: 'Copii, adolescenti, adulti',
+        audience: 'Copii, adolescenți, adulți',
         sessionTypes: ['Cabinet', 'Online'],
         featured: true,
     },
     {
         icon: SproutIcon,
-        title: 'Interventie pentru Recuperare',
-        subtitle: 'Terapie specializata prin joc pentru copii cu nevoi speciale',
+        title: 'Intervenție pentru Recuperare',
+        subtitle: 'Terapie specializată prin joc pentru copii cu nevoi speciale',
         description:
-            'Terapie de recuperare prin joc pentru copii cu intarzieri in dezvoltare, ADHD, autism si intarzieri in vorbire. Parintii pot asista la sedinte si primesc un plan de exercitii pentru acasa.',
+            'Terapie de recuperare prin joc pentru copii cu întârzieri în dezvoltare, ADHD, autism și întârzieri în vorbire. Părinții pot asista la ședințe și primesc un plan de exerciții pentru acasă.',
         features: [
             'Terapie prin joc pentru copii',
-            'Recuperare autism si ADHD',
-            'Probleme de integrare senzoriala',
-            'Intarzieri in dezvoltare',
-            'Participarea parintilor la sedinte',
-            'Plan de exercitii pentru acasa',
+            'Recuperare autism și ADHD',
+            'Probleme de integrare senzorială',
+            'Întârzieri în dezvoltare',
+            'Participarea părinților la ședințe',
+            'Plan de exerciții pentru acasă',
         ],
         href: '/servicii/interventie-recuperare',
         color: 'warm',
         price: '260 RON',
         duration: '100 minute',
         audience: 'Copii cu nevoi speciale (2-18 ani)',
-        sessionTypes: ['Cabinet', 'Sedinte extinse'],
+        sessionTypes: ['Cabinet', 'Ședințe extinse'],
     },
     {
         icon: Puzzle,
-        title: 'Terapie Senzoriala, Reflexe Primare si Terapie Ocupationala',
-        subtitle: 'Integrare senzoriala si maturizarea reflexelor primare',
+        title: 'Terapie Senzorială, Reflexe Primare și Terapie Ocupațională',
+        subtitle: 'Integrare senzorială și maturizarea reflexelor primare',
         description:
-            'Programe specializate pentru copii cu dificultati de procesare senzoriala, reflexe primare neintegrate si probleme de coordonare. Terapia ocupationala ajuta la dobandirea autonomiei in activitatile zilnice.',
+            'Programe specializate pentru copii cu dificultăți de procesare senzorială, reflexe primare neintegrate și probleme de coordonare. Terapia ocupațională ajută la dobândirea autonomiei în activitățile zilnice.',
         features: [
-            'Evaluare si terapie de integrare senzoriala',
-            'Integrarea reflexelor primare (MORO, Tonic, Palmar)',
-            'Terapie ocupationala pentru activitati zilnice',
-            'Exercitii de coordonare motorie fina si grosiera',
-            'Stimulare vestibulara si proprioceptiva',
-            'Ghid de exercitii pentru parinti acasa',
+            'Evaluare și terapie de integrare senzorială',
+            'Integrarea reflexelor primare (Moro, tonic, palmar)',
+            'Terapie ocupațională pentru activitățile zilnice',
+            'Exerciții de coordonare motorie fină și grosieră',
+            'Stimulare vestibulară și proprioceptivă',
+            'Ghid de exerciții pentru părinți, acasă',
         ],
         href: '/servicii/terapie-senzoriala',
         color: 'peace',
         price: '250 RON',
         duration: '50 minute',
-        audience: 'Copii de la 1 an, adolescenti',
-        sessionTypes: ['Cabinet', 'Cu parintii'],
+        audience: 'Copii de la 1 an, adolescenți',
+        sessionTypes: ['Cabinet', 'Cu părinții'],
     },
     {
         icon: Trophy,
-        title: 'Psihologie Sportiva',
-        subtitle: 'Performanta mentala pentru sportivi de toate nivelurile',
+        title: 'Psihologie Sportivă',
+        subtitle: 'Performanță mentală pentru sportivi de toate nivelurile',
         description:
-            'Dedicata celor care fac sport si isi doresc imbunatatirea atitudinii, rezultatelor si in general a performantei in sportul pe care il practica, indiferent de nivel sau varsta.',
+            'Dedicată celor care fac sport și își doresc îmbunătățirea atitudinii, a rezultatelor și, în general, a performanței în sportul pe care îl practică, indiferent de nivel sau vârstă.',
         features: [
-            'Imbunatatirea performantei sportive',
-            'Gestionarea anxietatii de competitie',
-            'Dezvoltarea concentrarii si focusului',
-            'Motivatie si stabilirea obiectivelor',
-            'Sedinte la cabinet sau online',
-            'Pentru adulti, adolescenti si copii',
+            'Îmbunătățirea performanței sportive',
+            'Gestionarea anxietății de competiție',
+            'Dezvoltarea concentrării și a focusului',
+            'Motivație și stabilirea obiectivelor',
+            'Ședințe la cabinet sau online',
+            'Pentru adulți, adolescenți și copii',
         ],
         href: '/servicii/psihologie-sportiva',
         color: 'trust',
         price: '250 RON',
         duration: '50 minute',
-        audience: 'Copii, adolescenti, adulti sportivi',
+        audience: 'Copii, adolescenți, adulți sportivi',
         sessionTypes: ['Cabinet', 'Online'],
     },
     {
         icon: Heart,
         title: 'Psihoterapie',
-        subtitle: 'Terapie integrativa pentru adulti, adolescenti si copii',
+        subtitle: 'Terapie integrativă pentru adulți, adolescenți și copii',
         description:
-            'Sedinte de psihoterapie intr-un spatiu sigur si empatic. Tratament pentru anxietate, depresie, trauma si dezvoltare personala, adaptat nevoilor si varstei fiecarui client.',
+            'Ședințe de psihoterapie într-un spațiu sigur și empatic. Tratament pentru anxietate, depresie, traumă și dezvoltare personală, adaptat nevoilor și vârstei fiecărui client.',
         features: [
-            'Terapie integrativa personalizata',
-            'Tratament anxietate si depresie',
-            'Procesarea traumelor si PTSD',
-            'Dezvoltare personala si crestere',
-            'Sedinte la cabinet sau online',
-            'Adaptat pentru toate varstele',
+            'Terapie integrativă personalizată',
+            'Tratament pentru anxietate și depresie',
+            'Procesarea traumelor și PTSD',
+            'Dezvoltare și creștere personală',
+            'Ședințe la cabinet sau online',
+            'Adaptat pentru toate vârstele',
         ],
         href: '/servicii/psihoterapie',
         color: 'empathy',
         price: '250 RON',
         duration: '50 minute',
-        audience: 'Adulti, adolescenti, copii',
+        audience: 'Adulți, adolescenți, copii',
         sessionTypes: ['Cabinet', 'Online'],
     },
     {
         icon: MessageSquare,
         title: 'Logopedie',
-        subtitle: 'Terapia vorbirii si limbajului pentru copii',
+        subtitle: 'Terapia vorbirii și a limbajului pentru copii',
         description:
-            'Sedinte pentru copii in vederea recuperarii in urma intarzierilor in vorbire si corectarea sau insusirea anumitor sunete, cu exercitii continuate si acasa.',
+            'Ședințe pentru copii, în vederea recuperării întârzierilor în vorbire și a corectării sau însușirii anumitor sunete, cu exerciții continuate și acasă.',
         features: [
-            'Recuperarea intarzierilor in vorbire',
-            'Corectarea defectelor de pronuntie',
-            'Invatarea sunetelor corecte',
+            'Recuperarea întârzierilor în vorbire',
+            'Corectarea defectelor de pronunție',
+            'Învățarea sunetelor corecte',
             'Dezvoltarea vocabularului',
-            'Imbunatatirea fluentei vorbirii',
-            'Exercitii pentru acasa cu parintii',
+            'Îmbunătățirea fluenței vorbirii',
+            'Exerciții pentru acasă, cu părinții',
         ],
         href: '/servicii/logopedie',
         color: 'calming',
         price: '200 RON',
         duration: '45 minute',
         audience: 'Copii de la 2 ani',
-        sessionTypes: ['Cabinet', 'Cu parintii'],
+        sessionTypes: ['Cabinet', 'Cu părinții'],
     },
 ]
 
@@ -246,49 +246,49 @@ const colorMap: Record<string, Record<string, string>> = {
 const whyChooseUs = [
     {
         icon: Star,
-        title: 'Experienta si Specializare',
-        description: '12 ani de experienta in psihologie si formare continua in cele mai noi tehnici terapeutice.',
+        title: 'Experiență și Specializare',
+        description: '12 ani de experiență în psihologie și formare continuă în cele mai noi tehnici terapeutice.',
     },
     {
         icon: Heart,
-        title: 'Abordare Personalizata',
-        description: 'Fiecare client primeste un plan terapeutic personalizat, adaptat nevoilor si obiectivelor sale.',
+        title: 'Abordare Personalizată',
+        description: 'Fiecare client primește un plan terapeutic personalizat, adaptat nevoilor și obiectivelor sale.',
     },
     {
         icon: Shield,
-        title: 'Mediu Sigur si Confidential',
-        description: 'Spatiu profesional, non-judgmental, unde poti fi autentic si te poti simti in siguranta.',
+        title: 'Mediu Sigur și Confidențial',
+        description: 'Spațiu profesional, fără judecăți, unde poți fi autentic și te poți simți în siguranță.',
     },
     {
         icon: Target,
-        title: 'Rezultate Masurabile',
-        description: 'Monitorizez progresul constant si adaptez terapia pentru a obtine cele mai bune rezultate.',
+        title: 'Rezultate Măsurabile',
+        description: 'Monitorizez constant progresul și adaptez terapia pentru a obține cele mai bune rezultate.',
     },
 ]
 
 const processSteps = [
-    { step: '1', title: 'Primul Contact',    description: 'Discutie telefonica gratuita de 15 minute pentru a intelege nevoile tale si a raspunde la intrebari.' },
-    { step: '2', title: 'Evaluarea Initiala', description: 'Prima sedinta dedicata evaluarii detaliate si stabilirii obiectivelor terapeutice.' },
-    { step: '3', title: 'Planul Terapeutic',  description: 'Elaborarea unui plan personalizat cu tehnicile si metodele cele mai potrivite.' },
-    { step: '4', title: 'Terapia Activa',     description: 'Sedinte regulate cu monitorizarea progresului si adaptarea planului dupa nevoie.' },
+    { step: '1', title: 'Primul Contact',    description: 'Discuție telefonică gratuită de 15 minute, pentru a înțelege nevoile tale și a răspunde la întrebări.' },
+    { step: '2', title: 'Evaluarea Inițială', description: 'Prima ședință, dedicată evaluării detaliate și stabilirii obiectivelor terapeutice.' },
+    { step: '3', title: 'Planul Terapeutic',  description: 'Elaborarea unui plan personalizat, cu tehnicile și metodele cele mai potrivite.' },
+    { step: '4', title: 'Terapia Activă',     description: 'Ședințe regulate, cu monitorizarea progresului și adaptarea planului după nevoie.' },
 ]
 
 const faqs = [
     {
         question: 'Cum aleg serviciul potrivit pentru mine?',
-        answer: 'Ofer o consultatie telefonica gratuita de 15 minute pentru a discuta nevoile tale si a recomanda cel mai potrivit serviciu. Fiecare situatie este unica si merita o abordare personalizata.',
+        answer: 'Ofer o consultație telefonică gratuită de 15 minute, pentru a discuta nevoile tale și a-ți recomanda cel mai potrivit serviciu. Fiecare situație este unică și merită o abordare personalizată.',
     },
     {
         question: 'Pot combina mai multe servicii?',
-        answer: 'Da, adesea o abordare integrata aduce cele mai bune rezultate. De exemplu, un copil poate beneficia atat de logopedie cat si de terapie senzoriala sau sedinte de interventie pentru dezvoltare.',
+        answer: 'Da, adesea o abordare integrată aduce cele mai bune rezultate. De exemplu, un copil poate beneficia atât de logopedie, cât și de terapie senzorială sau de ședințe de intervenție pentru dezvoltare.',
     },
     {
-        question: 'Sedintele online sunt la fel de eficiente?',
-        answer: 'Pentru majoritatea serviciilor, sedintele online sunt la fel de eficiente. Logopedia, terapia senzoriala si interventiile pentru copii se desfasoara insa mai bine fata in fata.',
+        question: 'Ședințele online sunt la fel de eficiente?',
+        answer: 'Pentru majoritatea serviciilor, ședințele online sunt la fel de eficiente. Logopedia, terapia senzorială și intervențiile pentru copii se desfășoară însă mai bine față în față.',
     },
     {
-        question: 'Cat dureaza in general o terapie?',
-        answer: 'Durata variaza in functie de serviciul ales si obiectivele personale. Unele probleme pot fi rezolvate in 5-10 sedinte, altele pot necesita terapie pe termen mai lung.',
+        question: 'Cât durează, în general, o terapie?',
+        answer: 'Durata variază în funcție de serviciul ales și de obiectivele personale. Unele probleme pot fi rezolvate în 5–10 ședințe, altele pot necesita terapie pe termen mai lung.',
     },
 ]
 
@@ -307,7 +307,7 @@ export default function ServiciiPage() {
                         <div className="text-center max-w-4xl mx-auto space-y-8">
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-sm font-medium backdrop-blur-sm">
                                 <Sparkles className="w-4 h-4 mr-2 text-warm-300" />
-                                Servicii complete de psihologie si logopedie
+                                Servicii complete de psihologie și logopedie
                             </div>
 
                             <Typography variant="h1" className="text-white flex justify-center gap-x-3" family="serif">
@@ -316,8 +316,8 @@ export default function ServiciiPage() {
                             </Typography>
 
                             <Typography variant="lead" className="text-white/90 max-w-2xl mx-auto">
-                                O gama completa de servicii de psihologie si logopedie pentru copii, adolescenti
-                                si adulti, fiecare personalizat pentru a raspunde nevoilor tale specifice.
+                                O gamă completă de servicii de psihologie și logopedie pentru copii, adolescenți
+                                și adulți, fiecare personalizat pentru a răspunde nevoilor tale specifice.
                             </Typography>
 
                             {/* Servicii quick icons */}
@@ -341,13 +341,13 @@ export default function ServiciiPage() {
                                 <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-base px-8">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
-                                        Programeaza consultatie
+                                        Programează consultație
                                     </Link>
                                 </Button>
                                 <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40724172996">
                                         <Phone className="w-5 h-5 mr-2" />
-                                        Discuta gratuit
+                                        Discută gratuit
                                     </a>
                                 </Button>
                             </div>
@@ -367,13 +367,13 @@ export default function ServiciiPage() {
                             <div>
                                 <p className="font-bold text-lg leading-tight">Contract cu CASMB</p>
                                 <p className="text-therapeutic-100 text-sm">
-                                    Casa de Asigurari de Sanatate a Municipiului Bucuresti
+                                    Casa de Asigurări de Sănătate a Municipiului București
                                 </p>
                             </div>
                         </div>
                         <p className="text-therapeutic-100 text-sm text-center lg:text-left max-w-md">
-                            Diagnosticul TSA (F84.0) sedintele sunt decontate prin CASMB in limita locurilor disponibile.
-                            <br/>Contacteaza-ne pentru detalii despre serviciile acoperite.
+                            Pentru diagnosticul TSA (F84.0), ședințele sunt decontate prin CASMB, în limita locurilor disponibile.
+                            <br/>Contactează-ne pentru detalii despre serviciile acoperite.
                         </p>
                         <Button asChild size="sm" className="flex-shrink-0 bg-white text-therapeutic-700 hover:bg-therapeutic-50">
                             <Link href="/contact">Află detalii</Link>
@@ -399,7 +399,7 @@ export default function ServiciiPage() {
             {/*                                    Servicii decontate prin CASMB*/}
             {/*                                </Typography>*/}
             {/*                                <Typography variant="small" className="text-muted-foreground">*/}
-            {/*                                    Casa de Asigurari de Sanatate a Municipiului Bucuresti*/}
+            {/*                                    Casa de Asigurări de Sănătate a Municipiului București*/}
             {/*                                </Typography>*/}
             {/*                            </div>*/}
             {/*                        </div>*/}
@@ -472,7 +472,7 @@ export default function ServiciiPage() {
                             Serviciile <span className="text-therapeutic">Mele</span>
                         </Typography>
                         <Typography variant="lead">
-                            Fiecare serviciu este conceput pentru a raspunde nevoilor specifice ale fiecarei varste si situatii
+                            Fiecare serviciu este conceput pentru a răspunde nevoilor specifice fiecărei vârste și situații
                         </Typography>
                     </AnimatedSection>
 
@@ -561,10 +561,10 @@ export default function ServiciiPage() {
                 <Container>
                     <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-14">
                         <Typography variant="h2" className="mb-4" family="serif">
-                            De ce sa <span className="text-therapeutic">Alegi</span> Serviciile Mele?
+                            De ce să <span className="text-therapeutic">Alegi</span> Serviciile Mele?
                         </Typography>
                         <Typography variant="lead">
-                            Peste 12 ani de experienta, cu o abordare integrativa si personalizata
+                            Peste 12 ani de experiență, cu o abordare integrativă și personalizată
                         </Typography>
                     </AnimatedSection>
 
@@ -600,10 +600,10 @@ export default function ServiciiPage() {
                 <Container>
                     <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-14">
                         <Typography variant="h2" className="mb-4" family="serif">
-                            Cum <span className="text-therapeutic">Functioneaza</span>?
+                            Cum <span className="text-therapeutic">Funcționează</span>?
                         </Typography>
                         <Typography variant="lead">
-                            Procesul simplu si structurat pentru a incepe calatoria ta catre o viata mai buna
+                            Un proces simplu și structurat, pentru a începe călătoria ta către o viață mai bună
                         </Typography>
                     </AnimatedSection>
 
@@ -637,10 +637,10 @@ export default function ServiciiPage() {
                 <Container size="md">
                     <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-14">
                         <Typography variant="h2" className="mb-4" family="serif">
-                            Intrebari <span className="text-therapeutic">Frecvente</span>
+                            Întrebări <span className="text-therapeutic">Frecvente</span>
                         </Typography>
                         <Typography variant="lead">
-                            Raspunsuri la intrebarile comune despre serviciile oferite
+                            Răspunsuri la întrebările frecvente despre serviciile oferite
                         </Typography>
                     </AnimatedSection>
 
@@ -673,31 +673,31 @@ export default function ServiciiPage() {
                     <AnimatedSection animation="fadeIn">
                         <div className="text-center max-w-3xl mx-auto space-y-6">
                             <Typography variant="h2" className="text-white" family="serif">
-                                Incepe Calatoria ta de Schimbare Astazi
+                                Începe Călătoria ta de Schimbare Astăzi
                             </Typography>
                             <Typography variant="lead" className="text-white/90">
-                                Fiecare pas catre o viata mai buna incepe cu o decizie. Sunt aici sa te sprijin
-                                in aceasta calatorie, indiferent de provocarile cu care te confrunti.
+                                Fiecare pas către o viață mai bună începe cu o decizie. Sunt aici să te sprijin
+                                în această călătorie, indiferent de provocările cu care te confrunți.
                             </Typography>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                                 <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-base px-8">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
-                                        Programeaza consultatie gratuita
+                                        Programează consultație gratuită
                                     </Link>
                                 </Button>
                                 <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
                                     <Link href="/despre-mine">
                                         <Users className="w-5 h-5 mr-2" />
-                                        Afla mai mult despre mine
+                                        Află mai mult despre mine
                                     </Link>
                                 </Button>
                             </div>
 
                             <p className="text-sm text-white/70 pt-2">
-                                Consultatie telefonica initiala (15 minute) —{' '}
-                                <strong className="text-white">gratuita</strong>
+                                Consultație telefonică inițială (15 minute) —{' '}
+                                <strong className="text-white">gratuită</strong>
                             </p>
                         </div>
                     </AnimatedSection>

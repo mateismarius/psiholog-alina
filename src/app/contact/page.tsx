@@ -24,7 +24,7 @@ import { siteConfig } from '@/lib/site'
 export const metadata: Metadata = withPageMeta('/contact', {
     title: 'Contact',
     description: 'Contactează Psiholog Alina Patru pentru programări și informații. ' +
-        'Cabinet de psihologie în București, specialist în terapie autism si psihoterapie individuală. ' +
+        'Cabinet de psihologie în București, specialist în terapie autism și psihoterapie individuală. ' +
         'Programări online și la cabinet.',
     keywords: [
         'contact psiholog bucuresti',

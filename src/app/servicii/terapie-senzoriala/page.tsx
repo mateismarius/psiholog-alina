@@ -23,8 +23,8 @@ import { JsonLd } from '@/components/seo/JsonLd'
 import { RelatedServices } from '@/components/core/RelatedServices'
 
 export const metadata: Metadata = withPageMeta('/servicii/terapie-senzoriala', {
-    title: 'Terapie Senzoriala, Reflexe Primare si Terapie Ocupationala',
-    description: 'Terapie de integrare senzoriala, integrarea reflexelor primare si terapie ocupationala pentru copii in Bucuresti. Sedinte de 50 minute pentru coordonare, autonomie si dezvoltare.',
+    title: 'Terapie Senzorială, Reflexe Primare și Terapie Ocupațională',
+    description: 'Terapie de integrare senzorială, integrarea reflexelor primare și terapie ocupațională pentru copii în București. Ședințe de 50 de minute pentru coordonare, autonomie și dezvoltare.',
     keywords: [
         'terapie senzoriala bucuresti',
         'integrare senzoriala copii',
@@ -37,46 +37,46 @@ export const metadata: Metadata = withPageMeta('/servicii/terapie-senzoriala', {
 
 const areas = [
     {
-        title: 'Integrare Senzoriala',
-        description: 'Ajuta copilul sa proceseze si sa raspunda corect la stimulii din mediu',
+        title: 'Integrare Senzorială',
+        description: 'Ajută copilul să proceseze și să răspundă corect la stimulii din mediu',
         icon: Sparkles,
         benefits: [
-            'Reducerea hipersensibilitatii senzoriale',
-            'Imbunatatirea procesarii stimulilor',
-            'Toleranta crescuta la texturi si sunete',
-            'Reglare emotionala mai buna',
+            'Reducerea hipersensibilității senzoriale',
+            'Îmbunătățirea procesării stimulilor',
+            'Toleranță crescută la texturi și sunete',
+            'Reglare emoțională mai bună',
         ],
     },
     {
         title: 'Reflexe Primare',
-        description: 'Integrarea reflexelor neonatale care influenteaza dezvoltarea',
+        description: 'Integrarea reflexelor neonatale care influențează dezvoltarea',
         icon: Activity,
         benefits: [
-            'Reflexul MORO (de tresarire)',
-            'Reflexul Tonic asimetric al gatului',
-            'Reflexul Palmar de prindere',
-            'Imbunatatirea posturii si echilibrului',
+            'Reflexul Moro (de tresărire)',
+            'Reflexul tonic asimetric al gâtului',
+            'Reflexul palmar de prindere',
+            'Îmbunătățirea posturii și a echilibrului',
         ],
     },
     {
-        title: 'Terapie Ocupationala',
-        description: 'Dezvoltarea abilitatilor necesare in activitatile zilnice',
+        title: 'Terapie Ocupațională',
+        description: 'Dezvoltarea abilităților necesare în activitățile zilnice',
         icon: Hand,
         benefits: [
-            'Autonomie in activitati zilnice',
-            'Coordonare motorie fina si grosiera',
-            'Abilitati de scris si manipulare obiecte',
-            'Pregatirea pentru scoala',
+            'Autonomie în activitățile zilnice',
+            'Coordonare motorie fină și grosieră',
+            'Abilități de scris și de manipulare a obiectelor',
+            'Pregătirea pentru școală',
         ],
     },
     {
-        title: 'Coordonare si Motricitate',
-        description: 'Stimulare vestibulara si proprioceptiva pentru control corporal',
+        title: 'Coordonare și Motricitate',
+        description: 'Stimulare vestibulară și proprioceptivă pentru controlul corpului',
         icon: Footprints,
         benefits: [
-            'Stimulare vestibulara (echilibru)',
-            'Stimulare proprioceptiva',
-            'Schema corporala si lateralitate',
+            'Stimulare vestibulară (echilibru)',
+            'Stimulare proprioceptivă',
+            'Schemă corporală și lateralitate',
             'Planificare motorie',
         ],
     },
@@ -86,31 +86,31 @@ const pricing = {
     standard: 250,
     duration: '50 minute',
     includes: [
-        'Sedinta de terapie (50 minute)',
-        'Evaluare initiala a profilului senzorial',
-        'Exercitii de integrare a reflexelor primare',
-        'Activitati de terapie ocupationala',
-        'Ghid de exercitii pentru acasa',
+        'Ședința de terapie (50 de minute)',
+        'Evaluare inițială a profilului senzorial',
+        'Exerciții de integrare a reflexelor primare',
+        'Activități de terapie ocupațională',
+        'Ghid de exerciții pentru acasă',
         'Monitorizarea progresului',
     ],
 }
 
 const faqs = [
     {
-        question: 'De la ce varsta se poate incepe terapia senzoriala?',
-        answer: 'Terapia poate incepe de la 1 an. Cu cat interventia este mai timpurie, cu atat reflexele primare se integreaza mai usor si dezvoltarea decurge mai armonios.',
+        question: 'De la ce vârstă se poate începe terapia senzorială?',
+        answer: 'Terapia poate începe de la 1 an. Cu cât intervenția este mai timpurie, cu atât reflexele primare se integrează mai ușor și dezvoltarea decurge mai armonios.',
     },
     {
         question: 'Ce sunt reflexele primare neintegrate?',
-        answer: 'Sunt reflexe prezente la nastere care ar trebui sa dispara in primii ani de viata. Cand raman active, pot afecta coordonarea, atentia, postura si invatarea.',
+        answer: 'Sunt reflexe prezente la naștere, care ar trebui să dispară în primii ani de viață. Când rămân active, pot afecta coordonarea, atenția, postura și învățarea.',
     },
     {
-        question: 'Cum stiu daca copilul meu are nevoie de aceasta terapie?',
-        answer: 'Semnele includ sensibilitate la sunete, texturi sau lumina, dificultati de coordonare, echilibru slab, neindemanare sau dificultati de concentrare. O evaluare initiala clarifica situatia.',
+        question: 'Cum știu dacă copilul meu are nevoie de această terapie?',
+        answer: 'Semnele includ sensibilitate la sunete, texturi sau lumină, dificultăți de coordonare, echilibru slab, neîndemânare sau dificultăți de concentrare. O evaluare inițială clarifică situația.',
     },
     {
-        question: 'Pot participa la sedinte?',
-        answer: 'Da, participarea parintilor este incurajata. Veti invata exercitii pe care sa le continuati acasa pentru a accelera progresul.',
+        question: 'Pot participa la ședințe?',
+        answer: 'Da, participarea părinților este încurajată. Veți învăța exerciții pe care să le continuați acasă, pentru a accelera progresul.',
     },
 ]
 
@@ -129,30 +129,30 @@ export default function TerapieSenzorialaPage() {
                         <AnimatedSection immediate animation="slideUp" className="space-y-8">
                             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium backdrop-blur-sm mb-6">
                                 <Puzzle className="w-4 h-4 mr-2 text-warm-300" />
-                                Integrare senzoriala si dezvoltare
+                                Integrare senzorială și dezvoltare
                             </div>
 
                             <Typography variant="h1" className="text-white leading-tight" family="serif">
-                                Terapie Senzoriala, Reflexe Primare
-                                <span className="block text-warm-200">si Terapie Ocupationala</span>
+                                Terapie Senzorială, Reflexe Primare
+                                <span className="block text-warm-200">și Terapie Ocupațională</span>
                             </Typography>
 
                             <Typography variant="lead" className="text-white/90">
-                                Programe specializate pentru copii cu dificultati de procesare senzoriala,
-                                reflexe primare neintegrate si probleme de coordonare. Sprijinim dezvoltarea
-                                autonomiei si a abilitatilor necesare in viata de zi cu zi.
+                                Programe specializate pentru copii cu dificultăți de procesare senzorială,
+                                reflexe primare neintegrate și probleme de coordonare. Sprijinim dezvoltarea
+                                autonomiei și a abilităților necesare în viața de zi cu zi.
                             </Typography>
 
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                                     <Clock className="w-8 h-8 text-warm-300 mx-auto mb-2" />
                                     <div className="text-2xl font-bold text-white">50 min</div>
-                                    <div className="text-white/80 text-sm">Durata sedinta</div>
+                                    <div className="text-white/80 text-sm">Durata ședinței</div>
                                 </div>
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                                     <Baby className="w-8 h-8 text-calming-300 mx-auto mb-2" />
                                     <div className="text-2xl font-bold text-white">1+ an</div>
-                                    <div className="text-white/80 text-sm">De la varsta</div>
+                                    <div className="text-white/80 text-sm">De la vârsta</div>
                                 </div>
                             </div>
 
@@ -160,13 +160,13 @@ export default function TerapieSenzorialaPage() {
                                 <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
-                                        Programeaza evaluarea
+                                        Programează evaluarea
                                     </Link>
                                 </Button>
                                 <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-peace-600">
                                     <a href="tel:+40724172996">
                                         <Phone className="w-5 h-5 mr-2" />
-                                        Discuta cu mine
+                                        Discută cu mine
                                     </a>
                                 </Button>
                             </div>
@@ -181,10 +181,10 @@ export default function TerapieSenzorialaPage() {
                                     {[
                                         'Evaluarea profilului senzorial',
                                         'Integrarea reflexelor primare',
-                                        'Activitati de terapie ocupationala',
-                                        'Stimulare vestibulara si proprioceptiva',
-                                        'Coordonare motorie fina si grosiera',
-                                        'Ghid de exercitii pentru parinti',
+                                        'Activități de terapie ocupațională',
+                                        'Stimulare vestibulară și proprioceptivă',
+                                        'Coordonare motorie fină și grosieră',
+                                        'Ghid de exerciții pentru părinți',
                                     ].map((feature) => (
                                         <div key={feature} className="flex items-center space-x-3">
                                             <CheckCircle className="w-5 h-5 text-warm-300 flex-shrink-0" />
@@ -206,7 +206,7 @@ export default function TerapieSenzorialaPage() {
                             Ce <span className="text-peace-600">Acoperim</span>
                         </Typography>
                         <Typography variant="lead">
-                            Trei directii complementare care lucreaza impreuna pentru dezvoltarea armonioasa a copilului
+                            Patru direcții complementare care lucrează împreună pentru dezvoltarea armonioasă a copilului
                         </Typography>
                     </AnimatedSection>
 
@@ -248,10 +248,10 @@ export default function TerapieSenzorialaPage() {
                 <Container>
                     <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
                         <Typography variant="h2" className="mb-6" family="serif">
-                            Tarif si <span className="text-peace-600">Servicii Incluse</span>
+                            Tarif și <span className="text-peace-600">Servicii Incluse</span>
                         </Typography>
                         <Typography variant="lead">
-                            Pret transparent, cu toate serviciile incluse
+                            Preț transparent, cu toate serviciile incluse
                         </Typography>
                     </AnimatedSection>
 
@@ -261,7 +261,7 @@ export default function TerapieSenzorialaPage() {
                                 <div className="w-20 h-20 bg-peace-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                     <Puzzle className="w-10 h-10 text-peace-600" />
                                 </div>
-                                <CardTitle className="text-2xl mb-2">Sedinta de Terapie Senzoriala</CardTitle>
+                                <CardTitle className="text-2xl mb-2">Ședința de Terapie Senzorială</CardTitle>
                                 <div className="text-4xl font-bold text-peace-600 mb-2">{pricing.standard} RON</div>
                                 <Typography variant="body" className="text-gray-600">
                                     Sesiune de {pricing.duration}
@@ -280,13 +280,13 @@ export default function TerapieSenzorialaPage() {
                                     <Button asChild className="flex-1 bg-peace-500 text-white hover:bg-peace-600">
                                         <Link href="/contact">
                                             <Calendar className="w-5 h-5 mr-2" />
-                                            Programeaza acum
+                                            Programează acum
                                         </Link>
                                     </Button>
                                     <Button asChild variant="outline" className="flex-1">
                                         <a href="tel:+40724172996">
                                             <Phone className="w-5 h-5 mr-2" />
-                                            Intreaba detalii
+                                            Întreabă detalii
                                         </a>
                                     </Button>
                                 </div>
@@ -301,10 +301,10 @@ export default function TerapieSenzorialaPage() {
                 <Container>
                     <AnimatedSection animation="fadeIn" className="text-center max-w-3xl mx-auto mb-16">
                         <Typography variant="h2" className="mb-6" family="serif">
-                            Intrebari <span className="text-peace-600">Frecvente</span>
+                            Întrebări <span className="text-peace-600">Frecvente</span>
                         </Typography>
                         <Typography variant="lead">
-                            Raspunsuri la intrebarile comune despre terapia senzoriala
+                            Răspunsuri la întrebările frecvente despre terapia senzorială
                         </Typography>
                     </AnimatedSection>
 
@@ -336,10 +336,10 @@ export default function TerapieSenzorialaPage() {
                 <Container className="relative z-10">
                     <AnimatedSection animation="fadeIn" className="text-center max-w-4xl mx-auto">
                         <Typography variant="h2" className="text-white mb-6" family="serif">
-                            Sprijina Dezvoltarea Copilului Tau
+                            Sprijină Dezvoltarea Copilului Tău
                         </Typography>
                         <Typography variant="lead" className="text-white/90 mb-8">
-                            Fiecare copil are propriul ritm. Te ajut sa ii oferi instrumentele
+                            Fiecare copil are propriul ritm. Te ajut să îi oferi instrumentele
                             de care are nevoie pentru a se dezvolta armonios.
                         </Typography>
 
@@ -347,7 +347,7 @@ export default function TerapieSenzorialaPage() {
                             <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-lg px-8">
                                 <Link href="/contact">
                                     <Calendar className="w-5 h-5 mr-2" />
-                                    Programeaza prima sedinta
+                                    Programează prima ședință
                                 </Link>
                             </Button>
                             <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-peace-600">

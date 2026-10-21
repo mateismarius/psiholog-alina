@@ -45,8 +45,8 @@ const personalInfo = {
 
 const education = [
     {
-        degree: 'Master în Psihodiagnoza cognitiva si consiliere psihologica',
-        institution: 'Universitatea UEB din Bucuresti',
+        degree: 'Master în Psihodiagnoză cognitivă și consiliere psihologică',
+        institution: 'Universitatea UEB din București',
         year: '2020-2022',
         description: 'Specializare în diagnostic și consiliere',
         honors: ''
@@ -59,10 +59,10 @@ const education = [
         honors: ''
     },
     {
-        degree: 'Formare de lunga durata in Psihoterapie integrativa',
-        institution: 'Asociatia de Cercetare, Consiliere si Psihoterapie Integrativa',
+        degree: 'Formare de lungă durată în Psihoterapie integrativă',
+        institution: 'Asociația de Cercetare, Consiliere și Psihoterapie Integrativă',
         year: '2018-2021',
-        description: 'Curs de formare si dezvoltare personala cu acreditare in UE'
+        description: 'Curs de formare și dezvoltare personală cu acreditare în UE'
     }
 ]
 
@@ -229,12 +229,12 @@ export default function AboutPage() {
 
                             <Typography variant="h1" className="text-white leading-tight" family="serif">
                                 Sunt <span className="text-warm-200">Alina Patru</span>,
-                                <span className="block">Psiholog clinician si psihoterapeut integrativ</span>
+                                <span className="block">Psiholog clinician și psihoterapeut integrativ</span>
                             </Typography>
 
                             <Typography variant="lead" className="text-white/90">
                                 Cu peste {personalInfo.experience.split('+')[0]} ani de experiență în psihologie clinică și
-                                terapia copiilor cu probleme de neurodezvoltare (autism, ADHD etc..) si psihoterapie integrativa.
+                                terapia copiilor cu probleme de neurodezvoltare (autism, ADHD etc.) și psihoterapie integrativă.
                             </Typography>
 
                             <div className="grid grid-cols-2 gap-6">

@@ -98,7 +98,7 @@ export function Footer() {
                                 </Link>
 
                                 <Typography variant="body" className="text-gray-300 mb-6 leading-relaxed">
-                                    Cabinet de psihologie specializat în psihologie clinica si psihoterapie pentru copii și adulți în București si online.
+                                    Cabinet de psihologie specializat în psihologie clinică și psihoterapie pentru copii și adulți, în București și online.
                                     Oferim intervenție timpurie, evaluare profesională și suport psihologic într-un mediu sigur și empatic.
                                 </Typography>
 
