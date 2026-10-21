@@ -24,6 +24,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { colorClasses } from '@/lib/colorMap'
 
 export const metadata: Metadata = {
     title: 'Logopedie',
@@ -356,13 +357,13 @@ export default function LogopediePage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90">
+                                <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
                                         Programează evaluarea
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-calming-600">
+                                <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-calming-600">
                                     <a href="tel:+40722123456">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discută cu logoped
@@ -413,10 +414,10 @@ export default function LogopediePage() {
                             {speechProblems.map((problem, index) => {
                                 const Icon = problem.icon
                                 return (
-                                    <Card key={index} className={`p-6 border-${problem.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
+                                    <Card key={index} className={`p-6 ${colorClasses(problem.color).border200} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
                                         <CardHeader className="pb-4">
-                                            <div className={`w-14 h-14 bg-${problem.color}-100 rounded-xl flex items-center justify-center mb-4`}>
-                                                <Icon className={`w-7 h-7 text-${problem.color}-600`} />
+                                            <div className={`w-14 h-14 ${colorClasses(problem.color).bg100} rounded-xl flex items-center justify-center mb-4`}>
+                                                <Icon className={`w-7 h-7 ${colorClasses(problem.color).text600}`} />
                                             </div>
                                             <CardTitle className="text-xl mb-2">{problem.title}</CardTitle>
                                             <Typography variant="body" className="text-gray-600 mb-4">
@@ -430,7 +431,7 @@ export default function LogopediePage() {
                                                 </Typography>
                                                 <div className="flex flex-wrap gap-1 mb-4">
                                                     {problem.conditions.map((condition, idx) => (
-                                                        <span key={idx} className={`text-xs px-2 py-1 bg-${problem.color}-100 text-${problem.color}-700 rounded`}>
+                                                        <span key={idx} className={`text-xs px-2 py-1 ${colorClasses(problem.color).bg100} ${colorClasses(problem.color).text700} rounded`}>
                               {condition}
                             </span>
                                                     ))}
@@ -443,7 +444,7 @@ export default function LogopediePage() {
                                                 <ul className="space-y-2">
                                                     {problem.symptoms.map((symptom, idx) => (
                                                         <li key={idx} className="flex items-start space-x-2 text-sm">
-                                                            <CheckCircle className={`w-4 h-4 text-${problem.color}-500 mt-0.5 flex-shrink-0`} />
+                                                            <CheckCircle className={`w-4 h-4 ${colorClasses(problem.color).text500} mt-0.5 flex-shrink-0`} />
                                                             <span>{symptom}</span>
                                                         </li>
                                                     ))}
@@ -475,10 +476,10 @@ export default function LogopediePage() {
                             {ageGroups.map((group, index) => {
                                 const Icon = group.icon
                                 return (
-                                    <Card key={index} className={`p-6 border-${group.color}-200 hover:shadow-lg transition-shadow`}>
+                                    <Card key={index} className={`p-6 ${colorClasses(group.color).border200} hover:shadow-lg transition-shadow`}>
                                         <CardHeader className="pb-4">
-                                            <div className={`w-14 h-14 bg-${group.color}-100 rounded-xl flex items-center justify-center mb-4`}>
-                                                <Icon className={`w-7 h-7 text-${group.color}-600`} />
+                                            <div className={`w-14 h-14 ${colorClasses(group.color).bg100} rounded-xl flex items-center justify-center mb-4`}>
+                                                <Icon className={`w-7 h-7 ${colorClasses(group.color).text600}`} />
                                             </div>
                                             <CardTitle className="text-xl mb-2">{group.group}</CardTitle>
                                             <Typography variant="body" className="text-gray-600 mb-4">
@@ -493,7 +494,7 @@ export default function LogopediePage() {
                                                 <ul className="space-y-2 mb-4">
                                                     {group.goals.map((goal, idx) => (
                                                         <li key={idx} className="flex items-start space-x-2 text-sm">
-                                                            <CheckCircle className={`w-4 h-4 text-${group.color}-500 mt-0.5 flex-shrink-0`} />
+                                                            <CheckCircle className={`w-4 h-4 ${colorClasses(group.color).text500} mt-0.5 flex-shrink-0`} />
                                                             <span>{goal}</span>
                                                         </li>
                                                     ))}
@@ -505,7 +506,7 @@ export default function LogopediePage() {
                                                 </Typography>
                                                 <div className="flex flex-wrap gap-1">
                                                     {group.methods.map((method, idx) => (
-                                                        <span key={idx} className={`text-xs px-2 py-1 bg-${group.color}-100 text-${group.color}-700 rounded`}>
+                                                        <span key={idx} className={`text-xs px-2 py-1 ${colorClasses(group.color).bg100} ${colorClasses(group.color).text700} rounded`}>
                               {method}
                             </span>
                                                     ))}
@@ -679,7 +680,7 @@ export default function LogopediePage() {
                                             {package_.duration}
                                         </Typography>
                                         {package_.savings && (
-                                            <div className="text-sm text-green-600 font-medium mt-2">
+                                            <div className="text-sm text-green-700 font-medium mt-2">
                                                 Economii {package_.savings} RON
                                             </div>
                                         )}
@@ -766,14 +767,14 @@ export default function LogopediePage() {
                         </Typography>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
+                            <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-lg px-8">
                                 <Link href="/contact">
                                     <Calendar className="w-5 h-5 mr-2" />
                                     Programează evaluarea
                                 </Link>
                             </Button>
 
-                            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-calming-600">
+                            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-calming-600">
                                 <Link href="/servicii">
                                     Vezi toate serviciile
                                 </Link>

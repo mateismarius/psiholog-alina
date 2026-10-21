@@ -24,6 +24,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { colorClasses } from '@/lib/colorMap'
 
 export const metadata: Metadata = {
     title: 'Psihologie Sportivă',
@@ -297,13 +298,13 @@ export default function PsihologieSportivaPage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90">
+                                <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
                                         Programează ședința
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40722123456">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discută gratuit
@@ -356,10 +357,10 @@ export default function PsihologieSportivaPage() {
                             {sportsAreas.map((area, index) => {
                                 const Icon = area.icon
                                 return (
-                                    <Card key={index} className={`p-6 border-${area.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
+                                    <Card key={index} className={`p-6 ${colorClasses(area.color).border200} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
                                         <CardHeader className="pb-4">
-                                            <div className={`w-14 h-14 bg-${area.color}-100 rounded-xl flex items-center justify-center mb-4`}>
-                                                <Icon className={`w-7 h-7 text-${area.color}-600`} />
+                                            <div className={`w-14 h-14 ${colorClasses(area.color).bg100} rounded-xl flex items-center justify-center mb-4`}>
+                                                <Icon className={`w-7 h-7 ${colorClasses(area.color).text600}`} />
                                             </div>
                                             <CardTitle className="text-xl mb-2">{area.title}</CardTitle>
                                             <Typography variant="body" className="text-gray-600 mb-4">
@@ -369,7 +370,7 @@ export default function PsihologieSportivaPage() {
                                         <CardContent>
                                             <div className="flex flex-wrap gap-2">
                                                 {area.sports.map((sport, idx) => (
-                                                    <span key={idx} className={`text-xs px-3 py-1 bg-${area.color}-100 text-${area.color}-700 rounded-full`}>
+                                                    <span key={idx} className={`text-xs px-3 py-1 ${colorClasses(area.color).bg100} ${colorClasses(area.color).text700} rounded-full`}>
                             {sport}
                           </span>
                                                 ))}
@@ -400,10 +401,10 @@ export default function PsihologieSportivaPage() {
                             {mentalSkills.map((skill, index) => {
                                 const Icon = skill.icon
                                 return (
-                                    <Card key={index} className={`p-6 border-${skill.color}-200 hover:shadow-lg transition-shadow`}>
+                                    <Card key={index} className={`p-6 ${colorClasses(skill.color).border200} hover:shadow-lg transition-shadow`}>
                                         <CardHeader className="pb-4">
-                                            <div className={`w-12 h-12 bg-${skill.color}-100 rounded-xl flex items-center justify-center mb-3`}>
-                                                <Icon className={`w-6 h-6 text-${skill.color}-600`} />
+                                            <div className={`w-12 h-12 ${colorClasses(skill.color).bg100} rounded-xl flex items-center justify-center mb-3`}>
+                                                <Icon className={`w-6 h-6 ${colorClasses(skill.color).text600}`} />
                                             </div>
                                             <CardTitle className="text-lg mb-2">{skill.skill}</CardTitle>
                                             <Typography variant="body" className="text-gray-600 text-sm mb-3">
@@ -598,7 +599,7 @@ export default function PsihologieSportivaPage() {
                                             {package_.sessions} {package_.sessions === 1 ? 'ședință' : 'ședințe'} × 50 minute
                                         </Typography>
                                         {package_.savings && (
-                                            <div className="text-sm text-green-600 font-medium mt-2">
+                                            <div className="text-sm text-green-700 font-medium mt-2">
                                                 Economisești {package_.savings} RON
                                             </div>
                                         )}
@@ -684,13 +685,13 @@ export default function PsihologieSportivaPage() {
                             Programează o ședință sau discută gratuit despre obiectivele tale.
                         </Typography>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90">
+                            <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">
                                 <Link href="/contact">
                                     <Calendar className="w-5 h-5 mr-2" />
                                     Programează acum
                                 </Link>
                             </Button>
-                            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                 <a href="tel:+40722123456">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Sună pentru informații

@@ -17,6 +17,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { colorClasses } from '@/lib/colorMap'
 
 export const metadata: Metadata = {
     title: 'Contact',
@@ -126,7 +127,7 @@ export default function ContactPage() {
                         </Typography>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
+                            <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-lg px-8">
                                 <a href="tel:+40724172996">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Sună acum: +40 724 172 996
@@ -162,17 +163,17 @@ export default function ContactPage() {
                             {contactInfo.map((contact, index) => {
                                 const Icon = contact.icon
                                 return (
-                                    <Card key={index} className={`text-center p-6 border-${contact.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
+                                    <Card key={index} className={`text-center p-6 ${colorClasses(contact.color).border200} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
                                         <CardContent className="space-y-4 flex flex-col items-center">
-                                            <div className={`w-16 h-16 bg-${contact.color}-100 rounded-full flex items-center justify-center mx-auto`}>
-                                                <Icon className={`w-8 h-8 text-${contact.color}-600`} />
+                                            <div className={`w-16 h-16 ${colorClasses(contact.color).bg100} rounded-full flex items-center justify-center mx-auto`}>
+                                                <Icon className={`w-8 h-8 ${colorClasses(contact.color).text600}`} />
                                             </div>
                                             <Typography variant="h5" className="font-semibold items-center">
                                                 {contact.title}
                                             </Typography>
                                             <a
                                                 href={contact.link}
-                                                className={`block text-lg font-medium text-${contact.color}-600 hover:text-${contact.color}-700 transition-colors`}
+                                                className={`flex items-center justify-center min-h-11 wrap-anywhere text-lg font-medium ${colorClasses(contact.color).text600} ${colorClasses(contact.color).hoverText700} transition-colors`}
                                             >
                                                 {contact.info}
                                             </a>
@@ -180,7 +181,7 @@ export default function ContactPage() {
                                                 {contact.description}
                                             </Typography>
                                             <div className="">
-                                                <Button asChild className={`bg-${contact.color} text-white hover:bg-${contact.color}/90`}>
+                                                <Button asChild className={`${colorClasses(contact.color).bg} text-white ${colorClasses(contact.color).hoverBg90}`}>
                                                     <a href={contact.link}>
                                                         Contactează acum
                                                     </a>
@@ -468,7 +469,7 @@ export default function ContactPage() {
                         </Typography>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
+                            <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-lg px-8">
                                 <a href="tel:+40722123456">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Programează acum

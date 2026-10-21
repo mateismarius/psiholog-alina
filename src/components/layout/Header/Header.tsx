@@ -7,7 +7,7 @@ import { Menu, X, Phone, Mail, MapPin, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/core'
 import { cn } from '@/lib/utils'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
 
 
 const navigationItems = [
@@ -49,7 +49,8 @@ export function Header() {
     }, [pathname])
 
     return (
-        <>
+        // Animatiile framer-motion respecta prefers-reduced-motion
+        <MotionConfig reducedMotion="user">
             {/* Top contact bar */}
             <div className="bg-therapeutic-600 text-white py-2 hidden lg:block">
                 <Container>
@@ -159,10 +160,12 @@ export function Header() {
                         {/* Mobile menu button */}
                         <Button
                             variant="ghost"
-                            size="sm"
-                            className="lg:hidden"
+                            size="icon"
+                            className="lg:hidden size-11"
                             onClick={() => setIsOpen(!isOpen)}
                             aria-label="Toggle menu"
+                            aria-expanded={isOpen}
+                            aria-controls="mobile-navigation"
                         >
                             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                         </Button>
@@ -177,7 +180,8 @@ export function Header() {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="lg:hidden border-t bg-background/98 backdrop-blur"
+                            id="mobile-navigation"
+                            className="lg:hidden border-t bg-background/98 backdrop-blur overflow-hidden"
                         >
                             <Container>
                                 <div className="py-4 space-y-4">
@@ -186,7 +190,7 @@ export function Header() {
                                             <Link
                                                 href={item.href}
                                                 className={cn(
-                                                    "block py-2 text-base font-medium transition-colors",
+                                                    "block py-3 text-base font-medium transition-colors",
                                                     pathname === item.href
                                                         ? "text-therapeutic-600"
                                                         : "text-foreground hover:text-therapeutic-600"
@@ -203,17 +207,17 @@ export function Header() {
                                     <div className="pt-4 border-t space-y-3">
                                         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                                             <Phone className="h-4 w-4" />
-                                            <a href="tel:+40724172996">+40 724 172 996 </a>
+                                            <a href="tel:+40724172996" className="inline-flex items-center min-h-11">+40 724 172 996 </a>
                                         </div>
                                         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                                             <Mail className="h-4 w-4" />
-                                            <a href="mailto:psiholog.alina.patru@gmail.com">psiholog.alina.patru@gmail.com</a>
+                                            <a href="mailto:psiholog.alina.patru@gmail.com" className="inline-flex items-center min-h-11 break-all">psiholog.alina.patru@gmail.com</a>
                                         </div>
                                         <div className="flex flex-col sm:flex-row gap-2 pt-2">
-                                            <Button asChild variant="outline" size="sm" className="w-full sm:w-auto">
+                                            <Button asChild variant="outline" size="sm" className="w-full sm:w-auto min-h-11">
                                                 <Link href="/contact">Contact</Link>
                                             </Button>
-                                            <Button asChild className="bg-therapeutic text-white hover:bg-therapeutic/90 w-full sm:w-auto">
+                                            <Button asChild className="bg-therapeutic text-white hover:bg-therapeutic/90 w-full sm:w-auto min-h-11">
                                                 <Link href="/contact">Programare</Link>
                                             </Button>
                                         </div>
@@ -224,6 +228,6 @@ export function Header() {
                     )}
                 </AnimatePresence>
             </header>
-        </>
+        </MotionConfig>
     )
 }

@@ -20,7 +20,8 @@ export function AnimatedSection({
 
     // Folosim CSS classes în loc de framer-motion pentru a evita eroarea
     const getAnimationClass = () => {
-        if (!isInView) return 'opacity-0'
+        // Cu miscare redusa continutul ramane vizibil, fara ascundere initiala
+        if (!isInView) return 'motion-safe:opacity-0'
 
         switch (animation) {
             case 'fadeIn':
@@ -37,7 +38,7 @@ export function AnimatedSection({
     return (
         <div
             ref={ref}
-            className={`transition-all duration-700 ${getAnimationClass()} ${className}`}
+            className={`transition-all duration-700 motion-reduce:transition-none ${getAnimationClass()} ${className}`}
             style={{
                 transitionDelay: `${delay}ms`,
                 animationDelay: `${delay}ms`

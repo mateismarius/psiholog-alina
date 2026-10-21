@@ -23,6 +23,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { colorClasses } from '@/lib/colorMap'
 
 export const metadata: Metadata = {
     title: 'Psihoterapie',
@@ -313,13 +314,13 @@ export default function PsihoterapiePage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90">
+                                <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
                                         Programează ședința
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40722123456">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discută confidențial
@@ -370,10 +371,10 @@ export default function PsihoterapiePage() {
                             {therapyTypes.map((type, index) => {
                                 const Icon = type.icon
                                 return (
-                                    <Card key={index} className={`p-6 border-${type.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
+                                    <Card key={index} className={`p-6 ${colorClasses(type.color).border200} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
                                         <CardHeader className="pb-4">
-                                            <div className={`w-14 h-14 bg-${type.color}-100 rounded-xl flex items-center justify-center mb-4`}>
-                                                <Icon className={`w-7 h-7 text-${type.color}-600`} />
+                                            <div className={`w-14 h-14 ${colorClasses(type.color).bg100} rounded-xl flex items-center justify-center mb-4`}>
+                                                <Icon className={`w-7 h-7 ${colorClasses(type.color).text600}`} />
                                             </div>
                                             <CardTitle className="text-xl mb-2">{type.title}</CardTitle>
                                             <Typography variant="body" className="text-gray-600 mb-4">
@@ -387,7 +388,7 @@ export default function PsihoterapiePage() {
                                                 </Typography>
                                                 <div className="flex flex-wrap gap-1 mb-4">
                                                     {type.approaches.map((approach, idx) => (
-                                                        <span key={idx} className={`text-xs px-2 py-1 bg-${type.color}-100 text-${type.color}-700 rounded`}>
+                                                        <span key={idx} className={`text-xs px-2 py-1 ${colorClasses(type.color).bg100} ${colorClasses(type.color).text700} rounded`}>
                               {approach}
                             </span>
                                                     ))}
@@ -400,7 +401,7 @@ export default function PsihoterapiePage() {
                                                 <ul className="space-y-2">
                                                     {type.benefits.map((benefit, idx) => (
                                                         <li key={idx} className="flex items-start space-x-2 text-sm">
-                                                            <CheckCircle className={`w-4 h-4 text-${type.color}-500 mt-0.5 flex-shrink-0`} />
+                                                            <CheckCircle className={`w-4 h-4 ${colorClasses(type.color).text500} mt-0.5 flex-shrink-0`} />
                                                             <span>{benefit}</span>
                                                         </li>
                                                     ))}
@@ -432,10 +433,10 @@ export default function PsihoterapiePage() {
                             {conditions.map((condition, index) => {
                                 const Icon = condition.icon
                                 return (
-                                    <Card key={index} className={`p-6 border-${condition.color}-200 hover:shadow-lg transition-shadow`}>
+                                    <Card key={index} className={`p-6 ${colorClasses(condition.color).border200} hover:shadow-lg transition-shadow`}>
                                         <CardHeader className="pb-4">
-                                            <div className={`w-12 h-12 bg-${condition.color}-100 rounded-xl flex items-center justify-center mb-3`}>
-                                                <Icon className={`w-6 h-6 text-${condition.color}-600`} />
+                                            <div className={`w-12 h-12 ${colorClasses(condition.color).bg100} rounded-xl flex items-center justify-center mb-3`}>
+                                                <Icon className={`w-6 h-6 ${colorClasses(condition.color).text600}`} />
                                             </div>
                                             <CardTitle className="text-lg mb-2">{condition.condition}</CardTitle>
                                             <Typography variant="body" className="text-gray-600 text-sm mb-3">
@@ -655,14 +656,14 @@ export default function PsihoterapiePage() {
                         </Typography>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
+                            <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-lg px-8">
                                 <Link href="/contact">
                                     <Calendar className="w-5 h-5 mr-2" />
                                     Programează prima ședință
                                 </Link>
                             </Button>
 
-                            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                 <Link href="/servicii">
                                     Vezi toate serviciile
                                 </Link>

@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
-import { motion } from 'framer-motion'
+import { MotionConfig, motion } from 'framer-motion'
 
 const footerSections = {
     servicii: [
@@ -158,12 +158,12 @@ export function Footer() {
                                 <Typography variant="h6" className="text-white mb-6">
                                     Servicii Specializate
                                 </Typography>
-                                <ul className="space-y-3">
+                                <ul>
                                     {footerSections.servicii.map((link) => (
                                         <li key={link.name}>
                                             <Link
                                                 href={link.href}
-                                                className="text-gray-300 hover:text-therapeutic-300 transition-colors text-sm block py-1"
+                                                className="text-gray-300 hover:text-therapeutic-300 transition-colors text-sm flex items-center min-h-11"
                                             >
                                                 {link.name}
                                             </Link>
@@ -177,12 +177,12 @@ export function Footer() {
                                 <Typography variant="h6" className="text-white mb-6">
                                     Informații Utile
                                 </Typography>
-                                <ul className="space-y-3">
+                                <ul>
                                     {footerSections.informatii.map((link) => (
                                         <li key={link.name}>
                                             <Link
                                                 href={link.href}
-                                                className="text-gray-300 hover:text-calming-300 transition-colors text-sm block py-1"
+                                                className="text-gray-300 hover:text-calming-300 transition-colors text-sm flex items-center min-h-11"
                                             >
                                                 {link.name}
                                             </Link>
@@ -199,7 +199,7 @@ export function Footer() {
                                     <Phone className="h-5 w-5 text-therapeutic-400 shrink-0" />
                                     <a
                                         href="tel:+40724172996"
-                                        className="text-gray-300 hover:text-white transition-colors"
+                                        className="text-gray-300 hover:text-white transition-colors inline-flex items-center min-h-11"
                                     >
                                         +40 724 172 996
                                     </a>
@@ -209,7 +209,7 @@ export function Footer() {
                                     <Mail className="h-5 w-5 text-therapeutic-400 shrink-0" />
                                     <a
                                         href="mailto:psiholog.alina.patru@gmail.com"
-                                        className="text-gray-300 hover:text-white transition-colors"
+                                        className="text-gray-300 hover:text-white transition-colors inline-flex items-center min-h-11 break-all"
                                     >
                                         psiholog.alina.patru@gmail.com
                                     </a>
@@ -287,6 +287,8 @@ export function Footer() {
 
                         {/* Achievements section */}
                         <div className="mt-12 pt-8 border-t border-gray-800">
+                            {/* Animatiile respecta prefers-reduced-motion */}
+                            <MotionConfig reducedMotion="user">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                                 {achievements.map((achievement, index) => {
                                     const Icon = achievement.icon
@@ -309,6 +311,7 @@ export function Footer() {
                                     )
                                 })}
                             </div>
+                            </MotionConfig>
                         </div>
                     </div>
                 </Container>
@@ -332,7 +335,7 @@ export function Footer() {
                                         <Link
                                             key={link.name}
                                             href={link.href}
-                                            className="text-gray-400 hover:text-white transition-colors"
+                                            className="text-gray-400 hover:text-white transition-colors inline-flex items-center min-h-11"
                                         >
                                             {link.name}
                                         </Link>
@@ -342,7 +345,7 @@ export function Footer() {
 
                             {/* SEO footer */}
                             <div className="mt-6 pt-6 border-t border-gray-800">
-                                <div className="text-xs text-gray-500 leading-relaxed">
+                                <div className="text-xs text-gray-400 leading-relaxed">
                                     <p className="mb-2">
                                         <strong>Servicii psihologie București:</strong> terapie autism copii, psihoterapie individuală adulți,
                                         consiliere psihologică, evaluare psihologică, terapie de cuplu, intervenție timpurie autism,

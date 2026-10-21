@@ -22,6 +22,7 @@ import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { useState } from 'react'
+import { colorClasses } from '@/lib/colorMap'
 
 // export const metadata: Metadata = {
 //     title: 'Întrebări Frecvente',
@@ -279,13 +280,13 @@ export default function IntrebariFrecventePage() {
                             </Typography>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90">
+                                <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">
                                     <Link href="/contact">
                                         <MessageSquare className="w-5 h-5 mr-2" />
                                         Pune o întrebare
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40722123456">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discută direct
@@ -339,15 +340,15 @@ export default function IntrebariFrecventePage() {
                                 const isOpen = openCategory === categoryIndex
 
                                 return (
-                                    <Card key={categoryIndex} className={`border-${category.color}-200 overflow-hidden`}>
+                                    <Card key={categoryIndex} className={`${colorClasses(category.color).border200} overflow-hidden`}>
                                         <CardHeader
-                                            className={`cursor-pointer hover:bg-${category.color}-50 transition-colors`}
+                                            className={`cursor-pointer ${colorClasses(category.color).hoverBg50} transition-colors`}
                                             onClick={() => toggleCategory(categoryIndex)}
                                         >
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center space-x-4">
-                                                    <div className={`w-12 h-12 bg-${category.color}-100 rounded-lg flex items-center justify-center`}>
-                                                        <Icon className={`w-6 h-6 text-${category.color}-600`} />
+                                                    <div className={`w-12 h-12 ${colorClasses(category.color).bg100} rounded-lg flex items-center justify-center`}>
+                                                        <Icon className={`w-6 h-6 ${colorClasses(category.color).text600}`} />
                                                     </div>
                                                     <div>
                                                         <CardTitle className="text-xl">{category.title}</CardTitle>
@@ -371,13 +372,13 @@ export default function IntrebariFrecventePage() {
                                                         const isFaqOpen = openFaq?.category === categoryIndex && openFaq?.faq === faqIndex
 
                                                         return (
-                                                            <div key={faqIndex} className={`border border-${category.color}-100 rounded-lg overflow-hidden`}>
+                                                            <div key={faqIndex} className={`border ${colorClasses(category.color).border100} rounded-lg overflow-hidden`}>
                                                                 <div
-                                                                    className={`p-4 cursor-pointer hover:bg-${category.color}-25 transition-colors`}
+                                                                    className={`p-4 cursor-pointer ${colorClasses(category.color).hoverBg50} transition-colors`}
                                                                     onClick={() => toggleFaq(categoryIndex, faqIndex)}
                                                                 >
                                                                     <div className="flex items-center justify-between">
-                                                                        <Typography variant="h6" className={`text-${category.color}-700 pr-4`}>
+                                                                        <Typography variant="h6" className={`${colorClasses(category.color).text700} pr-4`}>
                                                                             {faq.question}
                                                                         </Typography>
                                                                         {isFaqOpen ? (

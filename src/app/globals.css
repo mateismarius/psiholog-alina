@@ -322,6 +322,16 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  /* Focus vizibil la tastatura, lizibil pe fundal deschis si inchis (WCAG 2.4.7) */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--therapeutic-500);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--background);
+  }
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
@@ -337,5 +347,22 @@
 
   .font-sans {
     font-family: var(--font-sans);
+  }
+}
+
+/* Clasa folosita in Header, definita aici fiindca design-system.css nu este importat */
+@utility focus-ring {
+  border-radius: var(--radius-sm);
+}
+
+/* Respecta preferinta utilizatorului pentru miscare redusa */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

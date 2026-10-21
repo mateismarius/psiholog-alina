@@ -337,13 +337,13 @@ export default function ServiciiPage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-base px-8">
+                                <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-base px-8">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
                                         Programeaza consultatie
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40724172996">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discuta gratuit
@@ -680,13 +680,13 @@ export default function ServiciiPage() {
                             </Typography>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-base px-8">
+                                <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-base px-8">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
                                         Programeaza consultatie gratuita
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="bg-transparent border-2 border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-therapeutic-600">
                                     <Link href="/despre-mine">
                                         <Users className="w-5 h-5 mr-2" />
                                         Afla mai mult despre mine

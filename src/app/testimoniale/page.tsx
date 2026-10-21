@@ -22,6 +22,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { colorClasses } from '@/lib/colorMap'
 
 export const metadata: Metadata = {
     title: 'Testimoniale',
@@ -334,13 +335,13 @@ export default function TestimonialePage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90">
+                                <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
                                         Începe-ți povestea
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40722123456">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Discută cu mine
@@ -412,10 +413,10 @@ export default function TestimonialePage() {
                             return (
                                 <AnimatedSection key={categoryIndex} animation="stagger">
                                     <div className="text-center mb-12">
-                                        <div className={`w-16 h-16 bg-${category.color}-100 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                                            <Icon className={`w-8 h-8 text-${category.color}-600`} />
+                                        <div className={`w-16 h-16 ${colorClasses(category.color).bg100} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                                            <Icon className={`w-8 h-8 ${colorClasses(category.color).text600}`} />
                                         </div>
-                                        <Typography variant="h3" className={`text-${category.color}-700 mb-2`} family="serif">
+                                        <Typography variant="h3" className={`${colorClasses(category.color).text700} mb-2`} family="serif">
                                             {category.title}
                                         </Typography>
                                         <Typography variant="body" className="text-gray-600">
@@ -425,11 +426,11 @@ export default function TestimonialePage() {
 
                                     <div className="grid md:grid-cols-2 gap-8">
                                         {category.testimonials.map((testimonial, index) => (
-                                            <Card key={index} className={`p-6 border-${category.color}-200 hover:shadow-lg transition-shadow relative`}>
+                                            <Card key={index} className={`p-6 ${colorClasses(category.color).border200} hover:shadow-lg transition-shadow relative`}>
                                                 <div className="absolute top-4 right-4">
                                                     <div className="flex items-center space-x-1">
                                                         {[...Array(testimonial.rating)].map((_, i) => (
-                                                            <Star key={i} className={`w-4 h-4 fill-${category.color}-400 text-${category.color}-400`} />
+                                                            <Star key={i} className={`w-4 h-4 ${colorClasses(category.color).fill400} ${colorClasses(category.color).text400}`} />
                                                         ))}
                                                     </div>
                                                 </div>
@@ -437,16 +438,16 @@ export default function TestimonialePage() {
                                                 <CardContent className="space-y-4">
                                                     {/* Quote */}
                                                     <div className="relative">
-                                                        <Quote className={`w-8 h-8 text-${category.color}-200 absolute -top-2 -left-2`} />
+                                                        <Quote className={`w-8 h-8 ${colorClasses(category.color).text200} absolute -top-2 -left-2`} />
                                                         <Typography variant="body" className="text-gray-700 italic leading-relaxed pl-6">
                                                             &#34;{testimonial.quote}&#34;
                                                         </Typography>
                                                     </div>
 
                                                     {/* Client Info */}
-                                                    <div className={`bg-${category.color}-50 rounded-lg p-4`}>
+                                                    <div className={`${colorClasses(category.color).bg50} rounded-lg p-4`}>
                                                         <div className="flex items-center justify-between mb-2">
-                                                            <Typography variant="h6" className={`text-${category.color}-700`}>
+                                                            <Typography variant="h6" className={`${colorClasses(category.color).text700}`}>
                                                                 {testimonial.name}
                                                             </Typography>
                                                             <Typography variant="small" className="text-gray-600">
@@ -456,7 +457,7 @@ export default function TestimonialePage() {
                                                         <Typography variant="small" className="text-gray-700 mb-2">
                                                             <strong>Problemă:</strong> {testimonial.problem}
                                                         </Typography>
-                                                        <Typography variant="small" className={`text-${category.color}-600 font-medium`}>
+                                                        <Typography variant="small" className={`${colorClasses(category.color).text600} font-medium`}>
                                                             <strong>Rezultat:</strong> {testimonial.result}
                                                         </Typography>
                                                     </div>
@@ -473,8 +474,8 @@ export default function TestimonialePage() {
                                                         </div>
                                                     </div>
 
-                                                    <div className={`bg-${category.color}-100 rounded-lg p-3 text-center`}>
-                                                        <Typography variant="small" className={`text-${category.color}-700 font-bold`}>
+                                                    <div className={`${colorClasses(category.color).bg100} rounded-lg p-3 text-center`}>
+                                                        <Typography variant="small" className={`${colorClasses(category.color).text700} font-bold`}>
                                                             ✓ {testimonial.improvement}
                                                         </Typography>
                                                     </div>
@@ -597,14 +598,14 @@ export default function TestimonialePage() {
                         </Typography>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
+                            <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-lg px-8">
                                 <Link href="/contact">
                                     <Calendar className="w-5 h-5 mr-2" />
                                     Programează consultația
                                 </Link>
                             </Button>
 
-                            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                 <a href="tel:+40722123456">
                                     <Phone className="w-5 h-5 mr-2" />
                                     Vorbește cu mine acum

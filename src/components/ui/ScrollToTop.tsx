@@ -20,9 +20,11 @@ export function ScrollToTop() {
     }, [])
 
     const scrollToTop = () => {
+        // Fara scroll animat daca utilizatorul prefera miscare redusa
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: reduceMotion ? 'auto' : 'smooth'
         })
     }
 
@@ -34,8 +36,9 @@ export function ScrollToTop() {
             className={`
                 fixed bottom-6 right-6 z-50 p-3 bg-therapeutic-600 text-white rounded-full 
                 shadow-therapeutic hover:bg-therapeutic-700 transition-all duration-300
-                focus:outline-none focus:ring-2 focus:ring-therapeutic-500 focus:ring-offset-2
-                hover:scale-110 hover:shadow-xl
+                min-h-11 min-w-11 flex items-center justify-center
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-therapeutic-500 focus-visible:ring-offset-2
+                motion-safe:hover:scale-110 hover:shadow-xl
                 ${isVisible ? 'animate-fade-in' : ''}
             `}
             aria-label="Scroll to top"

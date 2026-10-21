@@ -21,6 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Typography } from '@/components/core/Typography'
 import { Container } from '@/components/core/Container'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { colorClasses } from '@/lib/colorMap'
 
 export const metadata: Metadata = {
     title: 'Ședințe de Evaluare Psihologică',
@@ -223,13 +224,13 @@ export default function EvaluarePage() {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90">
+                                <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90">
                                     <Link href="/contact">
                                         <Calendar className="w-5 h-5 mr-2" />
                                         Programează evaluarea
                                     </Link>
                                 </Button>
-                                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-therapeutic-600">
+                                <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-therapeutic-600">
                                     <a href="tel:+40722123456">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Sună pentru detalii
@@ -283,10 +284,10 @@ export default function EvaluarePage() {
                             {evaluationTypes.map((evaluation, index) => {
                                 const Icon = evaluation.icon
                                 return (
-                                    <Card key={index} className={`p-6 border-${evaluation.color}-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
+                                    <Card key={index} className={`p-6 ${colorClasses(evaluation.color).border200} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
                                         <CardHeader className="pb-4">
-                                            <div className={`w-14 h-14 bg-${evaluation.color}-100 rounded-xl flex items-center justify-center mb-4`}>
-                                                <Icon className={`w-7 h-7 text-${evaluation.color}-600`} />
+                                            <div className={`w-14 h-14 ${colorClasses(evaluation.color).bg100} rounded-xl flex items-center justify-center mb-4`}>
+                                                <Icon className={`w-7 h-7 ${colorClasses(evaluation.color).text600}`} />
                                             </div>
                                             <CardTitle className="text-xl mb-2">{evaluation.title}</CardTitle>
                                             <Typography variant="body" className="text-gray-600 mb-4">
@@ -304,7 +305,7 @@ export default function EvaluarePage() {
                                             <ul className="space-y-2">
                                                 {evaluation.includes.map((item, idx) => (
                                                     <li key={idx} className="flex items-start space-x-2 text-sm">
-                                                        <CheckCircle className={`w-4 h-4 text-${evaluation.color}-500 mt-0.5 flex-shrink-0`} />
+                                                        <CheckCircle className={`w-4 h-4 ${colorClasses(evaluation.color).text500} mt-0.5 flex-shrink-0`} />
                                                         <span>{item}</span>
                                                     </li>
                                                 ))}
@@ -501,14 +502,14 @@ export default function EvaluarePage() {
                         </Typography>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button asChild size="lg" className="bg-warm text-warm-900 hover:bg-warm/90 text-lg px-8">
+                            <Button asChild size="lg" className="bg-warm text-white hover:bg-warm/90 text-lg px-8">
                                 <Link href="/contact">
                                     <Calendar className="w-5 h-5 mr-2" />
                                     Programează evaluarea
                                 </Link>
                             </Button>
 
-                            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-calming-600">
+                            <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-calming-600">
                                 <Link href="/servicii">
                                     Explorează alte servicii
                                 </Link>
